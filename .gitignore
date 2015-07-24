@@ -1,0 +1,35 @@
+# Thanks to: https://gist.github.com/jdbartlett/444295
+
+config.codekit
+
+# Ignore node_modules
+**/node_modules/
+**/npm-debug.log
+
+# Ignore images in the uploads
+wp-content/uploads/**/*.png
+wp-content/uploads/**/*.jpg
+
+# Ignore everything in the "wp-content" directory
+wp-content/*
+!wp-content/plugins/
+!wp-content/mu-plugins/
+!wp-content/themes/
+!wp-content/uploads/
+
+# Ignore everything in the "plugins" directory, except the plugins you specify
+# wp-content/plugins/*
+# !wp-content/plugins/my-single-file-plugin.php
+# !wp-content/plugins/woocommerce/
+
+# Ignore everything in the "themes" directory, except the themes you specify
+wp-content/themes/*
+!wp-content/themes/miltons-nn/
+
+# Ignore sass cache
+wp-content/themes/miltons-nn/scss/.sass-cache/*
+wp-config.php
+.htaccess
+
+# Ignore DS_Store
+.DS_Store

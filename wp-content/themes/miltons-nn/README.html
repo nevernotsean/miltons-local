@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="foundationpressbuildstatus">FoundationPress <a href="https://travis-ci.org/olefredrik/FoundationPress"><img src="https://travis-ci.org/olefredrik/FoundationPress.svg?branch=master" alt="Build Status" /></a></h1>
+
+<p>This is a WordPress starter theme based on Foundation 5 by Zurb. The purpose of FoundationPress, is to act as a small and handy toolbox that contains the essentials needed to build any design. FoundationPress is meant to be a starting point, not the final product. If you&#8217;re looking for an all-in-one theme with built-in shortcodes, plugins, fancypancy portfolio templates or whatnot, I&#8217;m afraid you have to look elsewhere.</p>
+
+<p>Please fork, copy, modify, delete, share or do whatever you like with this.</p>
+
+<p>All contributions are welcome!</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p><strong>A brief explanation to the requirements</strong> (feel free to skip this if you&#8217;re a pro):</p>
+
+<p>Back in the days we wrote all styles in the style.css file. Then we realized that this could quickly create clutter and confusion, especially in larger projects. Foundation uses SASS (equivalent to LESS, used in Bootstrap). In short, SASS is a CSS pre-processor that allows you to write styles more effectively and tidy.</p>
+
+<p>To compile SASS files into one style sheet, we use a tool called Grunt. In short, Grunt is a task runner that automates repetitive tasks like minification, compilation, linting, etc. Grunt and Grunt plugins are installed and managed via npm, the Node.js package manager. Before setting up Grunt ensure that your npm is up-to-date by running <code>npm update -g npm</code> (this might require <code>sudo</code> on certain systems)</p>
+
+<p>Bower is a package manager used by Zurb to distribute Foundation. When you have Bower installed, you will be able to run <code>foundation update</code> in the terminal to update Foundation to the latest version. (After an upgrade you must run <code>npm run build</code> to recompile files).</p>
+
+<p><strong>Okay, so you&#8217;ll need to have <a href="http://nodejs.org">Node.js</a> installed before continuing.</strong></p>
+
+<p><strong>And that is it.</strong></p>
+
+<p>Many project force their users to install <a href="http://bower.io">Bower</a> and <a href="http://gruntjs.com/">Grunt</a> globally. We don&#8217;t like that and decided to use them via <code>npm scripts</code> which means, that Grunt and Bower are installed in your <code>node_modules</code> folder and we&#8217;ll call them there.</p>
+
+<p>Haven&#8217;t used this approach yet? Read on.</p>
+
+<h2 id="quickstart">Quickstart</h2>
+
+<pre><code class="bash">$ cd my-wordpress-folder/wp-content/themes/
+$ git clone git@github.com:olefredrik/FoundationPress.git
+$ mv FoundationPress your-theme-name
+$ cd your-theme-name
+
+# will call:
+# bower install &amp;&amp; grunt build
+# afterwards
+# check `package.json` `scripts`
+# for further information
+$ npm install
+</code></pre>
+
+<p><strong>Tip:</strong>
+If you get an error saying Permission denied (publickey) when cloning the repository, use the https protocol instead:
+<code>git clone https://github.com/olefredrik/FoundationPress.git</code></p>
+
+<p>While you&#8217;re working on your project, run:</p>
+
+<pre><code class="bash"># will call:
+# grunt watch
+#
+# predefined in `package.json`
+$ npm run watch
+</code></pre>
+
+<p>For building all the assets, run:</p>
+
+<pre><code class="bash"># will call:
+# grunt build
+#
+# predefined in `package.json`
+$ npm run build
+</code></pre>
+
+<p>And you&#8217;re set!</p>
+
+<p>Check for Foundation Updates? Run:
+<code>$ foundation update</code>
+(this requires the foundation gem to be installed in order to work. Please see the <a href="http://foundation.zurb.com/docs/sass.html">docs</a> for details.)</p>
+
+<p>Wanna run a custom grunt task? Run:
+```bash</p>
+
+<h1 id="willcall:">will call:</h1>
+
+<h1 id="gruntsass">grunt sass</h1>
+
+<p>$ npm run grunt &#8211; sass</p>
+
+<h1 id="willcall:">will call:</h1>
+
+<h1 id="gruntcopy">grunt copy</h1>
+
+<p>$ npm run grunt &#8211; copy
+```</p>
+
+<h3 id="stylesheetfolderstructure">Stylesheet Folder Structure</h3>
+
+<ul>
+<li><p><code>style.css</code>: Do not worry about this file. (For some reason) it&#8217;s required by WordPress. All styling are handled in the Sass files described below</p></li>
+<li><p><code>scss/foundation.scss</code>: Imports for Foundation components and your custom styles.</p></li>
+<li><p><code>scss/config/_settings.scss</code>: Original Foundation 5 base settings</p></li>
+<li><p><code>scss/config/_custom-settings.scss</code>: Copy the settings you will modify to this file. Make it your own</p></li>
+<li><p><code>scss/site/*.scss</code>: Unleash your creativity and make it look perfect. Create the files you need (and remember to make import statements for all your files in scss/foundation.scss)</p></li>
+<li><p><code>css/foundation.css</code>: All Sass files are minified and compiled to this file</p></li>
+<li><p><code>css/foundation.css.map</code>: CSS source maps</p></li>
+</ul>
+
+<h3 id="scriptfolderstrucutre">Script Folder Strucutre</h3>
+
+<ul>
+<li><p><code>bower_components/</code>: This is the source folder where all Foundation components are located. <code>foundation update</code> will check and update scripts in this folder.</p></li>
+<li><p><code>js/custom</code>: This is where you put all your custom scripts. Every .js file you put in this directory will be minified and concatinated to <a href="https://github.com/olefredrik/FoundationPress/blob/master/js/foundation.js">foundation.js</a></p></li>
+<li><p><code>js/vendor</code>: Vendor scripts are copied from <code>bower_components/</code> to this directory. We use this path for enqueing the vendor scripts in WordPress.</p></li>
+<li><p>Please note that you must run <code>npm run build</code> in your terminal for the script to be copied and concatinated. See <a href="https://github.com/olefredrik/FoundationPress/blob/master/Gruntfile.js">Gruntfile.js</a> for details</p></li>
+</ul>
+
+<h2 id="demo">Demo</h2>
+
+<ul>
+<li><a href="http://foundationpress.olefredrik.com/">Clean FoundationPress install</a></li>
+<li><a href="http://foundationpress.olefredrik.com/kitchen-sink/">FoundationPress Kitchen Sink - see every single element in action</a></li>
+</ul>
+
+<h2 id="unittestingwithtravisci">Unit Testing With Travis CI</h2>
+
+<p>FoundationPress is completely ready to be deployed to and tested by Travis CI for WordPress Coding Standards and best practices. All you need to do to activate the test is sign up and follow the instructions to point Travis CI towards your repo. Just don&#8217;t forget to update the status badge to point to your repositories unit test.
+<a href="https://travis-ci.org/">Travis CI</a></p>
+
+<h2 id="uitoolkitsforrapidprototyping">UI toolkits for rapid prototyping</h2>
+
+<ul>
+<li><a href="https://gumroad.com/l/foundation-ui-kit-axure-rp">Foundation UI Kit for Axure RP</a></li>
+<li><a href="http://foundationpress.olefredrik.com/downloads/foundation-psd-template/">FoundationPSD - Foundation UI Kit for Photoshop</a></li>
+</ul>
+
+<h2 id="tutorialsandreviews">Tutorials and reviews</h2>
+
+<ul>
+<li><a href="http://rachievee.com/responsive-images-in-wordpress/">Responsive images in WordPress with Interchange</a></li>
+<li><a href="https://support.woothemes.com/hc/en-us/articles/204125559-FoundationPress">Integration guide for Sensei LMS plugin from WooThemes</a></li>
+<li><a href="http://www.webdesignermag.co.uk/build-a-responsive-wordpress-theme/">Build a Responsive WordPress theme</a></li>
+<li><a href="http://www.thecodecub.com/htmlcss/setting-up-a-blog-with-foundation-and-wordpress/">Setting Up a Blog with Foundation and WordPress</a></li>
+<li><a href="http://www.leblogduresponsivedesign.fr/developpement/foundationpress-un-starter-theme-pour-wordpress/">FoundationPress un starter theme pour WordPress (fr)</a></li>
+<li><a href="http://zurb.com/university/lessons/66">Learn to use the _settings file to change almost every aspect of a Foundation site</a></li>
+<li><a href="http://zurb.com/university/past-lessons">Other lessons from Zurb University</a></li>
+</ul>
+
+<h2 id="aselectionofsitesbuiltwithfoundationpress">A selection of sites built with FoundationPress</h2>
+
+<ul>
+<li><a href="http://www.harvardcgbc.org/">Harvard Center for Green Buildings and Cities</a></li>
+<li><a href="http://www.parent-child.org/">Parent-Child Home Program</a></li>
+<li><a href="http://hipandhealthy.com/">Hip and Healthy</a></li>
+<li><a href="http://blog.threadbird.com/">Threadbird blog</a></li>
+<li><a href="http://publichousewines.hstestsite.info/">Public House Wines</a></li>
+<li><a href="http://franchisecareeradvisors.com/">Franchise Career Advisors</a></li>
+<li><a href="http://www.lesaint.ca/">Le saint</a></li>
+<li><a href="http://help.com/blog/">Help blog</a></li>
+<li><a href="http://marenschmidt.com/">Maren Schmidt</a></li>
+<li><a href="http://ciancimino.com/">Ciancimino Gallery</a></li>
+<li><a href="http://www.sokolovelaw.com/">Sokolove Law</a></li>
+<li><a href="http://www.pandorachildrensparties.co.uk/">Pandora Children&#8217;s Parties</a></li>
+<li><a href="http://www.therainbowvenues.co.uk/">The Rainbow Venues</a></li>
+<li><a href="http://www.ameronix.com/">Ameronix</a></li>
+<li><a href="http://www.finnerodja.se/">Finnerodja</a></li>
+<li><a href="http://www.nufloors.ca/">Nufloors</a></li>
+<li><a href="http://www.glossopcartons.co.uk/">Glossop Cartons</a></li>
+<li><a href="http://www.ready4work.my/">Ready4Work</a></li>
+<li><a href="http://www.justlegal.co.jp/en/">Just Legal</a></li>
+<li><a href="http://vintageandstuff.com/">Vintage and Stuff</a></li>
+<li><a href="http://softwareforfm.co.uk/">Software for FM</a></li>
+<li><a href="http://www.wpdiamonds.com/">WP Diamonds</a></li>
+<li><a href="http://stormarts.fi/">Storm Arts</a></li>
+<li><a href="http://ussillinois.org/">USS Illinois</a></li>
+<li><a href="http://international.newinti.edu.my/">INTI International University &amp; Colleges</a></li>
+</ul>
+
+<h2 id="contributing">Contributing</h2>
+
+<h4 id="herearewaystogetinvolved:">Here are ways to get involved:</h4>
+
+<ol>
+<li><a href="https://github.com/olefredrik/FoundationPress/stargazers">Star</a> the project!</li>
+<li>Answer questions that come through <a href="https://github.com/olefredrik/FoundationPress/issues">GitHub issues</a></li>
+<li>Report a bug that you find</li>
+<li>Share a theme you&#8217;ve built on top of FoundationPress</li>
+<li><a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Ffoundationpress.olefredrik.com%2F&amp;text=Check%20out%20FoundationPress%2C%20the%20ultimate%20%23WordPress%20starter-theme%20built%20on%20%23Foundation%205&amp;tw_p=tweetbutton&amp;url=http%3A%2F%2Ffoundationpress.olefredrik.com&amp;via=olefredrik">Tweet</a> and <a href="http://www.justinfriebel.com/my-first-experience-with-foundationpress-a-wordpress-starter-theme-106/">blog</a> your experience of FoundationPress.</li>
+</ol>
+
+<h4 id="pullrequests">Pull Requests</h4>
+
+<p>Pull requests are highly appreciated. More than three dozen amazing people have contributed to FoundationPress (so far). Here are some guidelines to help:</p>
+
+<ol>
+<li>Solve a problem. Features are great, but even better is cleaning-up and fixing issues in the code that you discover</li>
+<li>Make sure that your code is bug-free and does not introduce new bugs</li>
+<li>Create a <a href="https://help.github.com/articles/creating-a-pull-request">pull request</a></li>
+</ol>
+
+<h2 id="documentation">Documentation</h2>
+
+<ul>
+<li><a href="http://foundation.zurb.com/docs/">Zurb Foundation Docs</a></li>
+<li><a href="http://codex.wordpress.org/">WordPress Codex</a></li>
+</ul>
+
+</body>
+</html>
