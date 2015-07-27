@@ -1,0 +1,9 @@
+.woocommerce span.onsale {
+  padding: 0px;
+}
+
+// Category Page
+
+ul.products {
+  @include block-grid(4)
+}

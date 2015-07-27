@@ -27,8 +27,11 @@ function foundationpress_theme_support() {
 	// Add post formarts support: http://codex.wordpress.org/Post_Formats
 	add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat') );
 
-}
+	/** Woo Support */
+	add_theme_support( 'woocommerce' );
 
+
+}
 add_action( 'after_setup_theme', 'foundationpress_theme_support' );
 endif;
 ?>
