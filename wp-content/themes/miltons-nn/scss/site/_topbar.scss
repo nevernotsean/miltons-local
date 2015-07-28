@@ -16,7 +16,7 @@
 }
 
 // Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
-// The $topbar-breakpoint can be edited in _custom-settings.scss. 
+// The $topbar-breakpoint can be edited in _custom-settings.scss.
 
 @media only screen and (min-width: ($topbar-breakpoint + em-calc(1))) {
   .tab-bar { display: none; }
@@ -25,4 +25,22 @@
 // Hide the topbar when the screen size is smaller than the topbar breakpoint
 @media only screen and (max-width: $topbar-breakpoint) {
   .top-bar { display: none; }
+}
+
+// Topbar fixed
+
+.top-bar-container {
+    position: fixed;
+    z-index: 999999;
+    border-bottom: 1px solid #fff;
+
+    li.divider {
+        border-right: 1px solid #fff;
+        height: 1.5rem;
+        transform: translateY(45%);
+    }
+
+    a {
+      text-transform: uppercase;
+    }
 }

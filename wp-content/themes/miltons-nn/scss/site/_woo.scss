@@ -4,6 +4,8 @@
 
 // Category Page
 
+.woocommerce-result-count {display:none;}
+
 ul.products {
-  @include block-grid(4)
+  @include block-grid(3);
 }
