@@ -21,3 +21,8 @@
         </section>
     </nav>
 </div>
+<div class="row collapse nomax topbar-bg">
+    <div class="small-12 column">
+        <img src="http://placehold.it/1200x100" alt="">
+    </div>
+</div>
