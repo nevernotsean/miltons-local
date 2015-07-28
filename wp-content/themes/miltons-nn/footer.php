@@ -16,11 +16,12 @@
   	<?php do_action( 'foundationpress_before_footer' ); ?>
 
     <div class="left">
-      <ul class="inline-list left">
-        <li class="divider"></li>
+      <ul class="inline-list left social">
         <li><a href=""><i class="fa fa-facebook"></i></a></li>
         <li><a href=""><i class="fa fa-instagram"></i></a></li>
         <li><a href=""><i class="fa fa-twitter"></i></a></li>
+      </ul>
+      <ul class="inline-list left pages">
         <li><a href=""><small>PRESS</small></a></li>
         <li><a href=""><small>CLIENTS</small></a></li>
         <li><a href=""><small>CONTACT</small></a></li>
@@ -29,8 +30,12 @@
       </ul>
     </div>
 
-    <div class="right">
+    <div class="right hide-for-small">
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-stacked-blk.svg" alt="">
+    </div>
+
+    <div class="text-center hide-for-medium-up">
+      <img class="white" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-stacked.svg" alt="">
     </div>
 
   	<?php do_action( 'foundationpress_after_footer' ); ?>

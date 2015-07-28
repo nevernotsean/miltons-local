@@ -8537,6 +8537,12 @@ section.container {
     section.container {
       padding: 25px; } }
 
+.inline-list.centered {
+  text-align: center; }
+  .inline-list.centered li {
+    float: none;
+    display: inline-block; }
+
 #wpadminbar {
   position: fixed !important; }
 
@@ -8695,7 +8701,7 @@ footer {
     border-left: 1px solid #000000;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem; }
-  footer .left li:last-child {
+  footer .left.pages li:last-child {
     border-right: 1px solid #000000; }
   footer .right img {
     height: 55px;
@@ -8703,6 +8709,70 @@ footer {
     width: auto;
     color: black; }
 
+@media only screen and (max-width: 40em) {
+  footer {
+    background-color: #222222;
+    border-top: 1px solid #FFFFFF;
+    padding: 40px 0px;
+    height: initial; }
+    footer ul li.divider {
+      border-right: 1px solid #FFFFFF; }
+    footer .left {
+      float: none !important; }
+    footer ul.left.social {
+      width: 100%;
+      text-align: center;
+      float: none !important; }
+      footer ul.left.social li {
+        float: none;
+        display: inline-block; }
+      footer ul.left.social a {
+        color: #FFFFFF; }
+        footer ul.left.social a:hover {
+          color: #FFFFFF; }
+      footer ul.left.social li {
+        border-left: 1px solid #FFFFFF; }
+      footer ul.left.social li:last-child {
+        border-right: 1px solid #FFFFFF; }
+    footer .left.pages {
+      display: block;
+      padding: 0;
+      margin: 0 -0.625rem;
+      text-align: center;
+      width: 100%; }
+      footer .left.pages:before, footer .left.pages:after {
+        content: " ";
+        display: table; }
+      footer .left.pages:after {
+        clear: both; }
+      footer .left.pages > li {
+        display: block;
+        float: left;
+        height: auto;
+        padding: 0 0.625rem 1.25rem; }
+      footer .left.pages > li {
+        list-style: none;
+        padding: 0 0.625rem 1.25rem;
+        width: 100%; }
+        footer .left.pages > li:nth-of-type(1n) {
+          clear: none; }
+        footer .left.pages > li:nth-of-type(1n+1) {
+          clear: both; }
+      footer .left.pages li {
+        border: 0px solid #000; }
+        footer .left.pages li:last-child {
+          border: 0px solid #000; }
+        footer .left.pages li a {
+          color: #FFFFFF; }
+          footer .left.pages li a:hover {
+            color: #FFFFFF; }
+        footer .left.pages li.copy a {
+          color: #FFFFFF;
+          pointer-events: none; }
+    footer img.white {
+      height: 70px;
+      padding: 10px;
+      width: auto; } }
 .topbar-bg img {
   width: 100%;
   height: auto; }

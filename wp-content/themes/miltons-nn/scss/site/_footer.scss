@@ -1,43 +1,119 @@
 // Add some whitespace above the footer for medium-up screens
 @media #{$medium-up} {
-	footer.row {
-		margin-top: rem-calc(60);
-	}
+    footer.row {
+        margin-top: rem-calc(60);
+    }
 }
 
 footer {
-  border-top: 1px solid $black;
-  padding-top: 1rem;
-  height: 5rem;
-  ul {
-    li {
-      &.divider {
-        border-right: 1px solid #000;
-      }
+    border-top: 1px solid $black;
+    padding-top: 1rem;
+    height: 5rem;
+    ul {
+        li {
+            &.divider {
+                border-right: 1px solid #000;
+            }
+        }
     }
-  }
+    .left {
+        li.copy a {
+            color: $black;
+            pointer-events: none;
+        }
+        li {
+            margin-left: 0px;
+            border-left: 1px solid $black;
+            padding-left: $column-gutter / 2;
+            padding-right: $column-gutter / 2;
+        }
 
-  .left {
-    li.copy a {
-      color: $black;
-      pointer-events: none;
+        &.pages {
+          li:last-child {
+              border-right: 1px solid $black;
+          }
+        }
     }
+    .right {
+        img {
+            height: 55px;
+            padding: 10px;
+            width: auto;
+            color: black;
+        }
+    }
+}
 
-    li {
-      margin-left: 0px;
-      border-left: 1px solid $black;
-      padding-left: $column-gutter/2;
-      padding-right: $column-gutter/2;
-    }
-    li:last-child { border-right: 1px solid $black; }
-  }
+// mobile footer
 
-  .right {
-    img {
-        height: 55px;
-        padding: 10px;
-        width: auto;
-        color: black;
+@media #{$small-only} {
+    footer {
+        background-color: $jet;
+        border-top: 1px solid $white;
+        padding: 40px 0px;
+        height: initial;
+        ul {
+            li {
+                &.divider {
+                    border-right: 1px solid $white;
+                }
+            }
+        }
+
+        .left { float: none !important; }
+
+        ul.left.social {
+            width: 100%;
+            @include inlineCentered;
+            float: none !important;
+
+            a {
+                color: $white;
+                &:hover {
+                    color: $white;
+                }
+            }
+            li {
+                // margin-left: 0px;
+                border-left: 1px solid $white;
+                // padding-left: $column-gutter/2;
+                // padding-right: $column-gutter/2;
+
+            }
+            li:last-child {
+                border-right: 1px solid $white;
+            }
+        }
+        .left.pages {
+            @include block-grid(1);
+            text-align: center;
+            width: 100%;
+            li {
+                border: 0px solid #000;
+                &:last-child {
+                    border: 0px solid #000;
+                }
+
+                a {
+                color: $white;
+                    &:hover {
+                        color: $white;
+                    }
+                }
+
+                &.copy a {
+                  color: $white;
+                  pointer-events: none;
+                }
+            }
+
+
+        }
+        .right {}
+        img.white {
+            height: 70px;
+            padding: 10px;
+            width: auto;
+        }
     }
-  }
 }
