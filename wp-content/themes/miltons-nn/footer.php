@@ -11,18 +11,36 @@
 
 ?>
 
-</section>
-<footer class="row">
-	<?php do_action( 'foundationpress_before_footer' ); ?>
-	<?php dynamic_sidebar( 'footer-widgets' ); ?>
-	<?php do_action( 'foundationpress_after_footer' ); ?>
-</footer>
-<a class="exit-off-canvas"></a>
+  </section>
+  <footer class="row">
+  	<?php do_action( 'foundationpress_before_footer' ); ?>
 
-	<?php do_action( 'foundationpress_layout_end' ); ?>
-	</div>
-</div>
-<?php wp_footer(); ?>
-<?php do_action( 'foundationpress_before_closing_body' ); ?>
-</body>
+    <div class="left">
+      <ul class="inline-list left">
+        <li class="divider"></li>
+        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+        <li><a href=""><small>PRESS</small></a></li>
+        <li><a href=""><small>CLIENTS</small></a></li>
+        <li><a href=""><small>CONTACT</small></a></li>
+        <li><a href=""><small>SITEBY</small></a></li>
+        <li class="copy"><a href=""><small>&copy 2015 MILTON'S LOCAL</small></a></li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-stacked-blk.svg" alt="">
+    </div>
+
+  	<?php do_action( 'foundationpress_after_footer' ); ?>
+  </footer>
+  <a class="exit-off-canvas"></a>
+
+  	<?php do_action( 'foundationpress_layout_end' ); ?>
+  	</div>
+  </div>
+  <?php wp_footer(); ?>
+  <?php do_action( 'foundationpress_before_closing_body' ); ?>
+  </body>
 </html>

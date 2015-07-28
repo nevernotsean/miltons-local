@@ -4,3 +4,40 @@
 		margin-top: rem-calc(60);
 	}
 }
+
+footer {
+  border-top: 1px solid $black;
+  padding-top: 1rem;
+  height: 5rem;
+  ul {
+    li {
+      &.divider {
+        border-right: 1px solid #000;
+      }
+    }
+  }
+
+  .left {
+    li.copy a {
+      color: $black;
+      pointer-events: none;
+    }
+
+    li {
+      margin-left: 0px;
+      border-left: 1px solid $black;
+      padding-left: $column-gutter/2;
+      padding-right: $column-gutter/2;
+    }
+    li:last-child { border-right: 1px solid $black; }
+  }
+
+  .right {
+    img {
+        height: 55px;
+        padding: 10px;
+        width: auto;
+        color: black;
+    }
+  }
+}

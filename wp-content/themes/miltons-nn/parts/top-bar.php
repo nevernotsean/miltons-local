@@ -11,8 +11,10 @@
 <div class="top-bar-container contain-to-grid show-for-medium-up">
     <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
-            <li class="name">
-                <h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+            <li class="logo">
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg" alt="">
+                </a>
             </li>
         </ul>
         <section class="top-bar-section">
@@ -23,6 +25,6 @@
 </div>
 <div class="row collapse nomax topbar-bg">
     <div class="small-12 column">
-        <img src="http://placehold.it/1200x100" alt="">
+        <img src="http://placehold.it/1200x200" alt="">
     </div>
 </div>

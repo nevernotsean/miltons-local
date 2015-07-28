@@ -3,18 +3,6 @@
 	margin-bottom: rem-calc(32);
 }
 
-.top-bar .name {
-	h1 a { font-weight: 500; }
-}
-
-// A more subtle background color for the active menu item
-.top-bar-section li.active:not(.has-form) a:not(.button)  {
-	background: #272727;
-}
-.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
-	background: #202020;
-}
-
 // Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
 // The $topbar-breakpoint can be edited in _custom-settings.scss.
 
@@ -31,16 +19,34 @@
 
 .top-bar-container {
     position: fixed;
-    z-index: 999999;
-    border-bottom: 1px solid #fff;
+    z-index: 999;
+
+    .top-bar {
+      border-bottom: 1px solid #fff;
+      margin-top: 1rem;
+    }
+
+    .logo img {
+      height: 55px;
+      width: auto;
+      padding: 5px;
+    }
+
+    li.menu-item a {
+      text-transform: uppercase;
+    }
 
     li.divider {
         border-right: 1px solid #fff;
-        height: 1.5rem;
+        height: 30px;
         transform: translateY(45%);
     }
+}
 
-    a {
-      text-transform: uppercase;
-    }
+// TB background
+.topbar-bg {
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }

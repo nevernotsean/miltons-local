@@ -114,9 +114,10 @@ $tuatara     : #444444;
 $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
+$gold        : #B4823C;
 
 // We use these as default colors throughout
-$primary-color: green;
+$primary-color: $gold;
 $secondary-color: $base;
 $alert-color: #f04124;
 $success-color: #43AC6A;
@@ -1405,7 +1406,7 @@ $topbar-bg-color: transparent;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: rem-calc(45);
+$topbar-height: rem-calc(60);
 $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1414,17 +1415,17 @@ $topbar-title-font-size: rem-calc(17);
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $white;
-$topbar-link-color-hover: $white;
-$topbar-link-color-active: $white;
-$topbar-link-color-active-hover: $white;
+$topbar-link-color-hover: $gold;
+$topbar-link-color-active: $gold;
+$topbar-link-color-active-hover: $black;
 $topbar-link-weight: $font-weight-normal;
 $topbar-link-font-size: rem-calc(13);
 $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg: $topbar-bg;
-$topbar-link-bg-hover: $jet;
-$topbar-link-bg-color-hover: $charcoal;
-$topbar-link-bg-active: $primary-color;
-$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-bg: transparent;
+$topbar-link-bg-hover: rgba(255,255,255,0.0);
+$topbar-link-bg-color-hover: rgba(255,255,255,1);
+$topbar-link-bg-active: rgba(255,255,255,1);
+$topbar-link-bg-active-hover: rgba(255,255,255,1);
 $topbar-link-font-family: $body-font-family;
 $topbar-link-text-transform: none;
 $topbar-link-padding: ($topbar-height / 3);
@@ -1435,10 +1436,10 @@ $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: transparent;
-$topbar-dropdown-link-color: $white;
-$topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-$topbar-dropdown-link-bg: $black;
-$topbar-dropdown-link-bg-hover: $oil;
+$topbar-dropdown-link-color: $gold;
+$topbar-dropdown-link-color-hover: $black;
+$topbar-dropdown-link-bg: $white;
+$topbar-dropdown-link-bg-hover: rgba(255,255,255,1);
 $topbar-dropdown-link-weight: $font-weight-normal;
 $topbar-dropdown-toggle-size: 5px;
 $topbar-dropdown-toggle-color: $white;
@@ -1448,7 +1449,7 @@ $topbar-dropdown-label-color: $monsoon;
 $topbar-dropdown-label-text-transform: uppercase;
 $topbar-dropdown-label-font-weight: $font-weight-bold;
 $topbar-dropdown-label-font-size: rem-calc(10);
-$topbar-dropdown-label-bg: $oil;
+$topbar-dropdown-label-bg: transparent;
 
 // Top menu icon styles
 $topbar-menu-link-transform: uppercase;

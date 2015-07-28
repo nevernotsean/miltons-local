@@ -8,4 +8,12 @@
 
 ul.products {
   @include block-grid(3);
+
+  @media #{$xlarge-up}{
+      @include block-grid(4);
+  }
+
+  @media #{$small-only}{
+      @include block-grid(1);
+  }
 }
