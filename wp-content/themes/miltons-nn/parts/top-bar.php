@@ -8,6 +8,8 @@
  */
 
 ?>
+<?php if ( !( is_product() ) ) { ?>
+
 <div class="top-bar-container contain-to-grid show-for-medium-up">
     <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
@@ -25,6 +27,30 @@
 </div>
 <div class="row collapse nomax topbar-bg">
     <div class="small-12 column">
-        <img src="http://placehold.it/1200x200" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ph.png" alt="" class="">
     </div>
 </div>
+
+<?php } else { ?>
+
+<div class="top-bar-container contain-to-grid black">
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="logo">
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt="">
+                </a>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="left">
+                <li class="divider"></li>
+                <li><a href="<?php echo site_url(); ?>/shop"><i class="fa fa-angle-double-left"></i> Back to All</a></li>
+                <li class="divider"></li>
+            </ul>
+            <?php foundationpress_top_bar_r(); ?>
+        </section>
+    </nav>
+</div>
+
+<?php } ?>

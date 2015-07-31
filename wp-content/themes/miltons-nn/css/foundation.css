@@ -4694,38 +4694,38 @@ ul.pagination {
 
 table {
   background: #FFFFFF;
-  border: solid 1px #DDDDDD;
+  border: solid 1px #000000;
   margin-bottom: 1.25rem;
   table-layout: auto; }
   table caption {
     background: transparent;
-    color: #222222;
+    color: #000000;
     font-size: 1rem;
     font-weight: bold; }
   table thead {
     background: #F5F5F5; }
     table thead tr th,
     table thead tr td {
-      color: #222222;
-      font-size: 0.875rem;
+      color: #000000;
+      font-size: 1rem;
       font-weight: bold;
       padding: 0.5rem 0.625rem 0.625rem; }
   table tfoot {
     background: #F5F5F5; }
     table tfoot tr th,
     table tfoot tr td {
-      color: #222222;
-      font-size: 0.875rem;
+      color: #000000;
+      font-size: 1rem;
       font-weight: bold;
       padding: 0.5rem 0.625rem 0.625rem; }
   table tr th,
   table tr td {
-    color: #222222;
+    color: #000000;
     font-size: 0.875rem;
     padding: 0.5625rem 0.625rem;
     text-align: left; }
   table tr.even, table tr.alt, table tr:nth-of-type(even) {
-    background: #F9F9F9; }
+    background: #FFFFFF; }
   table thead tr th,
   table tfoot tr th,
   table tfoot tr td,
@@ -5175,15 +5175,15 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > button.info:hover, .top-bar-section ul li > button.info:focus {
           color: #FFFFFF; }
     .top-bar-section ul li:hover:not(.has-form) > a {
-      background-color: white;
+      background-color: transparent;
       color: #B4823C;
-      background: rgba(255, 255, 255, 0); }
+      background: transparent; }
     .top-bar-section ul li.active > a {
-      background: white;
+      background: transparent;
       color: #B4823C; }
       .top-bar-section ul li.active > a:hover {
-        background: white;
-        color: #000000; }
+        background: transparent;
+        color: #B4823C; }
   .top-bar-section .has-form {
     padding: 1.25rem; }
   .top-bar-section .has-dropdown {
@@ -5307,24 +5307,24 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li .js-generated {
           display: none; }
     .top-bar-section li.hover > a:not(.button) {
-      background-color: white;
-      background: rgba(255, 255, 255, 0);
+      background-color: transparent;
+      background: transparent;
       color: #B4823C; }
     .top-bar-section li:not(.has-form) a:not(.button) {
       background: transparent;
       line-height: 3.75rem;
       padding: 0 1.25rem; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
-        background-color: white;
-        background: rgba(255, 255, 255, 0); }
+        background-color: transparent;
+        background: transparent; }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
-      background: white;
+      background: transparent;
       color: #B4823C;
       line-height: 3.75rem;
       padding: 0 1.25rem; }
       .top-bar-section li.active:not(.has-form) a:not(.button):hover {
-        background: white;
-        color: #000000; }
+        background: transparent;
+        color: #B4823C; }
     .top-bar-section .has-dropdown > a {
       padding-right: 2.5rem !important; }
       .top-bar-section .has-dropdown > a:after {
@@ -5382,9 +5382,9 @@ meta.foundation-mq-topbar {
         background: #FFFFFF;
         color: #B4823C; }
       .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
-        background-color: white;
+        background-color: transparent;
         color: #000000;
-        background: white; }
+        background: #FFFFFF; }
       .top-bar-section .dropdown li label {
         background: transparent;
         white-space: nowrap; }
@@ -5415,11 +5415,11 @@ meta.foundation-mq-topbar {
         left: 100%; }
 
   .no-js .top-bar-section ul li:hover > a {
-    background-color: white;
-    background: rgba(255, 255, 255, 0);
+    background-color: transparent;
+    background: transparent;
     color: #B4823C; }
   .no-js .top-bar-section ul li:active > a {
-    background: white;
+    background: transparent;
     color: #B4823C; }
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     position: static !important;
@@ -8531,20 +8531,42 @@ img.alignright {
 .row.nomax {
   max-width: none; }
 
-section.container {
-  padding: 50px; }
-  @media only screen and (max-width: 40em) {
-    section.container {
-      padding: 25px; } }
-
 .inline-list.centered {
   text-align: center; }
   .inline-list.centered li {
     float: none;
     display: inline-block; }
 
+hr.white {
+  border-color: #FFFFFF; }
+
 #wpadminbar {
   position: fixed !important; }
+
+section.container {
+  padding: 50px 0px; }
+  @media only screen and (max-width: 40em) {
+    section.container {
+      padding: 25px 0px; } }
+
+.row.contain {
+  width: 100%;
+  margin: auto;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000; }
+  .row.contain .column {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-right: 1px solid #000; }
+    .row.contain .column:last-child {
+      border-right: 0px solid #000; }
+    .row.contain .column p, .row.contain .column h1, .row.contain .column h2, .row.contain .column h3, .row.contain .column h4, .row.contain .column h5, .row.contain .column h6 {
+      margin: 0; }
+
+.border-t {
+  border-top: 1px solid #000; }
 
 ul.products li hr {
   border-bottom: 1px solid #000;
@@ -8554,21 +8576,6 @@ ul.products li hr {
 ul.products li h6 {
   font-size: 1rem;
   text-transform: uppercase; }
-ul.products li .row.contain {
-  width: 100%;
-  margin: auto;
-  margin-top: 0.625rem;
-  margin-bottom: 0.625rem;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000; }
-  ul.products li .row.contain .column {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    border-right: 1px solid #000; }
-    ul.products li .row.contain .column:last-child {
-      border-right: 0px solid #000; }
-    ul.products li .row.contain .column p, ul.products li .row.contain .column h1, ul.products li .row.contain .column h2, ul.products li .row.contain .column h3, ul.products li .row.contain .column h4, ul.products li .row.contain .column h5, ul.products li .row.contain .column h6 {
-      margin: 0; }
 ul.products li:after {
   height: 1px;
   width: 100%;
@@ -8576,6 +8583,65 @@ ul.products li:after {
   display: block;
   background-color: black;
   margin: 0.625rem 0px 0px  0px; }
+
+.thumbnails.columns-3 a img {
+  width: 33%;
+  height: auto; }
+
+.single-product section.container {
+  padding: 0px 0px; }
+.single-product footer.row {
+  margin-top: 0px; }
+
+@media only screen and (min-width: 40.0625em) {
+  .gallery {
+    padding-right: 0px; } }
+
+p.in-stock {
+  display: none; }
+
+.entry-summary {
+  margin-top: 50px; }
+  @media only screen and (min-width: 64.0625em) {
+    .entry-summary {
+      padding-left: 0px; } }
+  @media only screen and (max-width: 40em) {
+    .entry-summary {
+      margin-top: 25px; } }
+  .entry-summary .row.contain {
+    border-left: 0px solid #000;
+    border-right: 0px solid #000; }
+  .entry-summary h1.product_title {
+    margin: 0px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #888888;
+    border-bottom: 4px solid #888888; }
+  .entry-summary .row.excerpt {
+    padding-top: 16px;
+    padding-bottom: 16px; }
+  .entry-summary .border-b {
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.625rem; }
+  .entry-summary button.single_add_to_cart_button.button.alt {
+    transition: color 200ms ease, border 200ms ease;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #888888;
+    border-top: 4px solid #888888;
+    border-bottom: 4px solid #888888;
+    font-weight: 800; }
+    .entry-summary button.single_add_to_cart_button.button.alt:hover {
+      border-top: 4px solid #000000;
+      border-bottom: 4px solid #000000;
+      color: #000000; }
+
+.woocommerce-cart img.attachment-shop_thumbnail.wp-post-image {
+  height: 150px;
+  width: auto; }
+.woocommerce-cart td.product-remove a.remove {
+  font-size: 2rem; }
 
 .woocommerce span.onsale {
   padding: 0px; }
@@ -8661,6 +8727,9 @@ ul.products {
 @media only screen and (max-width: 51.25em) {
   .top-bar {
     display: none; } }
+.sub-menu.dropdown li.active {
+  background-color: #FFFFFF; }
+
 .top-bar-container {
   position: fixed;
   z-index: 999; }
@@ -8679,10 +8748,34 @@ ul.products {
     transform: translateY(45%); }
 
 .topbar-bg {
-  height: 200px;
+  height: 300px;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/header.jpg); }
+
+.single-product .top-bar-container {
+  position: relative;
+  z-index: 999;
+  margin-bottom: 0px; }
+  .single-product .top-bar-container .top-bar {
+    border-bottom: 1px solid #000;
+    margin-top: 1rem; }
+  .single-product .top-bar-container .logo img {
+    height: 55px;
+    width: auto;
+    padding: 5px; }
+  .single-product .top-bar-container li a {
+    color: #B4823C;
+    text-transform: uppercase; }
+    .single-product .top-bar-container li a:hover {
+      color: #000000 !important; }
+  .single-product .top-bar-container li.divider {
+    border-right: 1px solid #000;
+    height: 30px;
+    transform: translateY(45%); }
+  .single-product .top-bar-container .title-area {
+    margin-right: 1rem; }
 
 @media only screen and (min-width: 40.0625em) {
   footer.row {
@@ -8775,4 +8868,5 @@ footer {
       width: auto; } }
 .topbar-bg img {
   width: 100%;
-  height: auto; }
+  height: auto;
+  visibility: hidden; }

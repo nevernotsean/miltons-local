@@ -34,6 +34,12 @@
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-stacked-blk.svg" alt="">
     </div>
 
+    <div class="row hide-for-medium-up">
+      <div class="small-8 small-centered column">
+        <hr class="white">
+      </div>
+    </div>
+
     <div class="text-center hide-for-medium-up">
       <img class="white" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-stacked.svg" alt="">
     </div>

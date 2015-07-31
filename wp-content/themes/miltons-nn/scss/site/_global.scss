@@ -63,17 +63,16 @@ img.alignright {
 	margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
 }
 
+// Custom helper classes
+
 .row.nomax {
 	max-width: none;
 }
 
-section.container {
-	padding: 50px;
-	@media #{$small-only}{
-	    padding: 25px;
-	}
-}
-
 .inline-list.centered {
 	@include inlineCentered;
+}
+
+hr.white {
+	border-color: $white;
 }
