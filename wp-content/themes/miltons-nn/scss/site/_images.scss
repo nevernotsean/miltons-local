@@ -5,3 +5,23 @@
     visibility: hidden;
   }
 }
+
+.masthead-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+
+.left-image {
+  width: 67%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.left-image img, .masthead-image img {
+  visibility: hidden;
+}

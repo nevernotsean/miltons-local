@@ -9,6 +9,23 @@ section.container {
     section.container {
         padding: 0px;
     }
+    section.waypoint {
+      min-height: 100vh;
+    }
+    .sidebar {
+      min-height: 100%;
+      padding-top: 100px;
+      background-color: indianred;
+      width: 33%;
+      position: absolute;
+      top: 0;
+      right: -100%;
+      z-index: 9;
+      -webkit-transition: all, 1s, cubic;
+      right: 0;
+
+      color: white;
+    }
 }
 
 // Resuable

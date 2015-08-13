@@ -319,7 +319,7 @@ if ( 'post' == $post_type ) {
 	) );
 
 	get_current_screen()->set_help_sidebar(
-			'<p>' . sprintf(__('You can also create posts with the <a href="%s">Press This bookmarklet</a>.'), 'options-writing.php') . '</p>' .
+			'<p>' . sprintf(__('You can also create posts with the <a href="%s">Press This bookmarklet</a>.'), 'tools.php') . '</p>' .
 			'<p><strong>' . __('For more information:') . '</strong></p>' .
 			'<p>' . __('<a href="https://codex.wordpress.org/Posts_Add_New_Screen" target="_blank">Documentation on Writing and Editing Posts</a>') . '</p>' .
 			'<p>' . __('<a href="https://wordpress.org/support/" target="_blank">Support Forums</a>') . '</p>'
@@ -494,7 +494,7 @@ do_action( 'edit_form_top', $post ); ?>
 	$title_placeholder = apply_filters( 'enter_title_here', __( 'Enter title here' ), $post );
 	?>
 	<label class="screen-reader-text" id="title-prompt-text" for="title"><?php echo $title_placeholder; ?></label>
-	<input type="text" name="post_title" size="30" value="<?php echo esc_attr( htmlspecialchars( $post->post_title ) ); ?>" id="title" spellcheck="true" autocomplete="off" />
+	<input type="text" name="post_title" size="30" value="<?php echo esc_attr( $post->post_title ); ?>" id="title" spellcheck="true" autocomplete="off" />
 </div>
 <?php
 /**

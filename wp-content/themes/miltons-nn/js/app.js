@@ -17,7 +17,13 @@ $(document).ready( function(){
 });
 
 $( window ).load( function(){
+  $('body.no-fouc').removeClass('no-fouc');
   $('.gallery').slick({
-    slide: 'img'
+    slide: 'img',
+    arrows: false,
+    // fade: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: 'ease'
   });
 });

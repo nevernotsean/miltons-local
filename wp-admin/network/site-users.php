@@ -161,9 +161,7 @@ if ( isset( $_GET['action'] ) && 'update-site' == $_GET['action'] ) {
 
 add_screen_option( 'per_page' );
 
-$site_url_no_http = preg_replace( '#^http(s)?://#', '', get_blogaddress_by_id( $id ) );
-$title_site_url_linked = sprintf( __( 'Edit Site: %s' ), '<a href="' . get_blogaddress_by_id( $id ) . '">' . $site_url_no_http . '</a>' );
-$title = sprintf( __( 'Edit Site: %s' ), $site_url_no_http );
+$title = sprintf( __( 'Edit Site: %s' ), esc_html( $details->blogname ) );
 
 $parent_file = 'sites.php';
 $submenu_file = 'sites.php';
@@ -186,7 +184,8 @@ var current_site_id = <?php echo $id; ?>;
 
 
 <div class="wrap">
-<h1 id="edit-site"><?php echo $title_site_url_linked; ?></h1>
+<h1 id="edit-site"><?php echo $title; ?></h1>
+<p class="edit-site-actions"><a href="<?php echo esc_url( get_home_url( $id, '/' ) ); ?>"><?php _e( 'Visit' ); ?></a> | <a href="<?php echo esc_url( get_admin_url( $id ) ); ?>"><?php _e( 'Dashboard' ); ?></a></p>
 <h3 class="nav-tab-wrapper">
 <?php
 $tabs = array(
@@ -309,7 +308,7 @@ if ( current_user_can( 'create_users' ) && apply_filters( 'show_network_site_use
 			</select></td>
 		</tr>
 		<tr class="form-field">
-			<td colspan="2"><?php _e( 'Username and password will be mailed to the above email address.' ) ?></td>
+			<td colspan="2"><?php _e( 'A password reset link will be sent to the user via email.' ) ?></td>
 		</tr>
 	</table>
 	<?php wp_nonce_field( 'add-user', '_wpnonce_add-new-user' ) ?>

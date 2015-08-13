@@ -3364,6 +3364,7 @@ function wp_unique_term_slug( $slug, $term ) {
 	}
 
 	// If we didn't get a unique slug, try appending a number to make it unique.
+
 	/**
 	 * Filter whether the proposed unique term slug is bad.
 	 *
@@ -4213,11 +4214,13 @@ function _update_generic_term_count( $terms, $taxonomy ) {
 }
 
 /**
- * Create a new term for a term_taxonomy item that currently shares its term with another term_taxonomy.
+ * Create a new term for a term_taxonomy item that currently shares its term
+ * with another term_taxonomy.
  *
  * @ignore
  * @since 4.2.0
- * @since 4.3.0 Introduced `$record` parameter. `$term_id` and `$term_taxonomy_id` can now accept objects.
+ * @since 4.3.0 Introduced `$record` parameter. Also, `$term_id` and
+ *              `$term_taxonomy_id` can now accept objects.
  *
  * @global wpdb $wpdb
  *
@@ -4390,6 +4393,34 @@ function _wp_check_split_terms_in_menus( $term_id, $new_term_id, $term_taxonomy_
 			update_post_meta( $post_id, '_menu_item_object_id', $new_term_id, $term_id );
 		}
 	}
+}
+
+/**
+ * If the term being split is a nav_menu, change associations.
+ *
+ * @ignore
+ * @since 4.3.0
+ *
+ * @global wpdb $wpdb
+ *
+ * @param int    $term_id          ID of the formerly shared term.
+ * @param int    $new_term_id      ID of the new term created for the $term_taxonomy_id.
+ * @param int    $term_taxonomy_id ID for the term_taxonomy row affected by the split.
+ * @param string $taxonomy         Taxonomy for the split term.
+ */
+function _wp_check_split_nav_menu_terms( $term_id, $new_term_id, $term_taxonomy_id, $taxonomy ) {
+	if ( 'nav_menu' !== $taxonomy ) {
+		return;
+	}
+
+	// Update menu locations.
+	$locations = get_nav_menu_locations();
+	foreach ( $locations as $location => $menu_id ) {
+		if ( $term_id == $menu_id ) {
+			$locations[ $location ] = $new_term_id;
+		}
+	}
+	set_theme_mod( 'nav_menu_locations', $locations );
 }
 
 /**

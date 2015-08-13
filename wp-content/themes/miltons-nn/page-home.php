@@ -10,22 +10,44 @@ get_header(); ?>
 
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
-  <?php for ($i=0; $i < 5 ; $i++) {
+  <?php
+    $masthead = get_field('hero_image');
+    $src = $masthead['url'];
+  ?>
+  <section class="waypoint masthead">
+    <div class="row colapse nomax">
+      <div class="small-12 column">
+        <div class="masthead-image" style="background-image: url(<?php echo $src ?>)">
+          <img src="<?php echo $src ?>" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <?php $row = have_rows('repeater');
+  if ( have_rows('repeater') ) : while ( have_rows('repeater') ) : the_row();
+
+    $title = get_sub_field('title');
+    $subtitle = get_sub_field('sub_header');
+    $image = get_sub_field('image');
+    $img = $image['url'];
+    $content = get_sub_field('content');
     ?>
 
   <section class="waypoint">
     <div class="row collapse nomax">
       <div class="small-12 column">
-        <div class="left-image">
-          <img src="https://placeimg.com/1920/1080/any" alt="">
+        <div class="left-image" style="background-image: url(<?php echo $img  ?>)">
+          <img src="<?php echo $img  ?>" alt="">
         </div>
         <div class="sidebar">
           <div class="row">
             <div class="small-12 column">
-              <h1>Header</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta maiores, maxime deserunt quasi soluta excepturi, iste natus magnam. Beatae non adipisci, doloremque illo. Culpa nam, blanditiis qui ut reiciendis maiores!
-              </p>
+            <?php if( !empty($subtitle) ): ?>
+              <h3 class="subhead"><small><?php echo $subtitle; ?></small></h3>
+            <?php endif; ?>
+              <h1 class="headline"><?php echo $title ?></h1>
+              <p><?php echo $content ?></p>
             </div>
           </div>
         </div>
@@ -33,8 +55,7 @@ get_header(); ?>
     </div>
   </section>
 
-    <?php
-  } ?>
+  <?php endwhile; endif; ?>
 
 
 
@@ -46,33 +67,7 @@ get_header(); ?>
 
 <style>
 
-section {
-  min-height: 100vh;
-}
 
-.left-image {
-  width: 67%;
-  height: 100vh;
-}
-
-.sidebar {
-  min-height: 100%;
-  padding-top: 100px;
-  background-color: indianred;
-  width: 33%;
-  position: absolute;
-  top: 0;
-  right: -100%;
-  z-index: 9;
-  -webkit-transition: all, 1s, cubic;
-  right: 0;
-
-  color: white;
-}
-
-.sidebar h1 {
-  color: white;
-}
 
 </style>
 <?php get_footer(); ?>

@@ -301,8 +301,7 @@ class WP_Upgrader {
 	 * @global WP_Filesystem_Base $wp_filesystem Subclass
 	 *
 	 * @param string $remote_destination The location on the remote filesystem to be cleared
-	 *
-	 * @return bool|WP_Error true upon success, {@see WP_Error} on failure.
+	 * @return bool|WP_Error True upon success, WP_Error on failure.
 	 */
 	public function clear_destination( $remote_destination ) {
 		global $wp_filesystem;
@@ -311,11 +310,12 @@ class WP_Upgrader {
 			return true;
 		}
 
-		// Check all files are writable before attempting to clear the destination
+		// Check all files are writable before attempting to clear the destination.
 		$unwritable_files = array();
 
 		$_files = $wp_filesystem->dirlist( $remote_destination, true, true );
-		// Flatten the resulting array, iterate using each as we append to the array during iteration
+
+		// Flatten the resulting array, iterate using each as we append to the array during iteration.
 		while ( $f = each( $_files ) ) {
 			$file = $f['value'];
 			$name = $f['key'];
@@ -329,10 +329,11 @@ class WP_Upgrader {
 			}
 		}
 
-		// Check writability
+		// Check writability.
 		foreach ( $_files as $filename => $file_details ) {
 			if ( ! $wp_filesystem->is_writable( $remote_destination . $filename ) ) {
-				// Attempt to alter permissions to allow writes and try again
+
+				// Attempt to alter permissions to allow writes and try again.
 				$wp_filesystem->chmod( $remote_destination . $filename, ( 'd' == $file_details['type'] ? FS_CHMOD_DIR : FS_CHMOD_FILE ) );
 				if ( ! $wp_filesystem->is_writable( $remote_destination . $filename ) ) {
 					$unwritable_files[] = $filename;
@@ -1057,11 +1058,14 @@ class Plugin_Upgrader extends WP_Upgrader {
 
 		// Check the folder contains at least 1 valid plugin.
 		$plugins_found = false;
-		foreach ( glob( $working_directory . '*.php' ) as $file ) {
-			$info = get_plugin_data($file, false, false);
-			if ( !empty( $info['Name'] ) ) {
-				$plugins_found = true;
-				break;
+		$files = glob( $working_directory . '*.php' );
+		if ( $files ) {
+			foreach ( $files as $file ) {
+				$info = get_plugin_data( $file, false, false );
+				if ( ! empty( $info['Name'] ) ) {
+					$plugins_found = true;
+					break;
+				}
 			}
 		}
 
@@ -1896,7 +1900,7 @@ class Language_Pack_Upgrader extends WP_Upgrader {
 		// Remove any existing upgrade filters from the plugin/theme upgraders #WP29425 & #WP29230
 		remove_all_filters( 'upgrader_pre_install' );
 		remove_all_filters( 'upgrader_clear_destination' );
-		remove_all_filterS( 'upgrader_post_install' );
+		remove_all_filters( 'upgrader_post_install' );
 		remove_all_filters( 'upgrader_source_selection' );
 
 		add_filter( 'upgrader_source_selection', array( $this, 'check_package' ), 10, 2 );

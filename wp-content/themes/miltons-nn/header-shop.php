@@ -27,7 +27,7 @@
 
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class('no-fouc'); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<div class="off-canvas-wrap" data-offcanvas>

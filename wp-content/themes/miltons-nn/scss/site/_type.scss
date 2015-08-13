@@ -1,0 +1,26 @@
+// Global Resets
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+// Home Type
+
+.home {
+  .sidebar h1 {
+    color: white;
+  }
+
+  h1.headline {
+    border-bottom: 2px solid #fff;
+  }
+
+  h3.subhead {
+    line-height: 0;
+    small{
+      color: #fff;
+      font-weight: 300;
+    }
+  }
+}
