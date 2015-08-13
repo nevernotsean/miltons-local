@@ -1,0 +1,1 @@
+triggerSidebar=function(i){},$(document).ready(function(){svgeezy.init(!1,"png"),$("section.waypoint").waypoint(function(){triggerSidebar(this),console.log("Triggered")})}),$(window).load(function(){$(".gallery").slick({slide:"img"})});

@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="row">
 		<div class="small-12 medium-6 medium-push-6 column gallery">
-			<?php woocommerce_show_product_images(); ?>
+			<?php do_action( 'woocommerce_spp_gallery'); ?>
 		</div>
 
 		<div class="small-12 medium-6 medium-pull-6 column summary entry-summary">
@@ -71,6 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="row collapse addcart">
 				<div class="small-12 column">
 					<?php woocommerce_template_single_add_to_cart(); ?>
+					<?php woocommerce_show_messages(); ?>
 				</div>
 			</div>
 
