@@ -8630,18 +8630,34 @@ section.container {
   padding: 0px; }
 .home section.waypoint {
   min-height: 100vh; }
+  @media only screen and (max-width: 40em) {
+    .home section.waypoint {
+      min-height: inherit; } }
 .home .sidebar {
   min-height: 100%;
-  padding-top: 100px;
-  background-color: indianred;
-  width: 33%;
+  padding: 100px 0px;
+  width: 40%;
   position: absolute;
-  top: 0;
-  right: -100%;
   z-index: 9;
-  -webkit-transition: all, 1s, cubic;
+  top: 0;
   right: 0;
-  color: white; }
+  color: white;
+  background-color: #444745;
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.1); }
+  @media only screen and (max-width: 40em) {
+    .home .sidebar {
+      position: relative;
+      width: 100%;
+      padding: 50px 0px; } }
+.home .left-image {
+  width: 60%;
+  height: 100vh;
+  box-shadow: inset -5px 0px 15px 0px rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 40em) {
+    .home .left-image {
+      height: 50vh;
+      position: relative;
+      width: 100%; } }
 
 .row.contain {
   width: 100%;
@@ -8841,14 +8857,14 @@ ul.products {
     height: 30px;
     transform: translateY(45%); }
 
-.page:not(.home) .topbar-bg {
+body:not(.home) .topbar-bg {
   height: 300px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url(../assets/img/header.jpg); }
 
-.page.home .topbar-bg {
+body.home .topbar-bg {
   position: fixed; }
 
 .single-product .top-bar-container {
@@ -8975,8 +8991,6 @@ footer {
   height: 100vh; }
 
 .left-image {
-  width: 67%;
-  height: 100vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
@@ -8997,3 +9011,12 @@ h1, h2, h3 {
   .home h3.subhead small {
     color: #fff;
     font-weight: 300; }
+
+.home section.waypoint:nth-child(3n+1) .sidebar {
+  background-color: #444745; }
+.home section.waypoint:nth-child(3n+2) .sidebar {
+  background-color: #7A8157; }
+.home section.waypoint:nth-child(3n+3) .sidebar {
+  background-color: #FD8274; }
+.home section.waypoint:nth-child(3n+4) .sidebar {
+  background-color: #BFBCB1; }

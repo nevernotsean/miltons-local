@@ -48,7 +48,7 @@
 }
 
 // TB background
-.page:not(.home) {
+body:not(.home) {
   .topbar-bg {
     height: 300px;
     background-size: cover;
@@ -59,7 +59,7 @@
   }
 }
 
-.page.home {
+body.home {
   .topbar-bg {
     position: fixed;
   }

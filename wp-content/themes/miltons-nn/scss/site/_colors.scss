@@ -1,0 +1,16 @@
+.home {
+    section.waypoint {
+        &:nth-child(3n+1) .sidebar {
+            background-color: $slate;
+        }
+        &:nth-child(3n+2) .sidebar {
+            background-color: $forestgreen;
+        }
+        &:nth-child(3n+3) .sidebar {
+            background-color: $meat;
+        }
+        &:nth-child(3n+4) .sidebar {
+            background-color: $dusty;
+        }
+    }
+}

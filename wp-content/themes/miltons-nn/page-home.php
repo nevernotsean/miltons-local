@@ -15,7 +15,7 @@ get_header(); ?>
     $src = $masthead['url'];
   ?>
   <section class="waypoint masthead">
-    <div class="row colapse nomax">
+    <div class="row collapse nomax">
       <div class="small-12 column">
         <div class="masthead-image" style="background-image: url(<?php echo $src ?>)">
           <img src="<?php echo $src ?>" alt="">
