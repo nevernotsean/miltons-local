@@ -22,10 +22,10 @@
         <li><a href=""><i class="fa fa-twitter"></i></a></li>
       </ul>
       <ul class="inline-list left pages">
-        <li><a href=""><small>PRESS</small></a></li>
-        <li><a href=""><small>CLIENTS</small></a></li>
-        <li><a href=""><small>CONTACT</small></a></li>
-        <li><a href=""><small>SITEBY</small></a></li>
+        <li><a href="<?php echo site_url() ?>/press"><small>PRESS</small></a></li>
+        <li><a href="<?php echo site_url() ?>/wholesale"><small>CLIENTS</small></a></li>
+        <li><a href="<?php echo site_url() ?>/contact"><small>CONTACT</small></a></li>
+        <li><a href="http://www.never-not.com"><small>SITEBY</small></a></li>
         <li class="copy"><a href=""><small>&copy 2015 MILTON'S LOCAL</small></a></li>
       </ul>
     </div>

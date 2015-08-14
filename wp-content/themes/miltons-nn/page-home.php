@@ -11,8 +11,9 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
   <?php
+    $n = 0;
     $masthead = get_field('hero_image');
-    $src = $masthead['url'];
+    $src = $masthead['sizes']['large'];
   ?>
   <section class="waypoint masthead">
     <div class="row collapse nomax">
@@ -32,9 +33,10 @@ get_header(); ?>
     $image = get_sub_field('image');
     $img = $image['url'];
     $content = get_sub_field('content');
+    $n++
     ?>
 
-  <section class="waypoint">
+  <section class="waypoint" id="wypt-<?php echo $n; ?>">
     <div class="row collapse nomax">
       <div class="small-12 column">
         <div class="left-image" style="background-image: url(<?php echo $img  ?>)">
