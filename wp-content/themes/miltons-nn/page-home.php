@@ -15,15 +15,18 @@ get_header(); ?>
     $masthead = get_field('hero_image');
     $src = $masthead['sizes']['large'];
   ?>
-  <section class="waypoint masthead">
-    <div class="row collapse nomax">
-      <div class="small-12 column">
-        <div class="masthead-image" style="background-image: url(<?php echo $src ?>)">
-          <img src="<?php echo $src ?>" alt="">
+  <panel>
+    <section class="masthead active">
+      <div class="row collapse nomax">
+        <div class="small-12 column">
+          <div class="masthead-image" style="background-image: url(<?php echo $src ?>)">
+            <img src="<?php echo $src ?>" alt="">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <div class="placeholder"></div>
+  </panel>
 
   <?php $row = have_rows('repeater');
   if ( have_rows('repeater') ) : while ( have_rows('repeater') ) : the_row();
@@ -36,26 +39,29 @@ get_header(); ?>
     $n++
     ?>
 
-  <section class="waypoint" id="wypt-<?php echo $n; ?>">
-    <div class="row collapse nomax">
-      <div class="small-12 column">
-        <div class="left-image" style="background-image: url(<?php echo $img  ?>)">
-          <img src="<?php echo $img  ?>" alt="">
-        </div>
-        <div class="sidebar">
-          <div class="row">
-            <div class="small-12 column">
-            <?php if( !empty($subtitle) ): ?>
-              <h3 class="subhead"><small><?php echo $subtitle; ?></small></h3>
-            <?php endif; ?>
-              <h1 class="headline"><?php echo $title ?></h1>
-              <p><?php echo $content ?></p>
+  <panel>
+    <section class="waypoint" id="wypt-<?php echo $n; ?>">
+      <div class="row collapse nomax">
+        <div class="small-12 column">
+          <div class="left-image" style="background-image: url(<?php echo $img  ?>)">
+            <img src="<?php echo $img  ?>" alt="">
+          </div>
+          <div class="sidebar">
+            <div class="row">
+              <div class="small-12 column">
+              <?php if( !empty($subtitle) ): ?>
+                <h3 class="subhead"><small><?php echo $subtitle; ?></small></h3>
+              <?php endif; ?>
+                <h1 class="headline"><?php echo $title ?></h1>
+                <p><?php echo $content ?></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <div class="placeholder"></div>
+  </panel>
 
   <?php endwhile; endif; ?>
 

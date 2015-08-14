@@ -1,8 +1,15 @@
 
 // Home triggers
 
-triggerSidebar = function(el){
+winh = $(window).height();
+$('.placeholder').css('height',winh);
+
+triggerSidebar = function($el){
   TweenMax.to(el, 3, {right: "100px"});
+  console.log(el);
+};
+
+triggerFixed = function(el){
   console.log(el);
 };
 
@@ -13,16 +20,18 @@ $(document).ready( function(){
   hasSections = $('section.waypoint').length;
 
   if (hasSections) {
+    var $sidebar = $('#sidebar');
 
-    $('section.waypoint').each( function(){
+    $('panel').each( function(){
       // $(this).find('.sidebar').css('right','100%');
     });
 
-    $('section.waypoint').waypoint( function(direction){
-      if (direction === 'down') {
-        el = $(this).find('.sidebar');
-        triggerSidebar(el);
-      }
+    $('panel').waypoint( function(direction){
+      // if (direction === 'down') {
+        section = $(this)[0].element;
+        $(section).find('section.waypoint').toggleClass('active');
+        // triggerFixed($section);
+      // }
     });
 
   }
