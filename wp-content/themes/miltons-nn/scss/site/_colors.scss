@@ -1,16 +1,36 @@
 .home, .page-template-page-wholesale-php {
-    section.waypoint {
-        &:nth-child(3n+1) .sidebar {
-            background-color: $slate;
+
+        @media #{$small-only}{
+
+            section.waypoint {
+                &:nth-child(3n+1) .sidebar {
+                    background-color: $slate;
+                }
+                &:nth-child(3n+2) .sidebar {
+                    background-color: $forestgreen;
+                }
+                &:nth-child(3n+3) .sidebar {
+                    background-color: $meat;
+                }
+                &:nth-child(3n+4) .sidebar {
+                    background-color: $dusty;
+                }
+            }
+
         }
-        &:nth-child(3n+2) .sidebar {
-            background-color: $forestgreen;
+
+        #sidebar-bg {
+            &.color1 {
+                background-color: $slate;
+            }
+            &.color2 {
+                background-color: $forestgreen;
+            }
+            &.color3 {
+                background-color: $meat;
+            }
+            &.color4 {
+                background-color: $dusty;
+            }
         }
-        &:nth-child(3n+3) .sidebar {
-            background-color: $meat;
-        }
-        &:nth-child(3n+4) .sidebar {
-            background-color: $dusty;
-        }
-    }
 }
