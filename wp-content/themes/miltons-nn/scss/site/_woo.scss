@@ -23,3 +23,23 @@ ul.products {
 .gallery {
   padding: 20px 0px;
 }
+
+// Cart
+
+.shop_table.cart {
+  @include grid-column(12);
+}
+
+tr.cart_item td.product-thumbnail {
+    display: none;
+}
+
+table.shop_table.cart th.product-thumbnail {
+    display: none;
+}
+
+@media #{$small-only}{
+    input[type="submit"] {
+      width: 100%;
+    }
+}

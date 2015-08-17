@@ -12,7 +12,7 @@
 ?>
 
   </section>
-  <footer>
+  <footer id="site_footer">
   	<?php do_action( 'foundationpress_before_footer' ); ?>
 
     <div class="row collapse nomax">
@@ -20,9 +20,9 @@
         <column>
           <div class="left">
             <ul class="inline-list left social">
-              <li><a href=""><i class="fa fa-facebook"></i></a></li>
-              <li><a href=""><i class="fa fa-instagram"></i></a></li>
-              <li><a href=""><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://facebook.com/miltonslocal"><i class="fa fa-facebook"></i></a></li>
+              <!-- <li><a href=""><i class="fa fa-instagram"></i></a></li> -->
+              <li><a href="https://twitter.com/miltonslocal"><i class="fa fa-twitter"></i></a></li>
             </ul>
             <ul class="inline-list left pages">
               <li><a href="<?php echo site_url() ?>/press"><small>PRESS</small></a></li>
@@ -43,7 +43,7 @@
             </div>
           </div>
 
-          <div class="text-center hide-for-medium-up">
+          <div class="small-12 column text-center hide-for-medium-up">
             <img class="white" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-stacked.svg" alt="">
           </div>
         </column>

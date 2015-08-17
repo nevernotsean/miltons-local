@@ -18,7 +18,8 @@ get_header(); ?>
     $title = get_sub_field('title');
     $subtitle = get_sub_field('sub_header');
     $image = get_sub_field('image');
-    $img = $image['url'];
+    $size = 'large';
+    if ( !empty($image) ) { $img = $image['sizes'][$size]; } else { $img = ''; };
     $content = get_sub_field('content');
     ?>
 

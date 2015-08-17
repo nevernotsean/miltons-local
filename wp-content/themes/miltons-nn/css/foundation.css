@@ -8590,6 +8590,13 @@ hr.white {
 .slick-arrow.slick-hidden {
   display: none; }
 
+i.fa.fa-angle-down.scrolldown {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  color: #FFFFFF;
+  font-size: 3rem; }
+
 section.container {
   padding: 50px 0px; }
   @media only screen and (max-width: 40em) {
@@ -8597,8 +8604,12 @@ section.container {
       padding: 25px 0px; } }
 
 section.masthead {
-  position: fixed;
-  z-index: -1; }
+  top: 0;
+  position: relative; }
+  @media only screen and (min-width: 40.0625em) {
+    section.masthead {
+      position: fixed;
+      z-index: -1; } }
 
 div.placeholder {
   min-height: 100vh;
@@ -8606,8 +8617,10 @@ div.placeholder {
   width: 0px;
   display: block;
   background-color: transparent;
-  position: fixed;
   top: 0px; }
+  @media only screen and (max-width: 40em) {
+    div.placeholder {
+      display: none; } }
 
 section.active {
   position: fixed;
@@ -8616,16 +8629,16 @@ section.active {
   section.active + div.placeholder {
     position: relative; }
 
-.home section.container, .page-template-page-wholesale-php section.container {
+.home section.container, .page-template-page-wholesale-php section.container, .page-template-page-onepage-php section.container {
   padding: 0px; }
-.home section.waypoint, .home section.masthead, .page-template-page-wholesale-php section.waypoint, .page-template-page-wholesale-php section.masthead {
+.home section.waypoint, .home section.masthead, .page-template-page-wholesale-php section.waypoint, .page-template-page-wholesale-php section.masthead, .page-template-page-onepage-php section.waypoint, .page-template-page-onepage-php section.masthead {
   height: 100vh;
   width: 100%;
   z-index: -1; }
   @media only screen and (max-width: 40em) {
-    .home section.waypoint, .home section.masthead, .page-template-page-wholesale-php section.waypoint, .page-template-page-wholesale-php section.masthead {
+    .home section.waypoint, .home section.masthead, .page-template-page-wholesale-php section.waypoint, .page-template-page-wholesale-php section.masthead, .page-template-page-onepage-php section.waypoint, .page-template-page-onepage-php section.masthead {
       min-height: inherit; } }
-.home .sidebar, .page-template-page-wholesale-php .sidebar {
+.home .sidebar, .page-template-page-wholesale-php .sidebar, .page-template-page-onepage-php .sidebar {
   min-height: 100%;
   min-height: 100vh;
   padding: 100px 20px;
@@ -8636,23 +8649,23 @@ section.active {
   color: white;
   background-color: transparent; }
   @media only screen and (max-width: 40em) {
-    .home .sidebar, .page-template-page-wholesale-php .sidebar {
+    .home .sidebar, .page-template-page-wholesale-php .sidebar, .page-template-page-onepage-php .sidebar {
       position: relative;
       width: 100%;
       padding: 50px 0px;
       max-height: initial; } }
-.home .left-image, .page-template-page-wholesale-php .left-image {
+.home .left-image, .page-template-page-wholesale-php .left-image, .page-template-page-onepage-php .left-image {
   width: 60%;
   height: 100%;
   position: fixed;
   top: 0px;
   box-shadow: inset -5px 0px 15px 0px rgba(0, 0, 0, 0.2); }
   @media only screen and (max-width: 40em) {
-    .home .left-image, .page-template-page-wholesale-php .left-image {
+    .home .left-image, .page-template-page-wholesale-php .left-image, .page-template-page-onepage-php .left-image {
       height: 50vh;
       position: relative;
       width: 100%; } }
-.home #sidebar-bg, .page-template-page-wholesale-php #sidebar-bg {
+.home #sidebar-bg, .page-template-page-wholesale-php #sidebar-bg, .page-template-page-onepage-php #sidebar-bg {
   background-color: #444745;
   width: 40%;
   right: 0;
@@ -8662,6 +8675,9 @@ section.active {
   position: fixed;
   z-index: 0; }
 
+@media only screen and (max-width: 40em) {
+  .home section#wypt-1 .left-image {
+    display: none; } }
 .row.contain {
   width: 100%;
   margin: auto;
@@ -8837,9 +8853,21 @@ ul.products {
 .gallery {
   padding: 20px 0px; }
 
-.top-bar-container, .tab-bar {
-  margin-bottom: 2rem; }
+.shop_table.cart {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left; }
 
+tr.cart_item td.product-thumbnail {
+  display: none; }
+
+table.shop_table.cart th.product-thumbnail {
+  display: none; }
+
+@media only screen and (max-width: 40em) {
+  input[type="submit"] {
+    width: 100%; } }
 @media only screen and (min-width: 51.3125em) {
   .tab-bar {
     display: none; } }
@@ -8873,7 +8901,7 @@ ul.products {
         -ms-transform: translateY(45%);
             transform: translateY(45%); }
 
-body.home .topbar-bg, body.page-template-page-wholesale-php .topbar-bg {
+body.home .topbar-bg, body.page-template-page-wholesale-php .topbar-bg, body.page-template-page-onepage-php .topbar-bg {
   position: fixed; }
 
 .single-product .top-bar-container {
@@ -8905,7 +8933,7 @@ body.home .topbar-bg, body.page-template-page-wholesale-php .topbar-bg {
 .top-bar-container.black .title-area {
   margin-right: 1rem; }
 
-footer {
+footer#site_footer {
   width: 100%;
   position: relative;
   padding-left: 35px;
@@ -8914,89 +8942,90 @@ footer {
   padding-top: 1rem;
   height: 5rem;
   background-color: #fff; }
-  footer ul li.divider {
+  footer#site_footer ul li.divider {
     border-right: 1px solid #000; }
-  footer .left ul.pages a, footer .left ul.social a {
+  footer#site_footer .left ul.pages a, footer#site_footer .left ul.social a {
     color: #000000; }
-    footer .left ul.pages a:hover, footer .left ul.social a:hover {
+    footer#site_footer .left ul.pages a:hover, footer#site_footer .left ul.social a:hover {
       color: #B4823C; }
-  footer .left li.copy a {
+  footer#site_footer .left li.copy a {
     color: #000000;
     pointer-events: none; }
-  footer .left li {
+  footer#site_footer .left li {
     margin-left: 0px;
     border-left: 1px solid #000000;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem; }
-  footer .left.pages li:last-child {
+  footer#site_footer .left.pages li:last-child {
     border-right: 1px solid #000000; }
-  footer .right img {
+  footer#site_footer .right img {
     height: 55px;
     padding: 10px;
     width: auto;
     color: black; }
 
 @media only screen and (max-width: 40em) {
-  footer {
+  footer#site_footer {
     background-color: #222222;
     border-top: 1px solid #FFFFFF;
     padding: 40px 0px;
     height: initial; }
-    footer ul li.divider {
+    footer#site_footer ul li.divider {
       border-right: 1px solid #FFFFFF; }
-    footer .left {
+    footer#site_footer .left {
       float: none !important; }
-    footer ul.left.social {
+    footer#site_footer ul.left.social {
       width: 100%;
       text-align: center;
       float: none !important; }
-      footer ul.left.social li {
+      footer#site_footer ul.left.social li {
         float: none;
         display: inline-block; }
-      footer ul.left.social a {
+      footer#site_footer ul.left.social a {
         color: #FFFFFF; }
-        footer ul.left.social a:hover {
+        footer#site_footer ul.left.social a:hover {
           color: #FFFFFF; }
-      footer ul.left.social li {
+      footer#site_footer ul.left.social li {
         border-left: 1px solid #FFFFFF; }
-      footer ul.left.social li:last-child {
+      footer#site_footer ul.left.social li:last-child {
         border-right: 1px solid #FFFFFF; }
-    footer .left.pages {
+    footer#site_footer .left.pages {
       display: block;
       padding: 0;
       margin: 0 -0.625rem;
       text-align: center;
-      width: 100%; }
-      footer .left.pages:before, footer .left.pages:after {
+      width: 100%;
+      margin: 0px !important; }
+      footer#site_footer .left.pages:before, footer#site_footer .left.pages:after {
         content: " ";
         display: table; }
-      footer .left.pages:after {
+      footer#site_footer .left.pages:after {
         clear: both; }
-      footer .left.pages > li {
+      footer#site_footer .left.pages > li {
         display: block;
         float: left;
         height: auto;
         padding: 0 0.625rem 1.25rem; }
-      footer .left.pages > li {
+      footer#site_footer .left.pages > li {
         list-style: none;
         padding: 0 0.625rem 1.25rem;
         width: 100%; }
-        footer .left.pages > li:nth-of-type(1n) {
+        footer#site_footer .left.pages > li:nth-of-type(1n) {
           clear: none; }
-        footer .left.pages > li:nth-of-type(1n+1) {
+        footer#site_footer .left.pages > li:nth-of-type(1n+1) {
           clear: both; }
-      footer .left.pages li {
+      footer#site_footer .left.pages li {
         border: 0px solid #000; }
-        footer .left.pages li:last-child {
+        footer#site_footer .left.pages li:last-child {
           border: 0px solid #000; }
-        footer .left.pages li a {
+        footer#site_footer .left.pages li a {
           color: #FFFFFF; }
-          footer .left.pages li a:hover {
+          footer#site_footer .left.pages li a:hover {
             color: #FFFFFF; }
-        footer .left.pages li.copy a {
+        footer#site_footer .left.pages li.copy a {
           color: #FFFFFF;
           pointer-events: none; }
-    footer img.white {
+    footer#site_footer img.white {
       height: 70px;
       padding: 10px;
       width: auto; } }
@@ -9017,13 +9046,9 @@ svg#Layer_1 g#miltonsLogo path {
     width: 350px;
     height: auto;
     fill: #b83b22; }
-
-i.fa.fa-angle-down.scrolldown {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  color: #B4823C;
-  font-size: 3rem; }
+    @media only screen and (max-width: 40em) {
+      .introLogo .logo {
+        width: 200px; } }
 
 body > svg#Layer_1 {
   display: none; }
@@ -9035,7 +9060,7 @@ body .topbar-bg {
   background-repeat: no-repeat;
   background-image: url(../assets/img/header.jpg); }
 
-.home .topbar-bg, .page-template-page-wholesale-php .topbar-bg {
+.home .topbar-bg, .page-template-page-wholesale-php .topbar-bg, .page-template-page-onepage-php .topbar-bg {
   display: none;
   background-image: none; }
 
@@ -9057,34 +9082,34 @@ h1, h2, h3 {
   text-transform: uppercase;
   font-weight: bold; }
 
-.home .sidebar h1, .home .sidebar h2, .home .sidebar h3, .home .sidebar h4, .home .sidebar h5, .home .sidebar h6, .home .sidebar p, .home .sidebar span, .page-template-page-wholesale-php .sidebar h1, .page-template-page-wholesale-php .sidebar h2, .page-template-page-wholesale-php .sidebar h3, .page-template-page-wholesale-php .sidebar h4, .page-template-page-wholesale-php .sidebar h5, .page-template-page-wholesale-php .sidebar h6, .page-template-page-wholesale-php .sidebar p, .page-template-page-wholesale-php .sidebar span {
+.home .sidebar h1, .home .sidebar h2, .home .sidebar h3, .home .sidebar h4, .home .sidebar h5, .home .sidebar h6, .home .sidebar p, .home .sidebar span, .page-template-page-wholesale-php .sidebar h1, .page-template-page-wholesale-php .sidebar h2, .page-template-page-wholesale-php .sidebar h3, .page-template-page-wholesale-php .sidebar h4, .page-template-page-wholesale-php .sidebar h5, .page-template-page-wholesale-php .sidebar h6, .page-template-page-wholesale-php .sidebar p, .page-template-page-wholesale-php .sidebar span, .page-template-page-onepage-php .sidebar h1, .page-template-page-onepage-php .sidebar h2, .page-template-page-onepage-php .sidebar h3, .page-template-page-onepage-php .sidebar h4, .page-template-page-onepage-php .sidebar h5, .page-template-page-onepage-php .sidebar h6, .page-template-page-onepage-php .sidebar p, .page-template-page-onepage-php .sidebar span {
   color: #fff; }
-.home h1.headline, .page-template-page-wholesale-php h1.headline {
+.home h1.headline, .page-template-page-wholesale-php h1.headline, .page-template-page-onepage-php h1.headline {
   border-bottom: 2px solid #fff;
   margin-bottom: 1.8rem; }
-.home h3.subhead, .page-template-page-wholesale-php h3.subhead {
+.home h3.subhead, .page-template-page-wholesale-php h3.subhead, .page-template-page-onepage-php h3.subhead {
   line-height: 0;
   margin-bottom: 1rem; }
-  .home h3.subhead small, .page-template-page-wholesale-php h3.subhead small {
+  .home h3.subhead small, .page-template-page-wholesale-php h3.subhead small, .page-template-page-onepage-php h3.subhead small {
     color: #fff;
     font-weight: 300; }
 
-.home, .page-template-page-wholesale-php {
+.home, .page-template-page-wholesale-php, .page-template-page-onepage-php {
   background-color: #7A8157; }
   @media only screen and (max-width: 40em) {
-    .home section.waypoint:nth-child(3n+1) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+1) .sidebar {
+    .home section.waypoint:nth-child(3n+1) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+1) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+1) .sidebar {
       background-color: #444745; }
-    .home section.waypoint:nth-child(3n+2) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+2) .sidebar {
+    .home section.waypoint:nth-child(3n+2) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+2) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+2) .sidebar {
       background-color: #7A8157; }
-    .home section.waypoint:nth-child(3n+3) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+3) .sidebar {
+    .home section.waypoint:nth-child(3n+3) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+3) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+3) .sidebar {
       background-color: #b83b22; }
-    .home section.waypoint:nth-child(3n+4) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+4) .sidebar {
+    .home section.waypoint:nth-child(3n+4) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+4) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+4) .sidebar {
       background-color: #BFBCB1; } }
-  .home #sidebar-bg.color1, .page-template-page-wholesale-php #sidebar-bg.color1 {
+  .home #sidebar-bg.color1, .page-template-page-wholesale-php #sidebar-bg.color1, .page-template-page-onepage-php #sidebar-bg.color1 {
     background-color: #444745; }
-  .home #sidebar-bg.color2, .page-template-page-wholesale-php #sidebar-bg.color2 {
+  .home #sidebar-bg.color2, .page-template-page-wholesale-php #sidebar-bg.color2, .page-template-page-onepage-php #sidebar-bg.color2 {
     background-color: #7A8157; }
-  .home #sidebar-bg.color3, .page-template-page-wholesale-php #sidebar-bg.color3 {
+  .home #sidebar-bg.color3, .page-template-page-wholesale-php #sidebar-bg.color3, .page-template-page-onepage-php #sidebar-bg.color3 {
     background-color: #b83b22; }
-  .home #sidebar-bg.color4, .page-template-page-wholesale-php #sidebar-bg.color4 {
+  .home #sidebar-bg.color4, .page-template-page-wholesale-php #sidebar-bg.color4, .page-template-page-onepage-php #sidebar-bg.color4 {
     background-color: #BFBCB1; }

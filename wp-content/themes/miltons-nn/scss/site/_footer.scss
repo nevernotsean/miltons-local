@@ -1,11 +1,11 @@
 // Add some whitespace above the footer for medium-up screens
 @media #{$medium-up} {
-    footer {
+    footer#site_footer {
         // margin-top: rem-calc(60);
     }
 }
 
-footer {
+footer#site_footer {
     width: 100%;
     position: relative;
     padding-left: 35px;
@@ -57,7 +57,7 @@ footer {
 // mobile footer
 
 @media #{$small-only} {
-    footer {
+    footer#site_footer {
         background-color: $jet;
         border-top: 1px solid $white;
         padding: 40px 0px;
@@ -98,6 +98,7 @@ footer {
             @include block-grid(1);
             text-align: center;
             width: 100%;
+            margin: 0px !important;
             li {
                 border: 0px solid #000;
                 &:last-child {

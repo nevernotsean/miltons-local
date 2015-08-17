@@ -1,23 +1,26 @@
 
 // Home triggers
 
-var winh, winw, isHome, isShop;
+var winh, winw, isHome, isShop, isSmall;
 
 winh = $(window).height();
 winw = $(window).width();
 isHome = $('body').hasClass('home');
 isShop = $('body').hasClass('woocommerce');
+isSmall = Foundation.utils.is_small_only();
 
 introAnim = function(){
-
-
+  // tl = new TimelineMax();
+  // tl.from('.introLogo', 1, {opacity: "0", delay: 1})
+  // .from('.scrolldown', 0.5, {opacity: "0"})
+  // .to('.scrolldown', {y: "10"});
 };
 
 setPanelsTriggers = function(){
 
   var hasSections = $('section.waypoint').length;
 
-  if (hasSections) {
+  if (hasSections && !isSmall) {
 
     var $masthead = $('.masthead-image'),
         $sidebar = $('#sidebar-bg'),
@@ -26,7 +29,7 @@ setPanelsTriggers = function(){
         $firstSidebar = $firstPanel.find('.sidebar');
 
     expandSidebar = function(){
-      console.log('PING');
+      // console.log('PING');
 
       TweenMax.to('#sidebar-bg', 0.5, {
         ease: Quart.easeOut,
@@ -51,7 +54,7 @@ setPanelsTriggers = function(){
     },
 
     closeSidebar = function(){
-      console.log('PING');
+      // console.log('PING');
       TweenMax.to('#sidebar-bg', 0.5, {
         ease: Quart.easeIn,
         width: "0%"
@@ -59,7 +62,7 @@ setPanelsTriggers = function(){
 
       TweenMax.to('.top-bar-container', 0.5, { yPercent: "-100%" });
 
-      TweenMax.to('.introLogo', 0.8, { left: "50%", ease: Quart.easeIn});
+      TweenMax.to('.introLogo', 0.8, { left: "50%", ease: Quart.easeOut});
 
       TweenMax.to('.scrolldown', 0.5, { opacity: "1" });
 
@@ -128,7 +131,7 @@ setPanelsTriggers = function(){
 
 // Shop Triggers
 
-if (isShop) {
+if (isShop && !isSmall) {
   $('section.container').waypoint( function(direction){
     if (direction == "down"){
       console.log('PING');
@@ -151,25 +154,33 @@ $(document).ready( function(){
   // SVG 4 errybody
   svg4everybody();
 
-  // Reset positons
 
-  TweenMax.set('.left-image', {
-    // yPercent: "100%",
-    opacity: 0
-  });
 
-  if (!window.location.hash.length) {
-    $(window).scrollTop(0);
-  }
+  // Desktop Animations - Get Ready
 
-  if (isHome ) {
-    TweenMax.set('.placeholder', {height: winh });
+  if (!isSmall) {
+     // Reset positons
+    TweenMax.set('.left-image', {
+      // yPercent: "100%",
+      opacity: 0
+    });
+
+    if (!window.location.hash.length) {
+      $(window).scrollTop(0);
+    }
+
+    if (isHome) {
+      TweenMax.set('.placeholder', {height: winh });
+      TweenMax.set('.introLogo, .scrolldown', { xPercent: '-50%', yPercent: '-50%'});
+      TweenMax.set('.top-bar-container', { yPercent: '-100%'});
+    }
+
+    if (isHome && !window.location.hash.length) {
+      TweenMax.set('#sidebar-bg', { width: "0" });
+    }
+  } else if ( isSmall ) {
+    $('#sidebar-bg').css('width', '0');
     TweenMax.set('.introLogo, .scrolldown', { xPercent: '-50%', yPercent: '-50%'});
-    TweenMax.set('.top-bar-container', { yPercent: '-100%'});
-  }
-
-  if (isHome && !window.location.hash.length) {
-    TweenMax.set('#sidebar-bg', { width: "0" });
   }
 
 });

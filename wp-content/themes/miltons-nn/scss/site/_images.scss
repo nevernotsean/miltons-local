@@ -23,15 +23,11 @@ svg#Layer_1 {
       width: 350px;
       height: auto;
       fill: #b83b22;
-    }
-}
 
-i.fa.fa-angle-down.scrolldown {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    color: $gold;
-    font-size: 3rem;
+      @media #{$small-only}{
+          width: 200px;
+      }
+    }
 }
 
 body > svg#Layer_1 { display: none; }
@@ -48,7 +44,7 @@ body {
   }
 }
 
-.home, .page-template-page-wholesale-php {
+.home, .page-template-page-wholesale-php, .page-template-page-onepage-php {
   .topbar-bg {
     display: none;
     background-image: none;

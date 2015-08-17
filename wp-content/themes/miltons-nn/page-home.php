@@ -14,9 +14,10 @@ get_header(); ?>
   <?php
     $n = 0;
     $masthead = get_field('hero_image');
-    $src = $masthead['sizes']['large'];
+    $size = 'large';
+    $src = $masthead['sizes'][$size];
   ?>
-    <section class="masthead active">
+    <section class="masthead">
       <div class="row collapse nomax">
         <div class="small-12 column">
           <div class="masthead-image" style="background-image: url(<?php echo $src ?>)">
@@ -40,7 +41,8 @@ get_header(); ?>
     $title = get_sub_field('title');
     $subtitle = get_sub_field('sub_header');
     $image = get_sub_field('image');
-    $img = $image['sizes']['large'];
+    $size = 'large';
+    if ( !empty($image) ) { $img = $image['sizes'][$size]; } else { $img = ''; };
     $content = get_sub_field('content');
     $n++
     ?>
