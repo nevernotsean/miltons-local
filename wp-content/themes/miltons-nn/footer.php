@@ -15,7 +15,7 @@
   <footer>
   	<?php do_action( 'foundationpress_before_footer' ); ?>
 
-    <div class="row collapse">
+    <div class="row collapse nomax">
       <div class="small-12">
         <column>
           <div class="left">

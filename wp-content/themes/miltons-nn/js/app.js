@@ -1,15 +1,15 @@
 
 // Home triggers
 
-var winh, winw, isHome;
+var winh, winw, isHome, isShop;
 
 winh = $(window).height();
 winw = $(window).width();
 isHome = $('body').hasClass('home');
+isShop = $('body').hasClass('woocommerce');
 
 introAnim = function(){
 
-console.log(isHome);
 
 };
 
@@ -33,11 +33,21 @@ setPanelsTriggers = function(){
         width: "40%"
       });
 
-      TweenMax.from($firstSidebar, 1, {
-        delay: 0.5,
-        opacity: 0,
-        ease: Linear.none
-      });
+      if (isHome){
+        TweenMax.from($firstSidebar, 1, {
+          delay: 0.5,
+          opacity: 0,
+          ease: Linear.none
+        });
+      }
+
+      TweenMax.to('.top-bar-container', 0.5, { yPercent: "0" });
+
+      TweenMax.to('.introLogo', 1, { left: "30%", ease: Quart.easeOut});
+
+      TweenMax.to('.scrolldown', 0.5, { opacity: "0" });
+
+      TweenMax.to($masthead, 0.8, {opacity: "0"});
     },
 
     closeSidebar = function(){
@@ -46,6 +56,14 @@ setPanelsTriggers = function(){
         ease: Quart.easeIn,
         width: "0%"
       });
+
+      TweenMax.to('.top-bar-container', 0.5, { yPercent: "-100%" });
+
+      TweenMax.to('.introLogo', 0.8, { left: "50%", ease: Quart.easeIn});
+
+      TweenMax.to('.scrolldown', 0.5, { opacity: "1" });
+
+      TweenMax.to($masthead, 0.8, {opacity: "1"});
     };
 
     var colors = [
@@ -79,10 +97,12 @@ setPanelsTriggers = function(){
 
           TweenMax.fromTo(image, 0.8,
           {
-            yPercent: "100%",
+            // yPercent: "100%",
+            opacity: "0",
             ease: Quart.easeIn
           }, {
-            yPercent: "0%"
+            // yPercent: "0%"
+            opacity: "1",
           });
 
         }
@@ -91,10 +111,12 @@ setPanelsTriggers = function(){
 
           TweenMax.fromTo(image, 0.8,
           {
-            yPercent: "0%",
+            // yPercent: "0%",
+            opacity: "1",
             ease: Quart.easeOut
           }, {
-            yPercent: "100%"
+            // yPercent: "100%"
+            opacity: "0",
           });
         }
       }, {offset: "50%"});
@@ -104,17 +126,51 @@ setPanelsTriggers = function(){
 };
 
 
+// Shop Triggers
+
+if (isShop) {
+  $('section.container').waypoint( function(direction){
+    if (direction == "down"){
+      console.log('PING');
+      TweenMax.to('.top-bar-container', 2, {className: "+=black"});
+    }
+    if (direction == "up"){
+      console.log('PING');
+      TweenMax.to('.top-bar-container', 2, {className: "-=black"});
+    }
+  }, {offset: "150"});
+}
+
+
 // Doc Ready
 $(document).ready( function(){
 
   // SVGeezy
   svgeezy.init(false, 'png');
 
+  // SVG 4 errybody
+  svg4everybody();
+
   // Reset positons
-  $(window).scrollTop(0);
-  TweenMax.set('.left-image', { yPercent: "100%" });
-  TweenMax.set('#sidebar-bg', { width: "0" });
-  TweenMax.set('.placeholder', {height: winh });
+
+  TweenMax.set('.left-image', {
+    // yPercent: "100%",
+    opacity: 0
+  });
+
+  if (!window.location.hash.length) {
+    $(window).scrollTop(0);
+  }
+
+  if (isHome ) {
+    TweenMax.set('.placeholder', {height: winh });
+    TweenMax.set('.introLogo, .scrolldown', { xPercent: '-50%', yPercent: '-50%'});
+    TweenMax.set('.top-bar-container', { yPercent: '-100%'});
+  }
+
+  if (isHome && !window.location.hash.length) {
+    TweenMax.set('#sidebar-bg', { width: "0" });
+  }
 
 });
 

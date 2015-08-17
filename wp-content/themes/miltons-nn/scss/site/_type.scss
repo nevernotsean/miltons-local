@@ -8,16 +8,21 @@ h1, h2, h3 {
 // Home Type
 
 .home, .page-template-page-wholesale-php {
-  .sidebar h1 {
-    color: white;
+
+  .sidebar {
+    h1,h2,h3,h4,h5,h6,p,span {
+      color: #fff;
+    }
   }
 
   h1.headline {
     border-bottom: 2px solid #fff;
+    margin-bottom: 1.8rem;
   }
 
   h3.subhead {
     line-height: 0;
+    margin-bottom: 1rem;
     small{
       color: #fff;
       font-weight: 300;

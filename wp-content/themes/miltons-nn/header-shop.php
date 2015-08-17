@@ -37,9 +37,13 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
+		<?php get_template_part('parts/miltonsLogo'); ?>
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class('no-fouc'); ?>>
+
+			<?php echo file_get_contents("<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg"); ?>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<div class="off-canvas-wrap" data-offcanvas>

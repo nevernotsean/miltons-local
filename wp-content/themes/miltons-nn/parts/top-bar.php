@@ -16,6 +16,8 @@
             <li class="logo">
                 <a href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg" alt="">
+                    <img id="blklogo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt="">
+                    <!-- <svg><use xlink:href="#miltonsLogo"></svg> -->
                 </a>
             </li>
         </ul>
@@ -39,6 +41,8 @@
             <li class="logo">
                 <a href="<?php echo home_url(); ?>">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt="">
+                    <img id="blklogo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt="">
+                    <!-- <svg><use xlink:href="#miltonsLogo"></svg> -->
                 </a>
             </li>
         </ul>

@@ -6,6 +6,35 @@
   }
 }
 
+svg#Layer_1 {
+
+  g#miltonsLogo path {
+      width: 350px;
+    fill: $slate;
+  }
+}
+
+.introLogo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    .logo {
+      width: 350px;
+      height: auto;
+      fill: #b83b22;
+    }
+}
+
+i.fa.fa-angle-down.scrolldown {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    color: $gold;
+    font-size: 3rem;
+}
+
+body > svg#Layer_1 { display: none; }
 
 // TB background
 body {

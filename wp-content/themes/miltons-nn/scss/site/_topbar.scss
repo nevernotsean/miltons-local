@@ -37,6 +37,10 @@
       height: 55px;
       width: auto;
       padding: 5px;
+
+      &#blklogo {
+        display: none;
+      }
     }
 
     li.menu-item a {
@@ -55,14 +59,18 @@ body.home, body.page-template-page-wholesale-php {
     position: fixed;
   }
 }
+
 // Single product top-bar
 
 .single-product {
-
-.top-bar-container {
+  .top-bar-container {
     position: relative;
     z-index: 999;
     margin-bottom: 0px;
+  }
+}
+
+.top-bar-container.black {
 
     .top-bar {
       border-bottom: 1px solid #000;
@@ -73,14 +81,23 @@ body.home, body.page-template-page-wholesale-php {
       height: 55px;
       width: auto;
       padding: 5px;
+      display: none;
+
+      &#blklogo {
+        display: block;
+      }
     }
 
+    // g#miltonsLogo path {
+    //   fill: $slate;
+    // }
+
     li a {
-      color: $gold;
+      color: $black;
       text-transform: uppercase;
 
       &:hover {
-        color: $black !important;
+        color: $gold !important;
       }
     }
 
@@ -93,6 +110,4 @@ body.home, body.page-template-page-wholesale-php {
     .title-area {
       margin-right: 1rem;
     }
-}
-
 }

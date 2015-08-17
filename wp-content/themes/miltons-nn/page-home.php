@@ -22,6 +22,13 @@ get_header(); ?>
           <div class="masthead-image" style="background-image: url(<?php echo $src ?>)">
             <img src="<?php echo $src ?>" alt="">
           </div>
+          <div class="introLogo">
+            <object class="logo" type="image/svg+xml" data="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg">
+              <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg" alt="">
+            </object>
+            <!-- <svg><use xlink:href="#miltonsLogo"></svg> -->
+          </div>
+          <i class="fa fa-angle-down scrolldown"></i>
         </div>
       </div>
     </section>
@@ -33,7 +40,7 @@ get_header(); ?>
     $title = get_sub_field('title');
     $subtitle = get_sub_field('sub_header');
     $image = get_sub_field('image');
-    $img = $image['url'];
+    $img = $image['sizes']['large'];
     $content = get_sub_field('content');
     $n++
     ?>
@@ -52,7 +59,7 @@ get_header(); ?>
                 <h3 class="subhead"><small><?php echo $subtitle; ?></small></h3>
               <?php endif; ?>
                 <h1 class="headline"><?php echo $title ?></h1>
-                <p><?php echo $content ?></p>
+                <?php echo $content ?>
               </div>
             </div>
           </div>
@@ -110,10 +117,4 @@ get_header(); ?>
 	</div>
 	<?php //get_sidebar(); ?>
 </div>
-
-<style>
-
-
-
-</style>
 <?php get_footer(); ?>

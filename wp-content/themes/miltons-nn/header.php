@@ -40,6 +40,9 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class('no-fouc'); ?>>
+
+		<?php get_template_part('parts/miltonsLogo'); ?>
+
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<div class="off-canvas-wrap" data-offcanvas>

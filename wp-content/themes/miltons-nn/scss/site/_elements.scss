@@ -168,11 +168,13 @@ p.in-stock {
 
 .entry-summary {
     margin-top: 50px;
+    margin-bottom: 50px;
     @media #{$large-up} {
         padding-left: 0px;
     }
     @media #{$small-only} {
         margin-top: 25px;
+        margin-bottom: 25px;
     }
     .row.contain {
         border-left: 0px solid #000;
