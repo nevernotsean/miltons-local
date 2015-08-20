@@ -58,6 +58,7 @@ section.active {
             min-height: inherit;
         }
     }
+
     .sidebar {
         min-height: 100%;
         min-height: 100vh;
@@ -73,11 +74,13 @@ section.active {
             position: relative;
             width: 100%;
             padding: 50px 0px;
-            max-height: initial;
+            min-height: initial;
         }
     }
     .left-image {
-        width: 60%;
+        // width: 60%;
+        width: 100%;
+        z-index: -1;
         // height: 0;
         height: 100%;
         position: fixed;
@@ -101,9 +104,23 @@ section.active {
     }
 }
 
+.mask {
+    display: none;
+    width: 40%;
+    height: 75px;
+    position: fixed;
+    z-index: 99;
+    top: 0px;
+    right: 0px;
+}
+
 @media #{$small-only}{
-    .home section#wypt-1 .left-image {
-        display: none;
+    .home section#wypt-1 {
+        height: initial;
+
+        .left-image {
+            display: none;
+        }
     }
 }
 

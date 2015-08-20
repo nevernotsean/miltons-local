@@ -28,7 +28,7 @@ setPanelsTriggers = function(){
         $firstPanel = $('panel').first(),
         $firstSidebar = $firstPanel.find('.sidebar');
 
-    expandSidebar = function(){
+    var expandSidebar = function(){
       // console.log('PING');
 
       TweenMax.to('#sidebar-bg', 0.5, {
@@ -44,29 +44,32 @@ setPanelsTriggers = function(){
         });
       }
 
-      TweenMax.to('.top-bar-container', 0.5, { yPercent: "0" });
+      tl = new TimelineMax();
+      tl.to('.top-bar-container', 0.5, { yPercent: "0" })
+        .set('.mask', { display: "block" });
 
       TweenMax.to('.introLogo', 1, { left: "30%", ease: Quart.easeOut});
 
+      // TweenMax.to('g#miltonsLogo g path', 0.8, { attr: { fill: "#507846" }, ease: Quart.easeOut});
+
+      // TweenMax.to('.introLogo .tagline', 0.8, { color: "#507846", ease: Quart.easeOut});
+
       TweenMax.to('.scrolldown', 0.5, { opacity: "0" });
 
-      TweenMax.to($masthead, 0.8, {opacity: "0"});
+      // TweenMax.to($masthead, 0.8, {opacity: "0"});
     },
 
     closeSidebar = function(){
       // console.log('PING');
-      TweenMax.to('#sidebar-bg', 0.5, {
-        ease: Quart.easeIn,
-        width: "0%"
-      });
+      closetl = new TimelineMax();
 
-      TweenMax.to('.top-bar-container', 0.5, { yPercent: "-100%" });
-
-      TweenMax.to('.introLogo', 0.8, { left: "50%", ease: Quart.easeOut});
-
-      TweenMax.to('.scrolldown', 0.5, { opacity: "1" });
-
-      TweenMax.to($masthead, 0.8, {opacity: "1"});
+      closetl.set('.mask', { display: "none" })
+      .add('start')
+      .to('#sidebar-bg', 0.5, { ease: Quart.easeIn, width: "0%" }, 'start')
+      .to('.top-bar-container', 0.5, { yPercent: "-100%" }, 'start')
+      .to('.introLogo', 0.8, { left: "50%", ease: Quart.ease }, 'start+=0.2')
+      .to('.scrolldown', 0.5, { opacity: "1" }, 'start')
+      .to( $masthead, 0.8, {opacity: "1"}, 'start');
     };
 
     var colors = [
@@ -76,7 +79,7 @@ setPanelsTriggers = function(){
       '#BFBCB1'
     ];
 
-    randColor = function(){
+    var randColor = function(){
       var rand = colors[Math.floor(Math.random() * colors.length - 1)];
       TweenMax.to('#sidebar-bg', 1, { backgroundColor: rand, ease: Quart.easeInOut });
     };
@@ -154,8 +157,6 @@ $(document).ready( function(){
   // SVG 4 errybody
   svg4everybody();
 
-
-
   // Desktop Animations - Get Ready
 
   if (!isSmall) {
@@ -167,6 +168,13 @@ $(document).ready( function(){
 
     if (!window.location.hash.length) {
       $(window).scrollTop(0);
+    } else {
+      console.log('PING');
+      TweenMax.set('.top-bar-container', { y: '0'});
+    }
+
+    if (isHome && !window.location.hash.length) {
+      TweenMax.set('#sidebar-bg', { width: "0" });
     }
 
     if (isHome) {
@@ -175,9 +183,7 @@ $(document).ready( function(){
       TweenMax.set('.top-bar-container', { yPercent: '-100%'});
     }
 
-    if (isHome && !window.location.hash.length) {
-      TweenMax.set('#sidebar-bg', { width: "0" });
-    }
+
   } else if ( isSmall ) {
     $('#sidebar-bg').css('width', '0');
     TweenMax.set('.introLogo, .scrolldown', { xPercent: '-50%', yPercent: '-50%'});
