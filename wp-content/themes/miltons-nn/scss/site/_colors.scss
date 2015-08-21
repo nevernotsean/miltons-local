@@ -1,18 +1,6 @@
 .home, .page-template-page-wholesale-php, , .page-template-page-onepage-php {
 
-        background-color: $slate;
-
-        #sidebar-bg, .mask {
-            background-color: $miltonsgreen;
-            opacity: 0.8;
-        }
-        .mask {
-            visibility: hidden;
-        }
-
-        g#miltonsLogo g path {
-            fill: #fff !important;
-        }
+    background-color: $forestgreen;
 
         @media #{$small-only}{
 
@@ -21,7 +9,7 @@
                     background-color: $slate;
                 }
                 &:nth-child(3n+2) .sidebar {
-                    background-color: $miltonsgreen;
+                    background-color: $forestgreen;
                 }
                 &:nth-child(3n+3) .sidebar {
                     background-color: $meat;
@@ -38,7 +26,7 @@
                 background-color: $slate;
             }
             &.color2 {
-                background-color: $miltonsgreen;
+                background-color: $forestgreen;
             }
             &.color3 {
                 background-color: $meat;

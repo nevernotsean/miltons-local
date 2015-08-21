@@ -7,23 +7,11 @@ h1, h2, h3 {
 
 // Home Type
 
-.introLogo h4 {
-  text-transform: camel-case;
-  font-weight: 300;
-  text-align: center;
-  color: white;
-  font-style: italic;
-}
-
 .home, .page-template-page-wholesale-php, .page-template-page-onepage-php {
 
   .sidebar {
     h1,h2,h3,h4,h5,h6,p,span {
       color: #fff;
-    }
-    p {
-      font-size: 1.125rem;
-      line-height: 1.8;
     }
   }
 

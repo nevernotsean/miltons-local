@@ -32,7 +32,6 @@
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ph.png" alt="" class="">
     </div>
 </div>
-<div class="mask"></div>
 
 <?php } else { ?>
 

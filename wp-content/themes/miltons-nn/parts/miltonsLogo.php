@@ -1,4 +1,6 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;" xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;"
+   width="100%" height="100%" viewBox="0.001 -24.93 501.138 116.614"
+   enable-background="new 0.001 -24.93 501.138 116.614" xml:space="preserve">
 <g id="miltonsLogo">
   <g>
     <path d="M61.938,63.93c0,0,4.687-0.095,7.1,0c1.233,0,2.419-0.015,3.7,0c0.306,0,0.798-0.237,0.89-0.484

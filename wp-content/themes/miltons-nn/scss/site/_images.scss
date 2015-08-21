@@ -20,11 +20,12 @@ svg#Layer_1 {
     top: 50%;
 
     .logo {
-      width: 450px;
+      width: 350px;
       height: auto;
+      fill: #b83b22;
 
       @media #{$small-only}{
-          width: 300px;
+          width: 200px;
       }
     }
 }

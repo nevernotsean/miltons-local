@@ -8653,10 +8653,9 @@ section.active {
       position: relative;
       width: 100%;
       padding: 50px 0px;
-      min-height: initial; } }
+      max-height: initial; } }
 .home .left-image, .page-template-page-wholesale-php .left-image, .page-template-page-onepage-php .left-image {
-  width: 100%;
-  z-index: -1;
+  width: 60%;
   height: 100%;
   position: fixed;
   top: 0px;
@@ -8676,20 +8675,9 @@ section.active {
   position: fixed;
   z-index: 0; }
 
-.mask {
-  display: none;
-  width: 40%;
-  height: 75px;
-  position: fixed;
-  z-index: 99;
-  top: 0px;
-  right: 0px; }
-
 @media only screen and (max-width: 40em) {
-  .home section#wypt-1 {
-    height: initial; }
-    .home section#wypt-1 .left-image {
-      display: none; } }
+  .home section#wypt-1 .left-image {
+    display: none; } }
 .row.contain {
   width: 100%;
   margin: auto;
@@ -9055,11 +9043,12 @@ svg#Layer_1 g#miltonsLogo path {
   left: 50%;
   top: 50%; }
   .introLogo .logo {
-    width: 450px;
-    height: auto; }
+    width: 350px;
+    height: auto;
+    fill: #b83b22; }
     @media only screen and (max-width: 40em) {
       .introLogo .logo {
-        width: 300px; } }
+        width: 200px; } }
 
 body > svg#Layer_1 {
   display: none; }
@@ -9096,18 +9085,8 @@ h1, h2, h3 {
   text-transform: uppercase;
   font-weight: bold; }
 
-.introLogo h4 {
-  text-transform: camel-case;
-  font-weight: 300;
-  text-align: center;
-  color: white;
-  font-style: italic; }
-
 .home .sidebar h1, .home .sidebar h2, .home .sidebar h3, .home .sidebar h4, .home .sidebar h5, .home .sidebar h6, .home .sidebar p, .home .sidebar span, .page-template-page-wholesale-php .sidebar h1, .page-template-page-wholesale-php .sidebar h2, .page-template-page-wholesale-php .sidebar h3, .page-template-page-wholesale-php .sidebar h4, .page-template-page-wholesale-php .sidebar h5, .page-template-page-wholesale-php .sidebar h6, .page-template-page-wholesale-php .sidebar p, .page-template-page-wholesale-php .sidebar span, .page-template-page-onepage-php .sidebar h1, .page-template-page-onepage-php .sidebar h2, .page-template-page-onepage-php .sidebar h3, .page-template-page-onepage-php .sidebar h4, .page-template-page-onepage-php .sidebar h5, .page-template-page-onepage-php .sidebar h6, .page-template-page-onepage-php .sidebar p, .page-template-page-onepage-php .sidebar span {
   color: #fff; }
-.home .sidebar p, .page-template-page-wholesale-php .sidebar p, .page-template-page-onepage-php .sidebar p {
-  font-size: 1.125rem;
-  line-height: 1.8; }
 .home h1.headline, .page-template-page-wholesale-php h1.headline, .page-template-page-onepage-php h1.headline {
   border-bottom: 2px solid #fff;
   margin-bottom: 1.8rem; }
@@ -9119,19 +9098,12 @@ h1, h2, h3 {
     font-weight: 300; }
 
 .home, .page-template-page-wholesale-php, .page-template-page-onepage-php {
-  background-color: #444745; }
-  .home #sidebar-bg, .home .mask, .page-template-page-wholesale-php #sidebar-bg, .page-template-page-wholesale-php .mask, .page-template-page-onepage-php #sidebar-bg, .page-template-page-onepage-php .mask {
-    background-color: #788255;
-    opacity: 0.8; }
-  .home .mask, .page-template-page-wholesale-php .mask, .page-template-page-onepage-php .mask {
-    visibility: hidden; }
-  .home g#miltonsLogo g path, .page-template-page-wholesale-php g#miltonsLogo g path, .page-template-page-onepage-php g#miltonsLogo g path {
-    fill: #fff !important; }
+  background-color: #7A8157; }
   @media only screen and (max-width: 40em) {
     .home section.waypoint:nth-child(3n+1) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+1) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+1) .sidebar {
       background-color: #444745; }
     .home section.waypoint:nth-child(3n+2) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+2) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+2) .sidebar {
-      background-color: #788255; }
+      background-color: #7A8157; }
     .home section.waypoint:nth-child(3n+3) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+3) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+3) .sidebar {
       background-color: #b83b22; }
     .home section.waypoint:nth-child(3n+4) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+4) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+4) .sidebar {
@@ -9139,7 +9111,7 @@ h1, h2, h3 {
   .home #sidebar-bg.color1, .page-template-page-wholesale-php #sidebar-bg.color1, .page-template-page-onepage-php #sidebar-bg.color1 {
     background-color: #444745; }
   .home #sidebar-bg.color2, .page-template-page-wholesale-php #sidebar-bg.color2, .page-template-page-onepage-php #sidebar-bg.color2 {
-    background-color: #788255; }
+    background-color: #7A8157; }
   .home #sidebar-bg.color3, .page-template-page-wholesale-php #sidebar-bg.color3, .page-template-page-onepage-php #sidebar-bg.color3 {
     background-color: #b83b22; }
   .home #sidebar-bg.color4, .page-template-page-wholesale-php #sidebar-bg.color4, .page-template-page-onepage-php #sidebar-bg.color4 {

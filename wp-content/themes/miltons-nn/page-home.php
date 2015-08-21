@@ -24,11 +24,10 @@ get_header(); ?>
             <img src="<?php echo $src ?>" alt="">
           </div>
           <div class="introLogo">
-<!--             <object class="logo" type="image/svg+xml" data="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg">
+            <object class="logo" type="image/svg+xml" data="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg">
               <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg" alt="">
-            </object> -->
-            <svg class="logo" width="501px" height="116px" viewBox="0 -30 510 110" preserveAspectRatio="xMinYMin meet"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#miltonsLogo"></use></svg>
-            <h4 class="tagline">Hand-Crafted Artisan Meats</h4>
+            </object>
+            <!-- <svg><use xlink:href="#miltonsLogo"></svg> -->
           </div>
           <i class="fa fa-angle-down scrolldown"></i>
         </div>
