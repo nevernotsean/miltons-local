@@ -64,7 +64,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="row excerpt">
 				<div class="small-12 column">
-					<?php woocommerce_template_single_excerpt(); ?>
+					<?php //woocommerce_template_single_excerpt(); ?>
+					<?php the_content(); ?>
 				</div>
 			</div>
 
