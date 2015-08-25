@@ -8909,6 +8909,9 @@ body.home .topbar-bg, body.page-template-page-wholesale-php .topbar-bg, body.pag
   z-index: 999;
   margin-bottom: 0px; }
 
+.top-bar-container.black .top-bar-section .has-dropdown > a:after {
+  border-color: #B4823C transparent transparent transparent;
+  border-top-style: solid; }
 .top-bar-container.black .top-bar {
   border-bottom: 1px solid #000;
   margin-top: 1rem; }
@@ -9098,7 +9101,7 @@ h1, h2, h3 {
     font-weight: 300; }
 
 .home, .page-template-page-wholesale-php, .page-template-page-onepage-php {
-  background-color: #7A8157; }
+  background-color: #444745; }
   @media only screen and (max-width: 40em) {
     .home section.waypoint:nth-child(3n+1) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+1) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+1) .sidebar {
       background-color: #444745; }
@@ -9108,11 +9111,13 @@ h1, h2, h3 {
       background-color: #b83b22; }
     .home section.waypoint:nth-child(3n+4) .sidebar, .page-template-page-wholesale-php section.waypoint:nth-child(3n+4) .sidebar, .page-template-page-onepage-php section.waypoint:nth-child(3n+4) .sidebar {
       background-color: #BFBCB1; } }
-  .home #sidebar-bg.color1, .page-template-page-wholesale-php #sidebar-bg.color1, .page-template-page-onepage-php #sidebar-bg.color1 {
-    background-color: #444745; }
-  .home #sidebar-bg.color2, .page-template-page-wholesale-php #sidebar-bg.color2, .page-template-page-onepage-php #sidebar-bg.color2 {
-    background-color: #7A8157; }
-  .home #sidebar-bg.color3, .page-template-page-wholesale-php #sidebar-bg.color3, .page-template-page-onepage-php #sidebar-bg.color3 {
-    background-color: #b83b22; }
-  .home #sidebar-bg.color4, .page-template-page-wholesale-php #sidebar-bg.color4, .page-template-page-onepage-php #sidebar-bg.color4 {
-    background-color: #BFBCB1; }
+  .home #sidebar-bg, .page-template-page-wholesale-php #sidebar-bg, .page-template-page-onepage-php #sidebar-bg {
+    background-color: #788255; }
+    .home #sidebar-bg.color1, .page-template-page-wholesale-php #sidebar-bg.color1, .page-template-page-onepage-php #sidebar-bg.color1 {
+      background-color: #444745; }
+    .home #sidebar-bg.color2, .page-template-page-wholesale-php #sidebar-bg.color2, .page-template-page-onepage-php #sidebar-bg.color2 {
+      background-color: #7A8157; }
+    .home #sidebar-bg.color3, .page-template-page-wholesale-php #sidebar-bg.color3, .page-template-page-onepage-php #sidebar-bg.color3 {
+      background-color: #b83b22; }
+    .home #sidebar-bg.color4, .page-template-page-wholesale-php #sidebar-bg.color4, .page-template-page-onepage-php #sidebar-bg.color4 {
+      background-color: #BFBCB1; }

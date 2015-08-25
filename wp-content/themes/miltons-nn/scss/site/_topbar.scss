@@ -72,6 +72,12 @@ body.home, body.page-template-page-wholesale-php, body.page-template-page-onepag
 
 .top-bar-container.black {
 
+    .top-bar-section .has-dropdown > a:after
+      {
+        border-color: $gold transparent transparent transparent;
+        border-top-style: solid;
+      }
+
     .top-bar {
       border-bottom: 1px solid #000;
       margin-top: 1rem;

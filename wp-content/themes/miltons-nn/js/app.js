@@ -50,8 +50,8 @@ setPanelsTriggers = function(){
 
       TweenMax.to('.scrolldown', 0.5, { opacity: "0" });
 
-      TweenMax.to($masthead, 0.8, {opacity: "0"});
-    },
+      // TweenMax.to($masthead, 0.8, {opacity: "0"});
+    };
 
     closeSidebar = function(){
       // console.log('PING');
@@ -66,7 +66,7 @@ setPanelsTriggers = function(){
 
       TweenMax.to('.scrolldown', 0.5, { opacity: "1" });
 
-      TweenMax.to($masthead, 0.8, {opacity: "1"});
+      // TweenMax.to($masthead, 0.8, {opacity: "1"});
     };
 
     var colors = [
