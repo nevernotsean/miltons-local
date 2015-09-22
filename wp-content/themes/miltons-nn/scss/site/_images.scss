@@ -6,14 +6,6 @@
   }
 }
 
-svg#Layer_1 {
-
-  g#miltonsLogo path {
-      width: 350px;
-    fill: $slate;
-  }
-}
-
 .introLogo {
     position: absolute;
     left: 50%;
@@ -71,4 +63,32 @@ body {
 
 .left-image img, .masthead-image img {
   visibility: hidden;
+}
+
+// Line up Client Logos
+
+#clients ul li {
+    padding: 10px;
+
+    a {
+      height: 100%;
+      position: relative;
+      display: block;
+
+       &:after {
+          content: ' ';
+          height: auto;
+          width: 100%;
+          padding-top: 100%;
+          display: inline-block;
+          position: static;
+          top: 0px;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
 }

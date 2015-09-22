@@ -115,6 +115,7 @@ $oil         : #333333;
 $jet         : #222222;
 $black       : #000000;
 $gold        : #B4823C;
+// $gold: #7F5418;
 $warmblack   : $jumbo ;
 
 // Custom colors
@@ -282,7 +283,7 @@ $paragraph-text-rendering: optimizeLegibility;
 // We use these to style anchors
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
-$anchor-font-color: $primary-color;
+$anchor-font-color: $gold;
 $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element

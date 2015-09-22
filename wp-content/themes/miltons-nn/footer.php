@@ -26,8 +26,9 @@
             </ul>
             <ul class="inline-list left pages">
               <li><a href="<?php echo site_url() ?>/press"><small>PRESS</small></a></li>
-              <li><a href="<?php echo site_url() ?>#clients"><small>CLIENTS</small></a></li>
+              <li><a href="<?php echo site_url() ?>#clients"><small>WHERE TO BUY</small></a></li>
               <li><a href="<?php echo site_url() ?>/contact"><small>CONTACT</small></a></li>
+              <li><a href="<?php echo site_url() ?>/returns-privacy"><small>PRIVACY & RETURNS</small></a></li>
               <li><a href="http://www.never-not.com"><small>SITEBY</small></a></li>
               <li class="copy"><a href=""><small>&copy 2015 MILTON'S LOCAL</small></a></li>
             </ul>

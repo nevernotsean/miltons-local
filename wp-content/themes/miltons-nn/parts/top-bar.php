@@ -10,13 +10,13 @@
 ?>
 <?php if ( !( is_product() ) ) { ?>
 
-<div class="top-bar-container contain-to-grid show-for-medium-up">
+<div class="top-bar-container contain-to-grid show-for-medium-up" id="tb-mask">
     <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="logo">
                 <a href="<?php echo home_url(); ?>">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg" alt="">
-                    <img id="blklogo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt="">
+                    <img class="svg" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg" alt="">
+<!--                     <img class="svg" id="blklogo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt=""> -->
                     <!-- <svg><use xlink:href="#miltonsLogo"></svg> -->
                 </a>
             </li>
@@ -40,8 +40,8 @@
         <ul class="title-area">
             <li class="logo">
                 <a href="<?php echo home_url(); ?>">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt="">
-                    <img id="blklogo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt="">
+                    <img class="svg" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt="">
+<!--                     <img class="svg" id="blklogo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt=""> -->
                     <!-- <svg><use xlink:href="#miltonsLogo"></svg> -->
                 </a>
             </li>

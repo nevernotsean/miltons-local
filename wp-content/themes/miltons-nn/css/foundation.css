@@ -8868,6 +8868,12 @@ table.shop_table.cart th.product-thumbnail {
 @media only screen and (max-width: 40em) {
   input[type="submit"] {
     width: 100%; } }
+li.payment_method_simplify_commerce {
+  list-style: none; }
+
+ul.payment_methods.methods {
+  margin-left: 0px; }
+
 @media only screen and (min-width: 51.3125em) {
   .tab-bar {
     display: none; } }
@@ -8892,6 +8898,13 @@ table.shop_table.cart th.product-thumbnail {
     padding: 5px; }
     .top-bar-container .logo img#blklogo {
       display: none; }
+  .top-bar-container .logo svg {
+    width: 200px;
+    height: 60px; }
+  .top-bar-container .logo svg path {
+    fill: #fff;
+    -webkit-transition: fill 500ms ease;
+            transition: fill 500ms ease; }
   .top-bar-container li.menu-item a {
     text-transform: uppercase; }
   .top-bar-container li.divider {
@@ -8922,6 +8935,8 @@ body.home .topbar-bg, body.page-template-page-wholesale-php .topbar-bg, body.pag
   display: none; }
   .top-bar-container.black .logo img#blklogo {
     display: block; }
+.top-bar-container.black .logo svg path {
+  fill: #000; }
 .top-bar-container.black li a {
   color: #000000;
   text-transform: uppercase; }
@@ -8935,6 +8950,20 @@ body.home .topbar-bg, body.page-template-page-wholesale-php .topbar-bg, body.pag
           transform: translateY(45%); }
 .top-bar-container.black .title-area {
   margin-right: 1rem; }
+
+.top-bar {
+  z-index: 1; }
+
+.mask {
+  display: none;
+  float: right;
+  background-color: #788255;
+  top: 0;
+  right: 0;
+  height: 75px;
+  width: 40%;
+  position: fixed;
+  z-index: 0; }
 
 footer#site_footer {
   width: 100%;
@@ -9037,10 +9066,6 @@ footer#site_footer {
   height: auto;
   visibility: hidden; }
 
-svg#Layer_1 g#miltonsLogo path {
-  width: 350px;
-  fill: #444745; }
-
 .introLogo {
   position: absolute;
   left: 50%;
@@ -9084,6 +9109,28 @@ body .topbar-bg {
 .left-image img, .masthead-image img {
   visibility: hidden; }
 
+#clients ul li {
+  padding: 10px; }
+  #clients ul li a {
+    height: 100%;
+    position: relative;
+    display: block; }
+    #clients ul li a:after {
+      content: ' ';
+      height: auto;
+      width: 100%;
+      padding-top: 100%;
+      display: inline-block;
+      position: static;
+      top: 0px; }
+    #clients ul li a img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+
 h1, h2, h3 {
   text-transform: uppercase;
   font-weight: bold; }
@@ -9121,3 +9168,6 @@ h1, h2, h3 {
       background-color: #b83b22; }
     .home #sidebar-bg.color4, .page-template-page-wholesale-php #sidebar-bg.color4, .page-template-page-onepage-php #sidebar-bg.color4 {
       background-color: #BFBCB1; }
+  .home .sidebar a, .page-template-page-wholesale-php .sidebar a, .page-template-page-onepage-php .sidebar a {
+    color: #fff;
+    text-decoration: underline; }

@@ -1,0 +1,86 @@
+08-21-2015 @ 12:31:30 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F21%2F2015+12%3A26&end_date=08%2F21%2F2015+12%3A31&page=1
+08-21-2015 @ 12:31:30 - Exported 0 orders
+08-21-2015 @ 12:31:37 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F21%2F2015+12%3A26&end_date=08%2F21%2F2015+12%3A31&page=1
+08-21-2015 @ 12:31:37 - Exported 0 orders
+08-21-2015 @ 12:35:13 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F20%2F2015+00%3A35&end_date=08%2F22%2F2015+05%3A34&page=1
+08-21-2015 @ 12:35:13 - Exported 0 orders
+08-21-2015 @ 12:51:03 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F21%2F2015+00%3A34&end_date=08%2F22%2F2015+05%3A50&page=1
+08-21-2015 @ 12:51:03 - Exported 0 orders
+08-21-2015 @ 14:09:32 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F21%2F2015+00%3A50&end_date=08%2F22%2F2015+07%3A08&page=1
+08-21-2015 @ 14:09:33 - Exported 1 orders
+08-21-2015 @ 14:11:03 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=shipnotify&order_number=166&carrier=UPS&service=UPS+Ground&tracking_number=1Z07V0F44394449822&capture=true
+08-21-2015 @ 14:11:03 - ShipNotify XML: <?xml version="1.0" encoding="UTF-8"?><ShipNotice><OrderNumber>166</OrderNumber><OrderID>166</OrderID><CustomerCode>sean@never-not.com</CustomerCode><CustomerNotes><![CDATA[Make it meaty]]></CustomerNotes><InternalNotes><![CDATA[]]></InternalNotes><NotesToCustomer><![CDATA[]]></NotesToCustomer><NotifyCustomer>false</NotifyCustomer><LabelCreateDate>08/21/2015 07:11</LabelCreateDate><ShipDate>08/21/2015</ShipDate><Carrier>UPS</Carrier><Service>UPS Ground</Service><TrackingNumber>1Z07V0F44394449822</TrackingNumber><ShippingCost>13.69</ShippingCost><CustomField1 /><CustomField2 /><CustomField3 /><Recipient><Name>Sean Harrington</Name><Company>Never-Not LLC</Company><Address1>118 S COLONIAL AVE</Address1><Address2 /><City>RICHMOND</City><State>VA</State><PostalCode>23221-3518</PostalCode><Country>US</Country></Recipient><Items><Item><SKU>123456</SKU><Name>Milton's Own Bacon</Name><Quantity>1</Quantity><LineItemID>8</LineItemID></Item></Items></ShipNotice>
+08-21-2015 @ 14:11:03 - ShipNotify Item: SimpleXMLElement Object
+(
+    [SKU] => 123456
+    [Name] => Milton's Own Bacon
+    [Quantity] => 1
+    [LineItemID] => 8
+)
+
+08-21-2015 @ 14:11:03 - Shipped 1 out of 1 items in order 166
+08-21-2015 @ 14:11:17 - Updated order 166 to status wc-completed
+08-21-2015 @ 14:19:04 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F21%2F2015+02%3A08&end_date=08%2F22%2F2015+07%3A18&page=1
+08-21-2015 @ 14:19:04 - Exported 2 orders
+08-21-2015 @ 20:54:20 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=shipnotify&order_number=167&carrier=UPS&service=UPS+Ground&tracking_number=1Z07V0F40392360835&capture=true
+08-21-2015 @ 20:54:20 - ShipNotify XML: <?xml version="1.0" encoding="UTF-8"?><ShipNotice><OrderNumber>167</OrderNumber><OrderID>167</OrderID><CustomerCode>sean@never-not.com</CustomerCode><CustomerNotes><![CDATA[]]></CustomerNotes><InternalNotes><![CDATA[]]></InternalNotes><NotesToCustomer><![CDATA[]]></NotesToCustomer><NotifyCustomer>false</NotifyCustomer><LabelCreateDate>08/21/2015 13:54</LabelCreateDate><ShipDate>08/21/2015</ShipDate><Carrier>UPS</Carrier><Service>UPS Ground</Service><TrackingNumber>1Z07V0F40392360835</TrackingNumber><ShippingCost>11.69</ShippingCost><CustomField1 /><CustomField2 /><CustomField3 /><Recipient><Name>Sean Harrington</Name><Company>Never-Not LLC</Company><Address1>118 S COLONIAL AVE</Address1><Address2 /><City>RICHMOND</City><State>VA</State><PostalCode>23221-3518</PostalCode><Country>US</Country></Recipient><Items><Item><SKU>123456</SKU><Name>Milton's Own Ribeye</Name><Quantity>1</Quantity><LineItemID>10</LineItemID></Item></Items></ShipNotice>
+08-21-2015 @ 20:54:20 - ShipNotify Item: SimpleXMLElement Object
+(
+    [SKU] => 123456
+    [Name] => Milton's Own Ribeye
+    [Quantity] => 1
+    [LineItemID] => 10
+)
+
+08-21-2015 @ 20:54:20 - Shipped 1 out of 1 items in order 167
+08-21-2015 @ 20:54:33 - Updated order 167 to status wc-completed
+08-21-2015 @ 20:57:03 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=shipnotify&order_number=167&carrier=UPS&service=UPS+Ground&tracking_number=1Z07V0F40392217240&capture=true
+08-21-2015 @ 20:57:03 - ShipNotify XML: <?xml version="1.0" encoding="UTF-8"?><ShipNotice><OrderNumber>167</OrderNumber><OrderID>167</OrderID><CustomerCode>sean@never-not.com</CustomerCode><CustomerNotes><![CDATA[]]></CustomerNotes><InternalNotes><![CDATA[]]></InternalNotes><NotesToCustomer><![CDATA[]]></NotesToCustomer><NotifyCustomer>false</NotifyCustomer><LabelCreateDate>08/21/2015 13:56</LabelCreateDate><ShipDate>08/21/2015</ShipDate><Carrier>UPS</Carrier><Service>UPS Ground</Service><TrackingNumber>1Z07V0F40392217240</TrackingNumber><ShippingCost>11.69</ShippingCost><CustomField1 /><CustomField2 /><CustomField3 /><Recipient><Name>Sean Harrington</Name><Company>Never-Not LLC</Company><Address1>118 S COLONIAL AVE</Address1><Address2 /><City>RICHMOND</City><State>VA</State><PostalCode>23221-3518</PostalCode><Country>US</Country></Recipient><Items><Item><SKU>123456</SKU><Name>Milton's Own Ribeye</Name><Quantity>1</Quantity><LineItemID>10</LineItemID></Item></Items></ShipNotice>
+08-21-2015 @ 20:57:03 - ShipNotify Item: SimpleXMLElement Object
+(
+    [SKU] => 123456
+    [Name] => Milton's Own Ribeye
+    [Quantity] => 1
+    [LineItemID] => 10
+)
+
+08-21-2015 @ 20:57:03 - Shipped 1 out of 1 items in order 167
+08-21-2015 @ 20:57:10 - Updated order 167 to status wc-completed
+08-21-2015 @ 20:58:39 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=shipnotify&order_number=167&carrier=UPS&service=UPS+Ground&tracking_number=1Z07V0F40394535054&capture=true
+08-21-2015 @ 20:58:39 - ShipNotify XML: <?xml version="1.0" encoding="UTF-8"?><ShipNotice><OrderNumber>167</OrderNumber><OrderID>167</OrderID><CustomerCode>sean@never-not.com</CustomerCode><CustomerNotes><![CDATA[]]></CustomerNotes><InternalNotes><![CDATA[]]></InternalNotes><NotesToCustomer><![CDATA[]]></NotesToCustomer><NotifyCustomer>false</NotifyCustomer><LabelCreateDate>08/21/2015 13:58</LabelCreateDate><ShipDate>08/21/2015</ShipDate><Carrier>UPS</Carrier><Service>UPS Ground</Service><TrackingNumber>1Z07V0F40394535054</TrackingNumber><ShippingCost>11.69</ShippingCost><CustomField1 /><CustomField2 /><CustomField3 /><Recipient><Name>Sean Harrington</Name><Company>Never-Not LLC</Company><Address1>118 S COLONIAL AVE</Address1><Address2 /><City>RICHMOND</City><State>VA</State><PostalCode>23221-3518</PostalCode><Country>US</Country></Recipient><Items><Item><SKU>123456</SKU><Name>Milton's Own Ribeye</Name><Quantity>1</Quantity><LineItemID>10</LineItemID></Item></Items></ShipNotice>
+08-21-2015 @ 20:58:39 - ShipNotify Item: SimpleXMLElement Object
+(
+    [SKU] => 123456
+    [Name] => Milton's Own Ribeye
+    [Quantity] => 1
+    [LineItemID] => 10
+)
+
+08-21-2015 @ 20:58:39 - Shipped 1 out of 1 items in order 167
+08-21-2015 @ 20:58:45 - Updated order 167 to status wc-completed
+08-22-2015 @ 14:00:22 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F21%2F2015+02%3A18&end_date=08%2F23%2F2015+07%3A00&page=1
+08-22-2015 @ 14:00:22 - Exported 2 orders
+08-23-2015 @ 14:00:16 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F22%2F2015+02%3A00&end_date=08%2F24%2F2015+06%3A59&page=1
+08-23-2015 @ 14:00:16 - Exported 0 orders
+08-24-2015 @ 13:00:06 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F23%2F2015+01%3A59&end_date=08%2F25%2F2015+05%3A59&page=1
+08-24-2015 @ 13:00:06 - Exported 0 orders
+08-25-2015 @ 12:00:09 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F24%2F2015+00%3A59&end_date=08%2F26%2F2015+04%3A59&page=1
+08-25-2015 @ 12:00:09 - Exported 0 orders
+08-26-2015 @ 11:00:13 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F24%2F2015+23%3A59&end_date=08%2F27%2F2015+03%3A59&page=1
+08-26-2015 @ 11:00:13 - Exported 0 orders
+08-27-2015 @ 10:00:03 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F25%2F2015+22%3A59&end_date=08%2F28%2F2015+02%3A59&page=1
+08-27-2015 @ 10:00:03 - Exported 0 orders
+08-28-2015 @ 09:00:00 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F26%2F2015+21%3A59&end_date=08%2F29%2F2015+01%3A59&page=1
+08-28-2015 @ 09:00:00 - Exported 0 orders
+08-29-2015 @ 07:59:56 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F27%2F2015+20%3A59&end_date=08%2F30%2F2015+00%3A59&page=1
+08-29-2015 @ 07:59:56 - Exported 0 orders
+08-30-2015 @ 07:00:19 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F28%2F2015+19%3A59&end_date=08%2F31%2F2015+00%3A00&page=1
+08-30-2015 @ 07:00:19 - Exported 0 orders
+08-31-2015 @ 07:00:13 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F29%2F2015+19%3A00&end_date=08%2F31%2F2015+23%3A59&page=1
+08-31-2015 @ 07:00:13 - Exported 0 orders
+09-01-2015 @ 06:00:15 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F30%2F2015+18%3A59&end_date=09%2F01%2F2015+22%3A59&page=1
+09-01-2015 @ 06:00:15 - Exported 0 orders
+09-02-2015 @ 05:00:19 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=08%2F31%2F2015+17%3A59&end_date=09%2F02%2F2015+21%3A59&page=1
+09-02-2015 @ 05:00:19 - Exported 0 orders
+09-03-2015 @ 04:00:29 - Input params: wc-api=wc_shipstation&auth_key=WCSS-b8722aa59bdb85102440eb7f649d435d&action=export&start_date=09%2F01%2F2015+16%3A59&end_date=09%2F03%2F2015+21%3A00&page=1
+09-03-2015 @ 04:00:29 - Exported 0 orders

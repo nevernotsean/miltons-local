@@ -59,7 +59,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 		?>
 
 		<div class="row contain">
-		  <div class="small-8 column text-center right-border">
+		  <div class="small-8 column text-center right-border product-title">
 		    <h6><?php the_title(); ?></h6>
 		    <?php
 					/**
@@ -73,13 +73,20 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 				?>
 		  </div>
 		  <div class="small-4 column text-center">
+		  	<?php
+						global $product;
+						$weight = $product->get_weight();
+					?>
 		    <?php woocommerce_template_loop_price(); ?>
+		    <span> / <?php echo $weight;
+						echo 'oz.'; ?></span>
+
 		  </div>
 		</div>
 	</a>
 	<hr>
 	<div class="row contain">
-	  <div class="small-12 column">
+	  <div class="small-12 column product-descr">
 				<?php
 
 					/**
