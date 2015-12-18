@@ -292,7 +292,7 @@ p.in-stock {
     }
     // Body Styles
     .entry-content {
-        padding: 50px 0px;
+        padding: 60px 0px;
         @include grid-row();
         @media #{$small-only} {
             padding: 25px 0px;
@@ -314,9 +314,9 @@ p.in-stock {
         }
         // Sidebar sticky
         &.sticky {
-            @media #{$large-up} {
+            @media #{$medium-up} {
                 position: fixed;
-                top: 200px;
+                top: 60px;
             }
         }
     }

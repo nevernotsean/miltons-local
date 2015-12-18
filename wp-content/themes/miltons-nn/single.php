@@ -25,20 +25,29 @@ get_header(); ?>
 			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 				<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 				<div class="entry-content">
-					<div class="small-12 large-9 column">
+					<div class="small-12 medium-6 large-7 column">
 						<?php the_content(); ?>
-						<hr>
-						<a href="https://www.pinterest.com/pin/create/button/">
-						    <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" />
-						</a>
 					</div>
-					<div class="small-12 large-3 recipe-sidebar column">
+					<div class="small-12 medium-6 large-5 recipe-sidebar column">
 						<?php $recipe_sidebar = get_field('recipe_sidebar'); ?>
+						<?php if ( !empty($recipe_sidebar) ) { ?>
 						<div class="sidebar-container">
 							<div class="rel-wrapper">
 								<?php echo $recipe_sidebar ?>
+									<hr>
+									<ul class="inline-list">
+										<li>
+											<a href="https://www.pinterest.com/pin/create/button/">
+											    <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" />
+											</a>
+										</li>
+										<li>
+										</li>
+									</ul>
+
 							</div>
 						</div>
+						<?php } ?>
 					</div>
 				</div>
 				<footer>

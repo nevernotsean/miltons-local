@@ -195,7 +195,7 @@ if (!isOnePageTemplate && !isSinglePost) {
             var sidebarWidth = $('.recipe-sidebar').width();
             $('.sidebar-container').width(sidebarWidth);
             $(window).on('resize', function() {
-                if ( !Foundation.utils.is_medium_up() ) {
+                if ( Foundation.utils.is_small_only() ) {
                   return;
                 }
                 sidebarWidth = $('.recipe-sidebar').width();
@@ -213,7 +213,7 @@ if (!isOnePageTemplate && !isSinglePost) {
                 $('.sidebar-container').removeClass('sticky');
             }
         }, {
-            offset: "150"
+            offset: "0"
         });
     }
 }
@@ -335,6 +335,16 @@ $(window).load(function() {
         autoplaySpeed: 2000,
         cssEase: 'ease'
     });
+
+    // Single Post Slider
+    $('.recipe-gallery').slick({
+        slide: 'img',
+        arrows: false,
+        // fade: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: 'ease'
+    });
 });
 
 
@@ -357,6 +367,8 @@ $(window).on('nofoucreveal', function() {
 
 });
 
+
+// Pinterest
 (function(d){
     var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
     p.type = 'text/javascript';
