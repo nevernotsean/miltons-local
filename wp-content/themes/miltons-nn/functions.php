@@ -48,4 +48,17 @@ require_once( 'library/custom-header.php' );
 /** Add Header image */
 require_once( 'library/woocommerce-scripts.php' );
 
+
+// Gallery background color
+
+add_action('admin_head', 'custom_css');
+
+function custom_css() {
+  echo '<style>
+    .acf-gallery-attachment.acf-soh .margin {
+      background-color: #ddd;
+    }
+  </style>';
+}
+
 ?>
