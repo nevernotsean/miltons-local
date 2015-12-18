@@ -16,8 +16,7 @@ section.container {
 section.masthead {
     top: 0;
     position: relative;
-
-    @media #{$medium-up}{
+    @media #{$medium-up} {
         position: fixed;
         z-index: -1;
     }
@@ -31,8 +30,7 @@ div.placeholder {
     background-color: transparent;
     // position: fixed;
     top: 0px;
-
-    @media #{$small-only}{
+    @media #{$small-only} {
         display: none;
     }
 }
@@ -41,20 +39,23 @@ section.active {
     position: fixed;
     top: 0;
     z-index: 0;
-    & + div.placeholder { position: relative; }
+    & + div.placeholder {
+        position: relative;
+    }
 }
 
-.home, .page-template-page-wholesale-php, .page-template-page-onepage-php {
-
+.home,
+.page-template-page-wholesale-php,
+.page-template-page-onepage-php {
     section.container {
         padding: 0px;
     }
-    section.waypoint, section.masthead {
+    section.waypoint,
+    section.masthead {
         height: 100vh;
         width: 100%;
         z-index: -1;
-
-        @media #{$small-only}{
+        @media #{$small-only} {
             min-height: inherit;
         }
     }
@@ -68,8 +69,7 @@ section.active {
         clear: both;
         color: white;
         background-color: transparent;
-
-        @media #{$small-only}{
+        @media #{$small-only} {
             position: relative;
             width: 100%;
             padding: 50px 0px;
@@ -83,7 +83,7 @@ section.active {
         position: fixed;
         top: 0px;
         box-shadow: inset -5px 0px 15px 0px rgba(0, 0, 0, 0.2);
-        @media #{$small-only}{
+        @media #{$small-only} {
             height: 50vh;
             position: relative;
             width: 100%;
@@ -101,7 +101,7 @@ section.active {
     }
 }
 
-@media #{$small-only}{
+@media #{$small-only} {
     .home section#wypt-1 .left-image {
         display: none;
     }
@@ -113,7 +113,6 @@ section.active {
 }
 
 // Resuable
-
 .row.contain {
     width: 100%;
     margin: auto;
@@ -128,7 +127,13 @@ section.active {
         &:last-child {
             border-right: 0px solid #000;
         }
-        p, h1, h2, h3, h4, h5, h6 {
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             margin: 0;
         }
     }
@@ -139,7 +144,6 @@ section.active {
 }
 
 // Category
-
 ul.products li {
     hr {
         border-bottom: 1px solid #000;
@@ -157,7 +161,7 @@ ul.products li {
         content: '';
         display: block;
         background-color: black;
-        margin: 0.625rem 0px 0px  0px;
+        margin: 0.625rem 0px 0px 0px;
     }
 }
 
@@ -167,7 +171,6 @@ ul.products li {
 }
 
 // SPP
-
 .single-product {
     section.container {
         padding: 0px 0px;
@@ -234,7 +237,6 @@ p.in-stock {
 }
 
 // Cart
-
 .woocommerce-cart {
     img.attachment-shop_thumbnail.wp-post-image {
         height: 150px;
@@ -242,5 +244,52 @@ p.in-stock {
     }
     td.product-remove a.remove {
         font-size: 2rem;
+    }
+}
+
+// Single Blog post
+.single-post {
+    // reset styles
+    .topbar-bg {
+        display: none;
+    }
+    section.container {
+        padding: 0px 0px;
+    }
+    // New Header with Post BG
+    .post-header {
+        height: 400px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        &:before {
+            content: ' ';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+            opacity: 0.4;
+        }
+        .entry-meta {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            @include grid-column(12);
+            @include topbarmargin;
+            left: 0;
+            right: 0;
+            color: white;
+
+            h1 { color: white; }
+        }
+    }
+    // Body Styles
+    .entry-content {
+        padding: 50px 0px;
+        @include topbarmargin;
+        @media #{$small-only} {
+            padding: 25px 0px;
+        }
     }
 }

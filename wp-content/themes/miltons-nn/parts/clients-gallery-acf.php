@@ -20,8 +20,8 @@
                     if( $images ): ?>
                     <div class="row collapse">
                       <div class="small-12 column">
-                        <h4>Milton's Private Label:</h4>
-                        <ul class="small-block-grid-3">
+                        <h4>Retail:</h4>
+                        <ul class="small-block-grid-3 xlarge-block-grid-4">
                         <?php foreach( $images as $image ): ?>
                           <li>
                             <a href="<?php echo $image['description']; ?>">
@@ -37,8 +37,8 @@
                     <div class="row collapse">
                       <div class="small-12 column">
                         <hr>
-                        <h4>Source Identified Meats by Miltons:</h4>
-                        <ul class="small-block-grid-3 medium-block-grid-4">
+                        <h4>Foodservice:</h4>
+                        <ul class="small-block-grid-3 xlarge-block-grid-4">
                         <?php foreach( $images2 as $image2 ): ?>
                           <li>
                             <a href="<?php echo $image2['description']; ?>">

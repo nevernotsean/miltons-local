@@ -8,6 +8,7 @@
  */
 
 ?>
+
 <?php if ( !( is_product() ) ) { ?>
 
 <div class="top-bar-container contain-to-grid show-for-medium-up" id="tb-mask">
@@ -16,8 +17,6 @@
             <li class="logo">
                 <a href="<?php echo home_url(); ?>">
                     <img class="svg" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo.svg" alt="">
-<!--                     <img class="svg" id="blklogo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt=""> -->
-                    <!-- <svg><use xlink:href="#miltonsLogo"></svg> -->
                 </a>
             </li>
         </ul>
@@ -35,14 +34,12 @@
 
 <?php } else { ?>
 
-<div class="top-bar-container contain-to-grid black">
+<div class="top-bar-container contain-to-grid">
     <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="logo">
                 <a href="<?php echo home_url(); ?>">
                     <img class="svg" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt="">
-<!--                     <img class="svg" id="blklogo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-blk.svg" alt=""> -->
-                    <!-- <svg><use xlink:href="#miltonsLogo"></svg> -->
                 </a>
             </li>
         </ul>

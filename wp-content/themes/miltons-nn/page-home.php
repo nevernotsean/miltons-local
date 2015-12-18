@@ -29,7 +29,9 @@ get_header(); ?>
             </object>
             <!-- <svg><use xlink:href="#miltonsLogo"></svg> -->
           </div>
-          <i class="fa fa-angle-down scrolldown"></i>
+          <a href="#" class="js-scroll-down">
+            <i class="fa fa-angle-down scrolldown"></i>
+          </a>
         </div>
       </div>
     </section>

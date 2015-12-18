@@ -48,6 +48,10 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
+  @media #{$small-only}{
+    height: calc(100vh - 45px);
+    background-position: 15% center;
+  }
 }
 
 
@@ -91,4 +95,9 @@ body {
         transform: translate(-50%, -50%);
       }
     }
+}
+
+// Post images
+.entry-content figure img{
+    margin-bottom: 1.25rem;
 }
