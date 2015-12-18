@@ -276,20 +276,48 @@ p.in-stock {
             width: 100%;
             bottom: 0;
             @include grid-column(12);
-            @include topbarmargin;
             left: 0;
             right: 0;
             color: white;
-
-            h1 { color: white; }
+            @media #{$medium-up} {
+                @include grid-row();
+            }
+            @media #{$xlarge-up} {
+                margin: 0 auto;
+            }
+            h1 {
+                color: white;
+            }
         }
     }
     // Body Styles
     .entry-content {
         padding: 50px 0px;
-        @include topbarmargin;
+        @include grid-row();
         @media #{$small-only} {
             padding: 25px 0px;
+        }
+        p {
+            font-size: 1.25rem;
+            line-height: 2.25rem;
+        }
+    }
+    // Sidebar
+    .sidebar-container {
+        .rel-wrapper {
+            padding: 20px;
+            // background-color: $gold;
+            border-left: 1px solid black;
+            border-right: 1px solid black // * {
+            //     color: white;
+            // }
+        }
+        // Sidebar sticky
+        &.sticky {
+            @media #{$large-up} {
+                position: fixed;
+                top: 200px;
+            }
         }
     }
 }

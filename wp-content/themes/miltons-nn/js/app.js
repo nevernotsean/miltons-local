@@ -41,7 +41,7 @@ setPanelsTriggers = function() {
             $panels = $('panel'),
             $firstPanel = $('panel').first(),
             $firstPanelPostition = $firstPanel.position().top;
-        $firstSidebar = $firstPanel.find('.sidebar');
+            $firstSidebar = $firstPanel.find('.sidebar');
 
         expandSidebar = function() {
 
@@ -178,34 +178,39 @@ if (!isOnePageTemplate && !isSinglePost) {
         $('section.container').waypoint(function(direction) {
             if (direction == "down") {
                 // console.log('PING');
-                TweenMax.to('.top-bar-container', 2, {
-                    className: "+=black"
-                });
+                $('.top-bar-container').addClass('black');
             }
             if (direction == "up") {
                 // console.log('PING');
-                TweenMax.to('.top-bar-container', 2, {
-                    className: "-=black"
-                });
+                $('.top-bar-container').removeClass('black');
             }
         }, {
             offset: "150"
         });
     }
-} else if ( isSinglePost ) {
+} else if (isSinglePost) {
     if (!isSmall) {
+
+        var resizeSidebar = (function() {
+            var sidebarWidth = $('.recipe-sidebar').width();
+            $('.sidebar-container').width(sidebarWidth);
+            $(window).on('resize', function() {
+                if ( !Foundation.utils.is_medium_up() ) {
+                  return;
+                }
+                sidebarWidth = $('.recipe-sidebar').width();
+                $('.sidebar-container').width(sidebarWidth);
+            });
+        })();
+
         $('[role="main"]').waypoint(function(direction) {
             if (direction == "down") {
-                // console.log('PING');
-                TweenMax.to('.top-bar-container', 2, {
-                    className: "+=black"
-                });
+                $('.top-bar-container').addClass('black');
+                $('.sidebar-container').addClass('sticky');
             }
             if (direction == "up") {
-                // console.log('PING');
-                TweenMax.to('.top-bar-container', 2, {
-                    className: "-=black"
-                });
+                $('.top-bar-container').removeClass('black');
+                $('.sidebar-container').removeClass('sticky');
             }
         }, {
             offset: "150"
@@ -351,3 +356,11 @@ $(window).on('nofoucreveal', function() {
     });
 
 });
+
+(function(d){
+    var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+    p.type = 'text/javascript';
+    p.async = true;
+    p.src = '//assets.pinterest.com/js/pinit.js';
+    f.parentNode.insertBefore(p, f);
+}(document));

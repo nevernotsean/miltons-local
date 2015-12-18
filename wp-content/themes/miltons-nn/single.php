@@ -21,15 +21,29 @@ get_header(); ?>
 	</header>
 	<div class="row">
 		<div class="small-12 large-12 column" role="main">
-
 		<?php do_action( 'foundationpress_before_content' ); ?>
 			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 				<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 				<div class="entry-content">
-					<?php the_content(); ?>
+					<div class="small-12 large-9 column">
+						<?php the_content(); ?>
+						<hr>
+						<a href="https://www.pinterest.com/pin/create/button/">
+						    <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" />
+						</a>
+					</div>
+					<div class="small-12 large-3 recipe-sidebar column">
+						<?php $recipe_sidebar = get_field('recipe_sidebar'); ?>
+						<div class="sidebar-container">
+							<div class="rel-wrapper">
+								<?php echo $recipe_sidebar ?>
+							</div>
+						</div>
+					</div>
 				</div>
 				<footer>
-					<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
+					<?php //wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
+
 					<p><?php the_tags(); ?></p>
 				</footer>
 				<?php //do_action( 'foundationpress_post_before_comments' ); ?>

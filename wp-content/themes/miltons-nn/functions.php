@@ -61,4 +61,13 @@ function custom_css() {
   </style>';
 }
 
+// Single Post Pinterest Big Images
+// add_filter( 'the_content', 'add_pinterest_large_image', 10 );
+
+// function add_pinterest_large_image() {
+//   // echo "<script> console.dir(" . json_encode( $html ) . "); </script>";
+//     // $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+//     return $html;
+// }
+
 ?>

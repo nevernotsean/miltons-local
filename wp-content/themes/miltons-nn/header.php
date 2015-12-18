@@ -38,6 +38,7 @@
 		<meta name="theme-color" content="#ffffff">
 
 		<?php wp_head(); ?>
+
 	</head>
 	<body <?php body_class('no-fouc'); ?>>
 
