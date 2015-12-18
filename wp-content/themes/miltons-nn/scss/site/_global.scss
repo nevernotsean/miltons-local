@@ -82,6 +82,10 @@ img.alignright {
 	@include inlineCentered;
 }
 
+ul.inline-list li:first-child {
+    margin-left: 0px;
+}
+
 hr.white {
 	border-color: $white;
 }
