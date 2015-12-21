@@ -303,6 +303,11 @@ p.in-stock {
         }
     }
     // Sidebar
+    .recipe-sidebar {
+        @media #{$small-only}{
+            margin-bottom: 2rem;
+        }
+    }
     .sidebar-container {
         .rel-wrapper {
             padding: 20px;

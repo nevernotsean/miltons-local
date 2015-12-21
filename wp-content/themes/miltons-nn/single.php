@@ -25,10 +25,7 @@ get_header(); ?>
 			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 				<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
 				<div class="entry-content">
-					<div class="small-12 medium-6 large-7 column">
-						<?php the_content(); ?>
-					</div>
-					<div class="small-12 medium-6 large-5 recipe-sidebar column">
+					<div class="small-12 medium-6 medium-push-6 large-5 large-push-7 recipe-sidebar column">
 						<?php $recipe_sidebar = get_field('recipe_sidebar'); ?>
 						<?php if ( !empty($recipe_sidebar) ) { ?>
 						<div class="sidebar-container">
@@ -48,6 +45,9 @@ get_header(); ?>
 							</div>
 						</div>
 						<?php } ?>
+					</div>
+										<div class="small-12 medium-6 medium-pull-6 large-7 large-pull-5 column">
+						<?php the_content(); ?>
 					</div>
 				</div>
 				<footer>
