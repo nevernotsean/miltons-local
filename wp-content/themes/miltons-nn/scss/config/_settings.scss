@@ -346,15 +346,15 @@ $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 // $include-html-accordion-classes: $include-html-classes;
 
 // $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: $silver;
-// $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
-// $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
-// $accordion-navigation-font-color: $jet;
-// $accordion-navigation-font-size: rem-calc(16);
+$accordion-navigation-bg-color: $white;
+$accordion-navigation-hover-bg-color: $accordion-navigation-bg-color;
+$accordion-navigation-active-bg-color: $accordion-navigation-bg-color;
+$accordion-navigation-font-color: $black;
+$accordion-navigation-font-size: rem-calc(16);
 // $accordion-navigation-font-family: $body-font-family;
 
-// $accordion-content-padding: ($column-gutter/2);
-// $accordion-content-active-bg-color: $white;
+$accordion-content-padding: 0;
+$accordion-content-active-bg-color: $white;
 
 // 02. Alert Boxes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -669,7 +669,7 @@ $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 // $input-border-radius: $global-radius;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$input-box-shadow: inset 0 0px 0px rgba(0,0,0,0.1);
 // $input-include-glowing-effect: false;
 
 // We use these to style the fieldset border and spacing.

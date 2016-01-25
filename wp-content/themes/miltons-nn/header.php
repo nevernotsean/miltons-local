@@ -40,7 +40,7 @@
 		<?php wp_head(); ?>
 
 	</head>
-	<body <?php body_class('no-fouc'); ?>>
+	<body <?php body_class('no-fouc'); ?> data-uri="<?php echo get_stylesheet_directory_uri(); ?>">
 
 		<?php get_template_part('parts/miltonsLogo'); ?>
 

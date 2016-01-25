@@ -37,11 +37,15 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	// Custom scripts
 	wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array('jquery'), '1.0.0', true );
 
+	// Google Maps
+	wp_register_script( 'gmaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA4_o8c3lrtbyR1T972pwzvFlFlAWFRUCM', array(), '1.0.0', true );
+
 	// Enqueue all registered scripts.
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'fastclick' );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'foundation' );
+	wp_enqueue_script( 'gmaps' );
 	wp_enqueue_script( 'app' );
 
 	}

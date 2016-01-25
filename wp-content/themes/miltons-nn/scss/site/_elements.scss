@@ -1,9 +1,13 @@
-i.fa.fa-angle-down.scrolldown {
+.js-scroll-down {
     position: absolute;
     bottom: 2rem;
     left: 50%;
-    color: $white;
-    font-size: 3rem;
+    z-index: 9999999;
+    i.fa.fa-angle-down.scrolldown {
+        color: $white;
+        font-size: 3rem;
+        z-index: 9999999;
+    }
 }
 
 section.container {
@@ -46,7 +50,9 @@ section.active {
 
 .home,
 .page-template-page-wholesale-php,
-.page-template-page-onepage-php {
+.page-template-page-onepage-php,
+.page-template-page-clients
+ {
     section.container {
         padding: 0px;
     }
@@ -68,7 +74,8 @@ section.active {
         float: right;
         clear: both;
         color: white;
-        background-color: transparent;
+        // background-color: transparent;
+        background-color: #788255;
         @media #{$small-only} {
             position: relative;
             width: 100%;
@@ -101,15 +108,14 @@ section.active {
     }
 }
 
+.home .sidebar {
+    background-color: transparent;
+}
+
 @media #{$small-only} {
     .home section#wypt-1 .left-image {
         display: none;
     }
-}
-
-.page-template-page-wholesale-php {
-    // .sidebar { width: 50%; }
-    // .left-image { width: 50%; }
 }
 
 // Resuable
@@ -304,7 +310,7 @@ p.in-stock {
     }
     // Sidebar
     .recipe-sidebar {
-        @media #{$small-only}{
+        @media #{$small-only} {
             margin-bottom: 2rem;
         }
     }

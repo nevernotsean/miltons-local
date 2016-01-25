@@ -16,33 +16,14 @@
                     <p><?php echo get_field('client_content'); ?></p>
                     <?php
                     $images = get_field('gallery');
-                    $images2 = get_field('gallery_2');
                     if( $images ): ?>
                     <div class="row collapse">
                       <div class="small-12 column">
-                        <h4>Retail:</h4>
                         <ul class="small-block-grid-3 xlarge-block-grid-4">
                         <?php foreach( $images as $image ): ?>
                           <li>
                             <a href="<?php echo $image['description']; ?>">
                               <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
-                            </a>
-                          </li>
-                        <?php endforeach; ?>
-                        </ul>
-                      </div>
-                    </div>
-                  <?php endif; ?>
-                  <?php if( $images2 ): ?>
-                    <div class="row collapse">
-                      <div class="small-12 column">
-                        <hr>
-                        <h4>Foodservice:</h4>
-                        <ul class="small-block-grid-3 xlarge-block-grid-4">
-                        <?php foreach( $images2 as $image2 ): ?>
-                          <li>
-                            <a href="<?php echo $image2['description']; ?>">
-                              <img src="<?php echo $image2['sizes']['large']; ?>" alt="<?php echo $image2['alt']; ?>" />
                             </a>
                           </li>
                         <?php endforeach; ?>

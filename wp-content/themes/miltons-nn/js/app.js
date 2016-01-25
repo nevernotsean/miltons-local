@@ -4,10 +4,12 @@ var winh, winw, isHome, isShop, isSmall;
 
 winh = $(window).height();
 winw = $(window).width();
+siteURI = $('body').attr('data-uri');
 isHome = $('body').hasClass('home');
 isShop = $('body').hasClass('woocommerce-page');
 isOnePageTemplate = $('#sidebar-bg').length;
 isSinglePost = $('body.single-post').length;
+isFarmersPage = $('body.page-template-page-farmers-php').length;
 isSmall = Foundation.utils.is_small_only();
 
 introAnim = function() {
@@ -20,10 +22,10 @@ introAnim = function() {
             opacity: "1",
             delay: 1
         })
-        .to('.scrolldown', 0.5, {
+        .to('.js-scroll-down', 0.5, {
             opacity: "1"
         })
-        .to('.scrolldown', 1, {
+        .to('.js-scroll-down', 1, {
             y: "10",
             yoyo: true,
             repeat: -1
@@ -41,7 +43,7 @@ setPanelsTriggers = function() {
             $panels = $('panel'),
             $firstPanel = $('panel').first(),
             $firstPanelPostition = $firstPanel.position().top;
-            $firstSidebar = $firstPanel.find('.sidebar');
+        $firstSidebar = $firstPanel.find('.sidebar');
 
         expandSidebar = function() {
 
@@ -127,7 +129,7 @@ setPanelsTriggers = function() {
         });
 
         // Down arrow listener
-        $('.js-scroll-down').click(function(e) {
+        $('.js-scroll-down').bind('click touchstart', function(e) {
             e.preventDefault();
             $('html body').animate({
                 scrollTop: $firstPanelPostition
@@ -195,8 +197,8 @@ if (!isOnePageTemplate && !isSinglePost) {
             var sidebarWidth = $('.recipe-sidebar').width();
             $('.sidebar-container').width(sidebarWidth);
             $(window).on('resize', function() {
-                if ( Foundation.utils.is_small_only() ) {
-                  return;
+                if (Foundation.utils.is_small_only()) {
+                    return;
                 }
                 sidebarWidth = $('.recipe-sidebar').width();
                 $('.sidebar-container').width(sidebarWidth);
@@ -217,6 +219,148 @@ if (!isOnePageTemplate && !isSinglePost) {
         });
     }
 }
+
+// Farmers Map
+(function($) {
+
+    function new_map($el) {
+
+        // var
+        var $markers = $('.marker');
+
+
+        // vars
+        var args = {
+            zoom: 10,
+            center: new google.maps.LatLng(37.5333, 77.4667),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true
+        };
+
+
+        // create map
+        var map = new google.maps.Map($el[0], args);
+
+
+        // add a markers reference
+        map.markers = [];
+
+
+        // add markers
+        $markers.each(function() {
+
+            add_marker($(this), map);
+
+        });
+
+
+        // center map
+        center_map(map);
+
+
+        // return
+        return map;
+
+    }
+
+    function add_marker($marker, map) {
+
+        // var
+        var latlng = new google.maps.LatLng($marker.attr('data-lat'), $marker.attr('data-lng')),
+            id = $marker.attr('data-id');
+
+        // create marker
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            id: id,
+            icon: siteURI + '/assets/img/icons/star.png'
+        });
+
+        console.log(marker.icon);
+
+        // add to array
+        map.markers.push(marker);
+
+        // if marker contains HTML, add it to an infoWindow
+        if ($marker.html()) {
+
+            // create info window
+            var infowindow = new google.maps.InfoWindow({
+                content: $marker.html()
+            });
+
+            // show info window when marker is clicked
+            google.maps.event.addListener(marker, 'click', function() {
+
+                infowindow.open(map, marker);
+
+                map.panTo(marker.position);
+                // console.dir(marker.position);
+
+            });
+
+            //Close the info window on pan
+            // if ( Foundation.utils.is_medium_up() ) {
+                google.maps.event.addListener(map,'center_changed', function() {
+                    infowindow.close();
+                });
+            // }
+
+            // Center on the marker when hovering the list item
+
+            $('.sidebar-locked .marker[data-id="' + marker.id + '"]').on('mouseenter click',function() {
+
+                if (infowindow) {
+                    infowindow.close();
+                }
+
+                map.panTo(marker.position);
+
+                infowindow.open(map, marker);
+
+            });
+        }
+
+    }
+
+    function center_map(map) {
+
+        // vars
+        var bounds = new google.maps.LatLngBounds();
+
+        // loop through all markers and create bounds
+        $.each(map.markers, function(i, marker) {
+
+            var latlng = new google.maps.LatLng(marker.position.lat(), marker.position.lng());
+
+            bounds.extend(latlng);
+
+        });
+
+        // only 1 marker?
+        if (map.markers.length == 1) {
+            // set center of map
+            map.setCenter(bounds.getCenter());
+            map.setZoom(16);
+        } else {
+            // fit to bounds
+            map.fitBounds(bounds);
+        }
+
+    }
+    var map = null;
+
+    $(window).on('load', function() {
+
+        $('.acf-map').each(function() {
+            // create map
+            map = new_map($(this));
+        });
+
+    });
+
+})(jQuery);
 
 
 // Doc Ready
@@ -276,7 +420,7 @@ $(document).ready(function() {
             TweenMax.set('.placeholder', {
                 height: winh
             });
-            TweenMax.set('.introLogo, .scrolldown', {
+            TweenMax.set('.introLogo, .js-scroll-down', {
                 xPercent: '-50%',
                 yPercent: '-50%'
             });
@@ -322,7 +466,7 @@ $(document).ready(function() {
 
 $(window).load(function() {
 
-    $('.scrolldown, .introLogo').css('opacity', '0');
+    $('.js-scroll-down, .introLogo').css('opacity', '0');
 
     $(window).trigger('nofoucreveal');
 
@@ -344,6 +488,15 @@ $(window).load(function() {
         autoplay: true,
         autoplaySpeed: 2000,
         cssEase: 'ease'
+    });
+
+    $(document).foundation({
+        equalizer: {
+            // Specify if Equalizer should make elements equal height once they become stacked.
+            equalize_on_stack: false,
+            // Allow equalizer to resize hidden elements
+            act_on_hidden_el: true
+        }
     });
 });
 
@@ -369,8 +522,9 @@ $(window).on('nofoucreveal', function() {
 
 
 // Pinterest
-(function(d){
-    var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+(function(d) {
+    var f = d.getElementsByTagName('SCRIPT')[0],
+        p = d.createElement('SCRIPT');
     p.type = 'text/javascript';
     p.async = true;
     p.src = '//assets.pinterest.com/js/pinit.js';

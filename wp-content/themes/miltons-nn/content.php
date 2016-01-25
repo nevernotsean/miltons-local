@@ -13,7 +13,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="small-6 left column">
-		<?php the_post_thumbnail( 'large'); ?>
+		<a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'large'); ?></a>
 	</div>
 	<div class="small-6 right column">
 	<header>

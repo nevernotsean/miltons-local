@@ -23,8 +23,7 @@
     background-color: $topbar-dropdown-link-bg;
 }
 
-$topbarheight : 60px;
-
+$topbarheight: 60px;
 // Topbar fixed
 .top-bar-container {
     position: fixed;
@@ -67,7 +66,8 @@ $topbarheight : 60px;
 
 body.home,
 body.page-template-page-wholesale-php,
-body.page-template-page-onepage-php {
+body.page-template-page-onepage-php,
+.page-template-page-clients {
     .topbar-bg {
         position: fixed;
     }

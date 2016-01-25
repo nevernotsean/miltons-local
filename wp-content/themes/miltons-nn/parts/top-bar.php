@@ -26,11 +26,7 @@
         </section>
     </nav>
 </div>
-<div class="row collapse nomax topbar-bg">
-    <div class="small-12 column">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ph.png" alt="" class="">
-    </div>
-</div>
+<div class="row collapse nomax topbar-bg"></div>
 
 <?php } else { ?>
 

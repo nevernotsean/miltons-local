@@ -1,31 +1,39 @@
 // Global Resets
-
-h1, h2, h3 {
-  text-transform: uppercase;
-  font-weight: bold;
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 // Home Type
-
-.home, .page-template-page-wholesale-php, .page-template-page-onepage-php {
-
-  .sidebar {
-    h1,h2,h3,h4,h5,h6,p,span {
-      color: #fff;
+.home,
+.page-template-page-wholesale-php,
+.page-template-page-onepage-php,
+.page-template-page-farmers,
+.page-template-page-clients {
+    .sidebar {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span {
+            color: #fff;
+        }
     }
-  }
-
-  h1.headline {
-    border-bottom: 2px solid #fff;
-    margin-bottom: 1.8rem;
-  }
-
-  h3.subhead {
-    line-height: 0;
-    margin-bottom: 1rem;
-    small{
-      color: #fff;
-      font-weight: 300;
+    h1.headline {
+        border-bottom: 2px solid #fff;
+        margin-bottom: 1.8rem;
     }
-  }
+    h3.subhead {
+        line-height: 0;
+        margin-bottom: 1rem;
+        small {
+            color: #fff;
+            font-weight: 300;
+        }
+    }
 }

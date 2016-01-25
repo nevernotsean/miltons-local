@@ -86,7 +86,7 @@ function show_gallery_as_images(){
         $image       = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
         $image_title = esc_attr( get_the_title( $attachment_id ) );
 
-        echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( $image ), $attachment_id, $post->ID, $image_class );
+        echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $image, $attachment_id, $post->ID, $image_class );
 
     }
   }

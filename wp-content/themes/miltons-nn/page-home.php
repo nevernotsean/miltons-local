@@ -74,8 +74,6 @@ get_header(); ?>
 
   <?php endwhile; endif; ?>
 
-  <?php get_template_part('parts/clients-gallery-acf'); ?>
-
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 	</div>

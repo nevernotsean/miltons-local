@@ -25,12 +25,15 @@
               <li><a href="https://twitter.com/miltonslocal"><i class="fa fa-twitter"></i></a></li>
             </ul>
             <ul class="inline-list left pages">
+              <li><a href="<?php echo site_url() ?>/shop"><small>SHOP</small></a></li>
               <li><a href="<?php echo site_url() ?>/press"><small>PRESS</small></a></li>
-              <li><a href="<?php echo site_url() ?>#clients"><small>WHERE TO BUY</small></a></li>
+              <li><a href="<?php echo site_url() ?>/find-us"><small>FIND US</small></a></li>
+              <li><a href="<?php echo site_url() ?>/farmers"><small>FARMERS</small></a></li>
+              <li><a href="<?php echo site_url() ?>/clients"><small>CLIENTS</small></a></li>
               <li><a href="<?php echo site_url() ?>/contact"><small>CONTACT</small></a></li>
               <li><a href="<?php echo site_url() ?>/returns-privacy"><small>PRIVACY & RETURNS</small></a></li>
               <li><a href="http://www.never-not.com"><small>SITEBY</small></a></li>
-              <li class="copy"><a href=""><small>&copy 2015 MILTON'S LOCAL</small></a></li>
+              <li class="copy"><a href=""><small>&copy 2016 MILTON'S LOCAL</small></a></li>
             </ul>
           </div>
 
