@@ -62,6 +62,7 @@ section.active {
         width: 100%;
         z-index: -1;
         @media #{$small-only} {
+            height: 70vh;
             min-height: inherit;
         }
     }

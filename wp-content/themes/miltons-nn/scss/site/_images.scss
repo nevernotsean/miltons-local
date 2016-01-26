@@ -59,7 +59,7 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     @media #{$small-only} {
-        height: calc(100vh - 45px);
+        height: calc(70vh - 45px);
         background-position: 15% center;
     }
 }

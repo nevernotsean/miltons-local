@@ -8669,6 +8669,7 @@ section.active {
     .page-template-page-onepage-php section.masthead,
     .page-template-page-clients section.waypoint,
     .page-template-page-clients section.masthead {
+      height: 70vh;
       min-height: inherit; } }
 .home .sidebar,
 .page-template-page-wholesale-php .sidebar,
@@ -9239,7 +9240,7 @@ body .topbar-bg {
   height: 100vh; }
   @media only screen and (max-width: 40em) {
     .masthead-image {
-      height: calc(100vh - 45px);
+      height: calc(70vh - 45px);
       background-position: 15% center; } }
 
 .left-image {
