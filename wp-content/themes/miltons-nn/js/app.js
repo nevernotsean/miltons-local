@@ -24,97 +24,96 @@ introAnim = function() {
         })
         .to('.js-scroll-down', 0.5, {
             opacity: "1"
-        })
-        .to('.js-scroll-down', 1, {
-            y: "10",
-            yoyo: true,
-            repeat: -1
         });
+    // .to('.js-scroll-down', 1, {
+    //     y: "10",
+    //     yoyo: true,
+    //     repeat: -1
+    // });
 };
 
 setPanelsTriggers = function() {
 
-    var hasSections = $('section.waypoint').length;
-
-    if (hasSections && !isSmall) {
-
-        var $masthead = $('.masthead-image'),
-            $sidebar = $('#sidebar-bg'),
-            $panels = $('panel'),
-            $firstPanel = $('panel').first(),
-            $firstPanelPostition = $firstPanel.position().top;
+    var hasSections = $('section.waypoint').length,
+        $masthead = $('.masthead-image'),
+        $sidebar = $('#sidebar-bg'),
+        $panels = $('panel'),
+        $firstPanel = $('panel').first(),
+        $firstPanelPostition = $firstPanel.position().top,
         $firstSidebar = $firstPanel.find('.sidebar');
 
-        expandSidebar = function() {
+    expandSidebar = function() {
 
-            TweenMax.to('#sidebar-bg', 0.5, {
-                ease: Quart.easeOut,
-                width: "40%"
+        TweenMax.to('#sidebar-bg', 0.5, {
+            ease: Quart.easeOut,
+            width: "40%"
+        });
+
+        if (isHome) {
+            TweenMax.from($firstSidebar, 1, {
+                delay: 0.5,
+                opacity: 0.4,
+                ease: Linear.none
             });
 
-            if (isHome) {
-                TweenMax.from($firstSidebar, 1, {
-                    delay: 0.5,
-                    opacity: 0.4,
-                    ease: Linear.none
-                });
-
-                TweenMax.set('.masthead', {
-                    clearProps: "all"
-                });
-            }
-
-            TweenMax.to('.top-bar-container', 0.5, {
-                yPercent: "0",
-                onComplete: function() {
-                    TweenMax.set('.mask', {
-                        display: "block"
-                    });
-                }
+            TweenMax.set('.masthead', {
+                clearProps: "all"
             });
+        }
 
-            TweenMax.to('.introLogo', 1, {
-                left: "30%",
-                ease: Quart.easeOut
-            });
-
-            TweenMax.to('.scrolldown', 0.5, {
-                opacity: "0"
-            });
-
-        };
-
-        closeSidebar = function() {
-
-            TweenMax.set('.mask', {
-                display: "none"
-            });
-
-            TweenMax.to('#sidebar-bg', 0.5, {
-                ease: Quart.easeIn,
-                width: "0%",
-            });
-
-            if (isHome) {
-                TweenMax.set('.masthead', {
-                    zIndex: 1
+        TweenMax.to('.top-bar-container', 0.5, {
+            yPercent: "0",
+            onComplete: function() {
+                TweenMax.set('.mask', {
+                    display: "block"
                 });
             }
+        });
 
-            TweenMax.to('.top-bar-container', 0.5, {
-                yPercent: "-100%"
+        TweenMax.to('.introLogo', 1, {
+            left: "30%",
+            ease: Quart.easeOut
+        });
+
+        TweenMax.to('.scrolldown', 0.5, {
+            opacity: "0"
+        });
+
+    };
+
+    closeSidebar = function() {
+
+        TweenMax.set('.mask', {
+            display: "none"
+        });
+
+        TweenMax.to('#sidebar-bg', 0.5, {
+            ease: Quart.easeIn,
+            width: "0%",
+        });
+
+        if (isHome) {
+            TweenMax.set('.masthead', {
+                zIndex: 1
             });
+        }
 
-            TweenMax.to('.introLogo', 0.8, {
-                left: "50%",
-                ease: Quart.easeOut
-            });
+        TweenMax.to('.top-bar-container', 0.5, {
+            yPercent: "-100%"
+        });
 
-            TweenMax.to('.scrolldown', 0.5, {
-                opacity: "1"
-            });
+        TweenMax.to('.introLogo', 0.8, {
+            left: "50%",
+            ease: Quart.easeOut
+        });
 
-        };
+        TweenMax.to('.scrolldown', 0.5, {
+            opacity: "1"
+        });
+
+    };
+
+    if (hasSections && !isSmall) {
 
         // Close and Open the sidebar
         $firstPanel.waypoint(function(direction) {
@@ -126,14 +125,6 @@ setPanelsTriggers = function() {
             }
         }, {
             offset: winh - 50
-        });
-
-        // Down arrow listener
-        $('.js-scroll-down').bind('click touchstart', function(e) {
-            e.preventDefault();
-            $('html body').animate({
-                scrollTop: $firstPanelPostition
-            }, 1000, 'swing');
         });
 
         // Panel Triggers
@@ -169,6 +160,15 @@ setPanelsTriggers = function() {
 
         });
     }
+
+    // Down arrow listener
+    $('.js-scroll-down').on('touchstart click', function(e) {
+        e.preventDefault();
+        console.log('ping');
+        $('html body').animate({
+            scrollTop: $firstPanelPostition
+        }, 1000, 'swing');
+    });
 };
 
 
@@ -302,14 +302,14 @@ if (!isOnePageTemplate && !isSinglePost) {
 
             //Close the info window on pan
             // if ( Foundation.utils.is_medium_up() ) {
-                google.maps.event.addListener(map,'center_changed', function() {
-                    infowindow.close();
-                });
+            google.maps.event.addListener(map, 'center_changed', function() {
+                infowindow.close();
+            });
             // }
 
             // Center on the marker when hovering the list item
 
-            $('.sidebar-locked .marker[data-id="' + marker.id + '"]').on('mouseenter click',function() {
+            $('.sidebar-locked .marker[data-id="' + marker.id + '"]').on('mouseenter click', function() {
 
                 if (infowindow) {
                     infowindow.close();
@@ -456,7 +456,7 @@ $(document).ready(function() {
 
     } else if (isSmall) {
         $('#sidebar-bg').css('width', '0');
-        TweenMax.set('.introLogo, .scrolldown', {
+        TweenMax.set('.introLogo, .js-scroll-down', {
             xPercent: '-50%',
             yPercent: '-50%'
         });
