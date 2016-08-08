@@ -7,7 +7,7 @@ Author: Store Locator Plus
 Author URI: https://www.storelocatorplus.com
 License: GPL3
 Tested up to: 4.4.01
-Version: 4.4.12
+Version: 4.4.17
 
 Text Domain: store-locator-le
 Domain Path: /languages/
@@ -29,7 +29,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 */
-if ( defined( 'SLPLUS_VERSION'   ) === false ) { define( 'SLPLUS_VERSION'    , '4.4.12'                             ); } // Current plugin version.
+if ( defined( 'SLPLUS_VERSION'   ) === false ) { define( 'SLPLUS_VERSION'    , '4.4.17'                             ); } // Current plugin version.
 
 $min_wp_version  = '3.8';
 $min_php_version = '5.2.4';
@@ -84,39 +84,6 @@ if ( version_compare( PHP_VERSION , $min_php_version , '<' ) ) {
     deactivate_plugins( plugin_basename( __FILE__ ) );
     return;
 }
-
-//====================================================================
-// Freemius
-//====================================================================
-
-// Create a helper function for easy SDK access.
-function slp_fs() {
-    global $slp_fs;
-
-    if ( ! isset( $slp_fs ) ) {
-        // Include Freemius SDK.
-        require_once dirname(__FILE__) . '/freemius/start.php';
-
-        $slp_fs = fs_dynamic_init( array(
-            'id'                => '105',
-            'slug'              => 'store-locator-le',
-            'public_key'        => 'pk_d114156f189573a2885f2c62ccb0a',
-            'is_premium'        => false,
-            'has_addons'        => false,
-            'has_paid_plans'    => false,
-            'menu'              => array(
-                'slug'       => 'slp_info',
-                'account'    => false,
-                'support'    => false,
-            ),
-        ) );
-    }
-
-    return $slp_fs;
-}
-
-// Init Freemius.
-slp_fs();
 
 //====================================================================
 // Main Plugin Configuration

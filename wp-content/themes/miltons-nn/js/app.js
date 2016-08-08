@@ -10,6 +10,7 @@ isShop = $('body').hasClass('woocommerce-page');
 isOnePageTemplate = $('#sidebar-bg').length;
 isSinglePost = $('body.single-post').length;
 isFarmersPage = $('body.page-template-page-farmers-php').length;
+isWholesalePage = $('body.page-template-page-wholesale').length;
 isSmall = Foundation.utils.is_small_only();
 
 introAnim = function() {
@@ -130,6 +131,11 @@ setPanelsTriggers = function() {
         // Panel Triggers
         $panels.each(function() {
 
+            var self = this;
+
+            var darken = $(self).find('section.darken').length;
+            // console.log(darken);
+
             $(this).waypoint(function(direction) {
 
                 var image = $(this.element).find('.left-image');
@@ -143,6 +149,9 @@ setPanelsTriggers = function() {
                         opacity: "1",
                     });
 
+                    if ( darken ) {
+                      $('.top-bar-container').addClass('black')
+                    }
                 }
 
                 if (direction == "up") {
@@ -153,6 +162,10 @@ setPanelsTriggers = function() {
                     }, {
                         opacity: "0",
                     });
+
+                    if ( darken ) {
+                      $('.top-bar-container').removeClass('black')
+                    }
                 }
             }, {
                 offset: "50%"
@@ -300,12 +313,10 @@ if (!isOnePageTemplate && !isSinglePost) {
 
             });
 
-            //Close the info window on pan
-            // if ( Foundation.utils.is_medium_up() ) {
-            google.maps.event.addListener(map, 'center_changed', function() {
+            //Close the info window marker hover, click
+            $('.sidebar-locked .marker').on('mouseenter click', function() {
                 infowindow.close();
             });
-            // }
 
             // Center on the marker when hovering the list item
 
@@ -517,6 +528,10 @@ $(window).on('nofoucreveal', function() {
             setPanelsTriggers();
         }
     });
+
+    if ( isWholesalePage ) {
+      $('body.page-template-page-wholesale .top-bar-container').addClass('black');
+    }
 
 });
 

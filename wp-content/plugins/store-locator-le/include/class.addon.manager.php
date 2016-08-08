@@ -287,6 +287,24 @@ class SLPlus_AddOn_Manager extends SLPlus_BaseClass_Object {
 	public function register( $slug , $object ) {
 		if ( ! is_object( $object ) ) { return; }
 
+		if ( ( $slug === 'slp-experience' ) && version_compare( $object->version , '4.4.03' , '<' ) ) {
+			include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+			if (is_plugin_active('slp-experience/slp-experience.php')) {
+				deactivate_plugins('slp-experience/slp-experience.php');
+				add_action(
+					'admin_notices',
+					create_function(
+						'',
+						"echo '<div class=\"error\"><p>" .
+						__('You must upgrade Experience add-on to 4.4.03 or higher or your site will crash. ', 'store-locator-le') .
+						"</p></div>';"
+					)
+				);
+			}
+			delete_plugins( array('slp-experience/slp-experience.php') );
+			return;
+		}
+
 		if ( property_exists( $object , 'short_slug' ) ) {
 			$short_slug = $object->short_slug;
 		} else {

@@ -43,14 +43,16 @@ get_header(); ?>
     $title = get_sub_field('title');
     $subtitle = get_sub_field('sub_header');
     $image = get_sub_field('image');
+		$darken = get_sub_field('darken_ui');
     $size = 'large';
     if ( !empty($image) ) { $img = $image['sizes'][$size]; } else { $img = ''; };
+		if ( $darken ) { $darken = 'darken'; }
     $content = get_sub_field('content');
     $n++
     ?>
 
   <panel>
-    <section class="waypoint" id="wypt-<?php echo $n; ?>" data-attr="<?php echo $n; ?>">
+    <section class="waypoint <?php echo $darken ?>" id="wypt-<?php echo $n; ?>" data-attr="<?php echo $n; ?>">
       <div class="row collapse nomax">
         <div class="small-12 column">
           <div class="left-image" style="background-image: url(<?php echo $img  ?>)">

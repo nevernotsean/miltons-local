@@ -316,6 +316,10 @@ p.in-stock {
         }
     }
     .sidebar-container {
+        @media #{$medium-up} {
+          max-height: 100vh;
+          overflow-y: scroll;
+        }
         .rel-wrapper {
             padding: 20px;
             // background-color: $gold;
@@ -327,8 +331,12 @@ p.in-stock {
         // Sidebar sticky
         &.sticky {
             @media #{$medium-up} {
-                position: fixed;
-                top: 60px;
+                // position: fixed;
+                // top: 60px;
+                // right: rem-calc(29);
+            }
+            @media #{$large-up} {
+              // right: 20vw;
             }
         }
     }

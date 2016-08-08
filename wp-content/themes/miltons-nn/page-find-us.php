@@ -22,7 +22,7 @@ get_header(); ?>
 
     <div class="text-center small-12 medium-6 column medium-centered">
       <hr style="margin: 2rem auto; border-color: #000; width: 3rem;">
-      <p>Enjoying our selection of farm sourced meat is easier than you think. Select your preffered method below.</p>
+      <p>Enjoying our selection of farm sourced meat is easier than you think. Select your preferred method below.</p>
       <hr style="margin: 2rem auto; border-color: #000; width: 3rem;">
     </div>
     <ul class="accordion" data-accordion="">
@@ -52,21 +52,21 @@ get_header(); ?>
         <div id="panel2a" class="content" style="margin: 2em auto;">
           <div class="row">
             <div class="small-8 small-centered medium-uncentered medium-4 column text-center logo">
-              <div class="bg-image" style="background-image: url('https://www.bcorporation.net/sites/default/files/styles/company-logo-full/public/relay.jpg')"></div>
+              <div class="bg-image" style="background-image: url('https://www.bcorporation.net/sites/default/files/styles/company-logo-full/public/relay.jpg')" alt="Relay Foods"></div>
               <p>Delivers to Most Metro Areas in Maryland, Metro D.C., Virginia and North Carolina</p>
               <a class="button" href="https://www.relayfoods.com/search?q=miltons+local">Learn More</a>
               <hr class="hide-for-medium-up">
             </div>
             <div class="small-8 small-centered medium-uncentered medium-4 column text-center logo">
-              <div class="bg-image" style="background-image: url('https://www.dominionharvest.com/assets/images/logo-dominion-harvest.png')" alt=""></div>
+              <div class="bg-image" style="background-image: url('https://www.dominionharvest.com/assets/images/logo-dominion-harvest.png')" alt="Dominion Harvest"></div>
               <p>Delivery to all Richmond locations and Bi-weekly delivery service to Fredericksburg and Williamsburg areas.</p>
               <a class="button" href="https://www.dominionharvest.com">Learn More</a>
               <hr class="hide-for-medium-up">
             </div>
             <div class="small-8 small-centered medium-uncentered medium-4 column text-center logo">
-              <div class="bg-image" style="background-image: url('http://farmtable.co/wp-content/uploads/2015/06/FT-logo.svg')"></div>
+              <div class="bg-image" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/seasonal-roots-logo.png')" alt="seasonal-roots"></div>
               <p>Delivery to The Greater Richmond Area, Fredericksburg, Williamsburg, Hampton Roads and Virginia Beach.</p>
-              <a class="button" href="http://farmtable.co/">Learn More</a>
+              <a class="button" href="http://seasonalroots.com/">Learn More</a>
             </div>
           </div>
         </div>

@@ -9,19 +9,14 @@ if ( ! class_exists('SLPlus_Actions') ) {
 	 *
 	 * @package   StoreLocatorPlus\Actions
 	 * @author    Lance Cleveland <lance@charlestonsw.com>
-	 * @copyright 2012-2015 Charleston Software Associates, LLC
+	 * @copyright 2012-2016 Charleston Software Associates, LLC
 	 */
 	class SLPlus_Actions extends SLPlus_BaseClass_Object {
 
 		/**
-		 * @param array $options
+		 * Things to do at startup.
 		 */
-		function __construct( $options = array() ) {
-
-			parent::__construct( $options );
-
-			// In order called
-			//
+		function initialize( ) {
 			add_action('init'               , array($this,'init'                    ) , 11  );
 
 			add_action( "load-post.php"     , array( $this, 'action_AddToPageHelp'  ) , 20  );

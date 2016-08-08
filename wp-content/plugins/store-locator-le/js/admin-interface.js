@@ -337,7 +337,7 @@
         
         // Info Page , Highlight Plugin News
         //
-        $('#wpcsl-option-plugin_news_sidemenu').click();
+        $('#wpcsl-option-how_to_use_sidemenu').click();
     });
 
 })(jQuery);

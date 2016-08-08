@@ -46,10 +46,6 @@ body.store-locator-plus_page_slp_map_settings .button-primary {
   z-index: 0; }
   #wpcsl_container select {
     padding: 0em; }
-  #wpcsl_container div.icon32 {
-    background: url("../images/icons32.png") repeat scroll -75px -3px transparent; }
-  #wpcsl_container div.section_description h4:first-of-type {
-    margin-top: 0px; }
   #wpcsl_container .navsave {
     position: absolute;
     right: 1.5em;
@@ -61,43 +57,31 @@ body.store-locator-plus_page_slp_map_settings .button-primary {
       display: inline-block;
       vertical-align: top; }
   #wpcsl_container #wpcsl-nav {
-    background-color: #DDDDDD;
-    border-left: solid 1px #CCCCCC;
-    border-bottom: solid 1px #CCCCCC;
+    background-color: transparent;
+    border: none;
     margin-bottom: 0.25em; }
     #wpcsl_container #wpcsl-nav ul {
-      margin: 0; }
+      margin: 0;
+      border-bottom: 1px solid #CCCCCC;
+      box-shadow: 0px 2px 2px #DDDDDD; }
       #wpcsl_container #wpcsl-nav ul li {
         display: inline-block;
         margin-bottom: 0;
         min-width: 6em;
-        padding-right: 1em;
-        border-right: solid 1px #E5E5E5; }
-        #wpcsl_container #wpcsl-nav ul li:hover {
-          background-color: #CCCCCC; }
-        #wpcsl_container #wpcsl-nav ul li.current {
-          padding-right: 1.25em; }
-          #wpcsl_container #wpcsl-nav ul li.current a {
-            background-color: #CCCCCC;
-            color: #006600;
-            width: 100%; }
-            #wpcsl_container #wpcsl-nav ul li.current a:before {
-              font-family: dashicons;
-              content: "\f139";
-              color: #006600;
-              vertical-align: sub; }
+        padding: 0.75em 0.75em 0px; }
         #wpcsl_container #wpcsl-nav ul li a {
-          box-shadow: none;
+          color: #555;
+          padding: 0.5em 0px;
           display: block;
-          font: bold 1.1em sans-serif;
-          padding: 0.5em 0em 0.1em 1.1em;
+          font: normal 1.2em sans-serif;
+          box-shadow: none;
           text-decoration: none;
-          line-height: 1.5em; }
-          #wpcsl_container #wpcsl-nav ul li a:before {
-            font-family: dashicons;
-            content: "\f139";
-            vertical-align: sub;
-            color: #DDDDDD; }
+          text-align: center; }
+          #wpcsl_container #wpcsl-nav ul li a:hover {
+            border-bottom: 0.25em solid #4444AA; }
+        #wpcsl_container #wpcsl-nav ul li.current a {
+          background-color: transparent;
+          border-bottom: 0.25em solid #333366; }
   #wpcsl_container #wpcsl-option-navbar_wrapper {
     white-space: nowrap; }
     #wpcsl_container #wpcsl-option-navbar_wrapper .about-wrap {
@@ -108,13 +92,6 @@ body.store-locator-plus_page_slp_map_settings .button-primary {
       padding-left: 20px;
       padding-bottom: 0;
       border: none; }
-    #wpcsl_container #wpcsl-option-navbar_wrapper .nav-tab {
-      border-bottom: solid 1px #CCCCCC; }
-    #wpcsl_container #wpcsl-option-navbar_wrapper .nav-tab-active {
-      background-color: #DDDDDD;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #CCCCCC; }
   #wpcsl_container #content {
     font-family: sans-serif;
     min-height: 650px;
@@ -242,14 +219,51 @@ div.theme_details {
  * Settings Panel
  */
 .section_description {
-  font-size: 12px;
-  padding: 0px; }
-
-.section_description H3 {
-  margin: 0px; }
-
-.section_description H4 {
-  margin: 0px 0px 3px 6px; }
+  color: #666666;
+  font-size: 1em;
+  padding: 1em 0; }
+  .section_description H3 {
+    margin: 0; }
+  .section_description H4 {
+    margin: 0 0 0.25em 0; }
+  .section_description .left_side {
+    display: inline-block;
+    vertical-align: top;
+    width: 80%; }
+    .section_description .left_side .content_pad {
+      padding-right: 2em; }
+  .section_description .right_side {
+    background-color: #AAA;
+    display: inline-block;
+    vertical-align: top;
+    width: 20%; }
+    .section_description .right_side .content_pad {
+      padding: 0 1em; }
+    .section_description .right_side ul.news_feed_list .news_feed_item {
+      border-bottom: 1px solid #CCCCCC;
+      color: #CCCCCC;
+      padding: 1em 0; }
+      .section_description .right_side ul.news_feed_list .news_feed_item:last-child {
+        border-bottom: none; }
+      .section_description .right_side ul.news_feed_list .news_feed_item a {
+        display: block;
+        text-decoration: none;
+        font-size: 1.1em; }
+  .section_description .sprite_48 {
+    background: transparent url("../images/icons48.png") no-repeat scroll;
+    height: 48px;
+    width: 48px;
+    display: inline-block; }
+    .section_description .sprite_48.documentation {
+      background-position: -195px 0px; }
+    .section_description .sprite_48.forums {
+      background-position: -242px 0px; }
+    .section_description .sprite_48.rss {
+      background-position: -49px 0px; }
+    .section_description .sprite_48.twitter {
+      background-position: -98px 0px; }
+    .section_description .sprite_48.youtube {
+      background-position: -147px 0px; }
 
 /**
  * Line Entries
@@ -876,9 +890,6 @@ div.feedburnerFeedBlock ul li span.headline {
 .map_designer_section td {
   border-bottom: none; }
 
-.left_side {
-  border-right: solid #ddd 1px; }
-
 th.optionpack {
   background-color: #D4D4D4; }
 
@@ -897,10 +908,6 @@ div.section_column_intro {
 
 div.section_column_content {
   padding: 0px 6px; }
-
-.section_description {
-  padding-bottom: 6px;
-  color: #666666; }
 
 div.section_column h2 {
   background: none repeat scroll 0 0 #E0E0D0;

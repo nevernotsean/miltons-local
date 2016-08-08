@@ -21,14 +21,16 @@
           <div class="left">
             <ul class="inline-list left social">
               <li><a href="https://facebook.com/miltonslocal"><i class="fa fa-facebook"></i></a></li>
-              <!-- <li><a href=""><i class="fa fa-instagram"></i></a></li> -->
+              <li><a href="https://www.instagram.com/miltonslocal/"><i class="fa fa-instagram"></i></a></li>
               <li><a href="https://twitter.com/miltonslocal"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.pinterest.com/miltonslocal/"><i class="fa fa-pinterest"></i></a></li>
             </ul>
             <ul class="inline-list left pages">
               <li><a href="<?php echo site_url() ?>/shop"><small>SHOP</small></a></li>
-              <li><a href="<?php echo site_url() ?>/press"><small>PRESS</small></a></li>
               <li><a href="<?php echo site_url() ?>/find-us"><small>FIND US</small></a></li>
+              <li><a href="<?php echo site_url() ?>/category/recipe/"><small>RECIPES</small></a></li>
               <li><a href="<?php echo site_url() ?>/farmers"><small>FARMERS</small></a></li>
+              <li><a href="<?php echo site_url() ?>/press"><small>PRESS</small></a></li>
               <li><a href="<?php echo site_url() ?>/clients"><small>CLIENTS</small></a></li>
               <li><a href="<?php echo site_url() ?>/contact"><small>CONTACT</small></a></li>
               <li><a href="<?php echo site_url() ?>/returns-privacy"><small>PRIVACY & RETURNS</small></a></li>
@@ -48,6 +50,7 @@
           </div>
 
           <div class="small-12 column text-center hide-for-medium-up">
+            <a href="<?php echo home_url(); ?>">
             <img class="white" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/miltons-logo-stacked.svg" alt="">
           </div>
         </column>

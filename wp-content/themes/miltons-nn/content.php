@@ -22,6 +22,7 @@
 	</header>
 	<div class="entry-content">
 			<?php the_excerpt();?>
+			<a href="<?php the_permalink(); ?>">Read More</a>
 	</div>
 	<footer>
 		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>

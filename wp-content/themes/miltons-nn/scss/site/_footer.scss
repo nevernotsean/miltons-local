@@ -22,9 +22,13 @@ footer#site_footer {
         }
     }
     .left {
-        ul.pages, ul.social {
-            a { color: $black;
-            &:hover { color: $primary-color}
+        ul.pages,
+        ul.social {
+            a {
+                color: $black;
+                &:hover {
+                    color: $primary-color
+                }
             }
         }
         li.copy a {
@@ -37,11 +41,10 @@ footer#site_footer {
             padding-left: $column-gutter / 2;
             padding-right: $column-gutter / 2;
         }
-
         &.pages {
-          li:last-child {
-              border-right: 1px solid $black;
-          }
+            li:last-child {
+                border-right: 1px solid $black;
+            }
         }
     }
     .right {
@@ -55,7 +58,6 @@ footer#site_footer {
 }
 
 // mobile footer
-
 @media #{$small-only} {
     footer#site_footer {
         background-color: $jet;
@@ -69,14 +71,13 @@ footer#site_footer {
                 }
             }
         }
-
-        .left { float: none !important; }
-
+        .left {
+            float: none !important;
+        }
         ul.left.social {
             width: 100%;
             @include inlineCentered;
             float: none !important;
-
             a {
                 color: $white;
                 &:hover {
@@ -88,14 +89,13 @@ footer#site_footer {
                 border-left: 1px solid $white;
                 // padding-left: $column-gutter/2;
                 // padding-right: $column-gutter/2;
-
             }
             li:last-child {
                 border-right: 1px solid $white;
             }
         }
         .left.pages {
-            @include block-grid(1);
+            @include block-grid(3);
             text-align: center;
             width: 100%;
             margin: 0px !important;
@@ -104,21 +104,20 @@ footer#site_footer {
                 &:last-child {
                     border: 0px solid #000;
                 }
-
                 a {
-                color: $white;
+                    color: $white;
                     &:hover {
                         color: $white;
                     }
                 }
-
                 &.copy a {
-                  color: $white;
-                  pointer-events: none;
+                    color: $white;
+                    pointer-events: none;
                 }
             }
-
-
+        }
+        li.copy {
+            width: 100% !important;
         }
         .right {}
         img.white {

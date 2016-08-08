@@ -26,12 +26,16 @@ ul.products {
 
 // Cart
 
-.shop_table.cart {
+.shop_table.cart { 
   @include grid-column(12);
 }
 
 tr.cart_item td.product-thumbnail {
     display: none;
+}
+
+.product-subtotal {
+    border-right: 1px solid black;
 }
 
 table.shop_table.cart th.product-thumbnail {

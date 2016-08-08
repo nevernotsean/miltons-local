@@ -2,11 +2,11 @@
 Plugin Name:  Store Locator Plus
 Contributors: charlestonsw, DeBAAT
 Donate link: https://www.storelocatorplus.com/product/store-locator-plus-4/
-Tags:address location map, address map, admin, ajax, best google maps,business locations, coordinates, custom google maps, dealer locater, dealer locator, directions, easy map, geo, geocoder, geocoding, gmaps, google, google map, google map plugin, google maps,google maps, google map widget, jquery, latitude, location, location finder, locator, locator maps, longitude, map, map creator, map directions, map maker, map markers, map multiple locations, map of addresses, mapper, mapping, mapping software, mapping tools, map plugin, maps, map tools, map widget, marker, page, places, plugin, polygons, polylines, post, posts, proximity, proximity search, routes, shop finder, shop locator, shops, shortcode, store finder, store locater, store locator, store locator map, stores, streetview, widget, wordpress locator, wp google map, wp google maps, wp maps, zipcode, zip code, zip code locator, zipcode locator, zip code search, zipcode search
+Tags: map, locations, directory, directions,  google map, location finder, locator, postal code, shop finder, store finder, store locator, zip code
 License: GLPv2 or later
 Requires at least: 3.8
 Tested up to: 4.4.01
-Stable tag: 4.4.12
+Stable tag: 4.4.17
 
 Add a location finder or directory to your site in minutes. Extensive premium add-on library available!
 
@@ -18,7 +18,7 @@ The website offers more [screen shots](https://www.storelocatorplus.com/support/
 
 For the latest updates and news follow me on [Twitter](https://twitter.com/locatorplus/).
 
-https://www.youtube.com/watch?v=A7KG7pc9iGw
+https://www.youtube.com/watch?v=Gl4V-oz7-IU
 
 = Details =
 
@@ -311,6 +311,22 @@ If you have comments or suggestions about language support, please email us at s
 == Changelog ==
 
 Visit the [Store Locator Plus Release Notes page](https://www.storelocatorplus.com/support/documentation/store-locator-plus/release-notes/) for the full change log.
+
+= 4.4.17 2016-Jan-22 =
+
+Disable & delete Experience add-on during update as that needs to be upgraded to 4.4.03 or a fatal error will occur during install.
+
+= 4.4.13 2016-Jan-21 =
+
+Enhancements
+
+* Simpler look-and-feel of the Info page with a brief "How To Use" as the main focus along with a 2m intro video.
+* Revised info tab uses the built-in WordPress RSS feed for news.
+
+Changes
+
+* Remove Freemius support interface system.
+* Users with 'manage_slp_user' capability can now assign terms (categories) to stores.
 
 = 4.4.12 2016-Jan-13 =
 

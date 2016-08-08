@@ -112,7 +112,7 @@ if (! class_exists('SLPlus')) {
 		    'retry_maximum_delay'       => '5.0',
             'slplus_plugindir'          => SLPLUS_PLUGINDIR,
             'slplus_basename'           => SLPLUS_BASENAME,
-		    'theme'                     => 'twentysixteen_rev01',
+		    'theme'                     => 'twentysixteen_rev02',
 			'themes_last_updated'		=> '0',
 	    );
 
@@ -677,12 +677,14 @@ if (! class_exists('SLPlus')) {
 		 * @param	string	$text			The HTML "sentence" using %s where the hyperlink goes.
 		 * @param 	string  $link_text		The link text.
 		 * @param 	string  $url			The fully-qualified URL.
+		 * @param	string	$title_text		Defaults to link_text
 		 *
 		 * @return  string
 		 */
-		function create_web_link( $slug , $text, $link_text, $url ) {
+		function create_web_link( $slug , $text, $link_text, $url , $title_text = null ) {
 			if ( ! isset( $this->web_pages[ $slug ] ) ) {
-				$hyperlink =  sprintf( '<a href="%s" target="store_locator_plus" name="%s" title="%s">%s</a>' , $url , $link_text, $link_text, $link_text );
+				if ( is_null( $title_text) ) { $title_text = $link_text; }
+				$hyperlink =  sprintf( '<a href="%s" target="store_locator_plus" name="%s" title="%s">%s</a>' , $url , $title_text, $title_text, $link_text );
 
                 if ( empty( $text ) ) { $text = '%s'; } // simple web hyperlink
 
@@ -753,14 +755,7 @@ if (! class_exists('SLPlus')) {
 		 * Initialize some default web links.
 		 */
 		private function initialize_web_links() {
-
-			$this->create_web_link(
-				'documentation' ,
-				__( 'View the %s for more info.' , 'store-locator-le' ) ,
-				__( 'Documentation' 			 , 'store-locator-le' ) ,
-				$this->support_url
-				);	// 'documentation' => base support page URL
-
+			$this->create_web_link( 'view_documentation' ,  __( 'View the %s for more info.' , 'store-locator-le' ) , __( 'Documentation' 			 , 'store-locator-le' ) ,  $this->support_url );	// 'documentation' => base support page URL
 		}
 
 
@@ -1129,6 +1124,17 @@ if (! class_exists('SLPlus')) {
 		    if ( version_compare( $this->installed_version, SLPLUS_VERSION , '<' ) ) {
 			    $this->createobject_Activation();
 			    $this->Activation->update();
+				if ( $this->Activation->disabled_experience ) {
+					add_action(
+						'admin_notices',
+						create_function(
+							'',
+							"echo '<div class=\"error\"><p>" .
+							__('You must upgrade Experience add-on to 4.4.03 or higher or your site will crash. ', 'store-locator-le') .
+							"</p></div>';"
+						)
+					);
+				}
 		    }
 	    }
 

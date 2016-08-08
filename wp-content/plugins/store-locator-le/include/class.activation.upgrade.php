@@ -147,6 +147,7 @@ if ( ! class_exists('SLP_Upgrade') ) {
 			delete_option(SLPLUS_PREFIX.'_use_email_form');
 			delete_option('sl_use_name_search');
 			delete_option('sl_location_table_view');
+			delete_option('slplus_broadcast');
 
 			// Always re-load theme details data.
 			//
