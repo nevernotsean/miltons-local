@@ -37,6 +37,22 @@
               <li><a href="<?php echo site_url() ?>/returns-privacy"><small>PRIVACY & RETURNS</small></a></li>
               <li><a href="http://www.never-not.com"><small>SITEBY</small></a></li>
               <li class="copy"><a href=""><small>&copy 2016 MILTON'S LOCAL</small></a></li>
+              <li>
+              <div class="footer-mailing-wrapper">
+
+					<form action="http://monsterchildren.createsend.com/t/r/s/idhtjtr/" method="post">
+						Subscribe
+						<div class="input-wrapper">
+							<input id="fieldEmail" name="cm-idhtjtr-idhtjtr" type="email" required="" placeholder="NEED'S COPY">
+
+							<button class="button" type="submit">
+								Submit
+							</button>
+						</div>
+					</form>
+
+				</div>
+              </li>
             </ul>
           </div>
 
