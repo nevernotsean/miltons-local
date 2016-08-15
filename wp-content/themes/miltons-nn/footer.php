@@ -26,6 +26,7 @@
               <li><a href="https://www.pinterest.com/miltonslocal/"><i class="fa fa-pinterest"></i></a></li>
             </ul>
             <ul class="inline-list left pages">
+              <li><a href="<?php echo site_url() ?>/"><small>HOME</small></a></li>
               <li><a href="<?php echo site_url() ?>/shop"><small>SHOP</small></a></li>
               <li><a href="<?php echo site_url() ?>/find-us"><small>FIND US</small></a></li>
               <li><a href="<?php echo site_url() ?>/category/recipe/"><small>RECIPES</small></a></li>
