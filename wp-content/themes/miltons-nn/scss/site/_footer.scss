@@ -55,6 +55,58 @@ footer#site_footer {
             color: black;
         }
     }
+
+    .footer-mailing-wrapper{
+
+	display: inline-block;
+    width: 37%;
+    min-width: 413px;
+    vertical-align: top;
+    float: left;
+	     .input-wrapper {
+			    display: inline-block;
+			}
+
+	input {
+    width: 150px;
+    padding: 4px 6px;
+    font-size: 10px;
+    margin-left: 10px;
+//     color: #009BCE;
+    background-color: white;
+//     border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    float: left;
+    margin: 0;
+	}
+
+	 button {
+    font-size: 11px;
+    padding: 4px 6px;
+//     background-color: transparent;
+    text-transform: uppercase;
+//     color: #009BCE;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    margin: 0;
+}
+
+
+    }
 }
 
 // mobile footer

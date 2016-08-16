@@ -39,12 +39,9 @@
               <li class="copy"><a href=""><small>&copy 2016 MILTON'S LOCAL</small></a></li>
               <li>
               <div class="footer-mailing-wrapper">
-
 					<form action="http://monsterchildren.createsend.com/t/r/s/idhtjtr/" method="post">
-						Subscribe
 						<div class="input-wrapper">
-							<input id="fieldEmail" name="cm-idhtjtr-idhtjtr" type="email" required="" placeholder="NEED'S COPY">
-
+							<input id="fieldEmail" name="cm-idhtjtr-idhtjtr" type="email" required="" placeholder="Join the Community">
 							<button class="button" type="submit">
 								Submit
 							</button>
