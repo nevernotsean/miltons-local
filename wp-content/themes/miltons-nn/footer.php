@@ -13,133 +13,32 @@
 
   </section>
 
-  <style>
-	  .text-white{
-		  color: #fff;
-	  }
-	  .emailSignup{
-		  background: #B4823C;
-    z-index: 2;
-    position: absolute;
-    width: 100%;
-    bottom: 80px;    padding-top: 12px;
-    padding-bottom: 12px;
-	  }
-
-	  .o-close{
-		   color: #FFF;
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    font-weight: bold;
-
-
-	  }
-
-	  .input-wrapper{
-		  text-align: center;
-	  }
-	  #fieldEmail{
-		  width: 70%;
-    float: left;
-    height: 37px;
-    border: none;
-	  }
-	  .submit.button{
-		      background: #788255;
-    height: 37px;
-    width: 30%;
-    margin: 0px;
-	padding: 0px;
-    line-height: 8px;
-	  }
-
-	  .o-catfish-copy--desktop{
-		  color: #fff;
-	  }
-
-
-	  footer#site_footer .footer-mailing-wrapper button {
-    font-size: 11px;
-    padding: 4px 6px;
-    text-transform: uppercase;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 0px;
-    border: none;
-    cursor: pointer;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1;
-    height: 37px;
-    margin: 0;
-}
-
-
-footer#site_footer .footer-mailing-wrapper input {
-    width: 150px;
-    padding: 4px 6px;
-    font-size: 10px;
-    margin-left: 10px;
-    background-color: white;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 0px;
-    text-transform: uppercase;
-    float: left;
-    margin: 0;
-    border: 1px solid;
-}
-
-footer#site_footer .footer-mailing-wrapper {
-    display: inline-block;
-    width: 57%;
-    min-width: 0px;
-    vertical-align: top;
-    float: left;
-}
-
-	  </style>
-
-
   <section class="emailSignup">
 
-	<a class="o-close hide-for-small" >X</a>
-
-<div class="row collapse nomax">
-	<div class="small-12 medium-4 medium-centered column">
-		<h5 class="text-center text-white" id="question">Q: What do you get when you play Tug-of-War with a pig?
-			<br>A: Pulled-Pork</h5>
-		<p class="text-white text-center white o-catfish-copy--desktop">
-			Keep in touch with the Milton’s Local community for updates.</p>
-
-
-	<div class="small-12 medium-8 medium-centered column">
-		<form data-id="embedded_signup:form"  class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
-			  <input data-id="ca:input" type="hidden" name="ca" value="40644c76-e885-40a9-bc60-8065607e4831">
-           <input data-id="list:input" type="hidden" name="list" value="1790304532">
-           <input data-id="source:input" type="hidden" name="source" value="EFD">
-           <input data-id="required:input" type="hidden" name="required" value="list,email">
-           <input data-id="url:input" type="hidden" name="url" value="">
-
-
-			<div class="input-wrapper">
-				<input id="fieldEmail" required="" placeholder="you@emailaddress.com" data-id="Email Address:input" type="text" name="email" value="" maxlength="80">
-				<button class="button submit" type="submit" data-enabled="enabled">
-					Subscribe
-				</button>
-			</div>
-
-
-	      		</form>
-	</div>
-	</div>
-</div>
+  <a class="o-close hide-for-small" >X</a>
+  <div class="row collapse nomax">
+  <div class="small-12 medium-4 medium-centered column">
+  <h5 class="text-center text-white" id="question">Q: What do you get when you play Tug-of-War with a pig?
+  <br>A: Pulled-Pork</h5>
+  <p class="text-white text-center white o-catfish-copy--desktop">
+  Keep in touch with the Milton’s Local community for updates.</p>
+  <div class="small-12 medium-8 medium-centered column">
+  <form data-id="embedded_signup:form"  class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
+  <input data-id="ca:input" type="hidden" name="ca" value="40644c76-e885-40a9-bc60-8065607e4831">
+  <input data-id="list:input" type="hidden" name="list" value="1790304532">
+  <input data-id="source:input" type="hidden" name="source" value="EFD">
+  <input data-id="required:input" type="hidden" name="required" value="list,email">
+  <input data-id="url:input" type="hidden" name="url" value="">
+  <div class="input-wrapper">
+  <input id="fieldEmail" required="" placeholder="you@emailaddress.com" data-id="Email Address:input" type="text" name="email" value="" maxlength="80">
+  <button class="button submit" type="submit" data-enabled="enabled">
+  Subscribe
+  </button>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
   </section>
 
   <footer id="site_footer">

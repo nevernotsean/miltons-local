@@ -20,7 +20,7 @@ footer#site_footer {
                 border-right: 1px solid #000;
             }
         }
-    } 
+    }
     .left {
         ul.pages,
         ul.social {
@@ -178,4 +178,97 @@ footer#site_footer {
             width: auto;
         }
     }
+}
+
+// email signup
+
+.text-white{
+  color: #fff;
+}
+.emailSignup{
+  background: #B4823C;
+z-index: 2;
+position: relative;
+width: 100%;
+bottom: 0px;
+padding-top: 12px;
+padding-bottom: 12px;
+}
+
+.o-close{
+   color: #FFF;
+position: absolute;
+top: 25px;
+right: 30px;
+font-weight: bold;
+
+
+}
+
+.input-wrapper{
+  text-align: center;
+}
+#fieldEmail{
+  width: 70%;
+float: left;
+height: 37px;
+border: none;
+}
+.submit.button{
+      background: #788255;
+height: 37px;
+width: 30%;
+margin: 0px;
+padding: 0px;
+line-height: 8px;
+}
+
+.o-catfish-copy--desktop{
+  color: #fff;
+}
+
+
+footer#site_footer .footer-mailing-wrapper button {
+font-size: 11px;
+padding: 4px 6px;
+text-transform: uppercase;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 0px;
+border: none;
+cursor: pointer;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+-ms-transition: 0.2s;
+-o-transition: 0.2s;
+transition: 0.2s;
+display: inline-block;
+vertical-align: middle;
+line-height: 1;
+height: 37px;
+margin: 0;
+}
+
+
+footer#site_footer .footer-mailing-wrapper input {
+width: 150px;
+padding: 4px 6px;
+font-size: 10px;
+margin-left: 10px;
+background-color: white;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 0px;
+text-transform: uppercase;
+float: left;
+margin: 0;
+border: 1px solid;
+}
+
+footer#site_footer .footer-mailing-wrapper {
+display: inline-block;
+width: 57%;
+min-width: 0px;
+vertical-align: top;
+float: left;
 }
