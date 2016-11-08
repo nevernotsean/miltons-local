@@ -50,23 +50,25 @@
 	<div class="inner-wrap">
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
-
-	<nav class="tab-bar">
-		<section class="left-small">
-			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-		</section>
-		<section class="middle tab-bar-section">
-			<a href="<?php echo home_url(); ?>">
-			<h1 class="title">
-				<?php bloginfo( 'name' ); ?>
-			</h1>
-			</a>
-		</section>
-	</nav>
-
+	<div class="header" style="position: absolute;top: 0;width: 100%;z-index: 99;">
+		<nav class="tab-bar">
+			<section class="left-small">
+				<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+			</section>
+			<section class="middle tab-bar-section">
+				<a href="<?php echo home_url(); ?>">
+				<h1 class="title">
+					<?php bloginfo( 'name' ); ?>
+				</h1>
+				</a>
+			</section>
+		</nav>
+	</div>
 	<?php get_template_part( 'parts/off-canvas-menu' ); ?>
 
 	<?php get_template_part( 'parts/top-bar' ); ?>
+
+<div class="mobile-overflow">
 
 <section class="container" role="document">
 	<?php do_action( 'foundationpress_after_header' ); ?>
