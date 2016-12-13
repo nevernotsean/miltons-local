@@ -22,21 +22,21 @@
             <p>Keep in touch with the Milton’s Local community for updates.</p>
           	<?php echo get_template_part('parts/email-signup') ?>
           </div>
-          <div class="small-4 medium-offset-2 medium-2 column sitemap-links">
+          <div class="small-12 medium-offset-2 medium-2 column sitemap-links">
             <h4 class="sitemap-header">Shop Milton's</h3>
             <a href="<?php echo site_url() ?>/shop">SHOP ONLINE</a>
             <a href="<?php echo site_url() ?>/shop/cart">MY CART</a>
             <a href="<?php echo site_url() ?>/shop/my-account/">MY ACCOUNT</a>
             <a href="<?php echo site_url() ?>/find-us">FIND US</a>
           </div>
-          <div class="small-4 medium-2 column sitemap-links">
+          <div class="small-12 medium-2 column sitemap-links">
             <h4 class="sitemap-header">About Us</h3>
             <a href="<?php echo site_url() ?>/">ABOUT MILTON'S LOCAL</a>
             <a href="<?php echo site_url() ?>/clients">OUR CLIENTS</a>
             <a href="<?php echo site_url() ?>/farmers">OUR FARMERS</a>
             <a href="<?php echo site_url() ?>/press">PRESS</a>
           </div>
-          <div class="small-4 medium-2 column sitemap-links">
+          <div class="small-12 medium-2 column sitemap-links">
             <h4 class="sitemap-header">Contact Us</h3>
             <a href="<?php echo site_url() ?>/contact">EMAIL & ADDRESS</a>
             <a href="<?php echo site_url() ?>/wholesale">WHOLESALE</a>

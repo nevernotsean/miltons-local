@@ -11,7 +11,7 @@
 
 <?php if ( !( is_product() ) ) { ?>
 
-<div class="top-bar-container contain-to-grid show-for-medium-up" id="tb-mask">
+<div class="top-bar-container contain-to-grid show-for-medium-up black" id="tb-mask">
     <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="logo">
@@ -30,7 +30,7 @@
 
 <?php } else { ?>
 
-<div class="top-bar-container contain-to-grid">
+<div class="top-bar-container contain-to-grid ?>">
     <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="logo">

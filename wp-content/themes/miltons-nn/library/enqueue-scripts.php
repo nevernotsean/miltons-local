@@ -33,7 +33,6 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	// It's a good idea to do this, performance-wise. No need to load everything if you're just going to use the grid anyway, you know :)
 	wp_register_script( 'foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'), '5.5.2', true );
 
-
 	// Custom scripts
 	wp_register_script( 'app', get_template_directory_uri() . '/js/app.js', array('jquery'), '1.0.0', true );
 

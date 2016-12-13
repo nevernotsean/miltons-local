@@ -12,10 +12,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="small-6 left column">
+	<div class="medium-6 left column">
 		<a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail( 'large'); ?></a>
 	</div>
-	<div class="small-6 right column">
+	<div class="medium-6 right column">
 	<header>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		<?php foundationpress_entry_meta(); ?>

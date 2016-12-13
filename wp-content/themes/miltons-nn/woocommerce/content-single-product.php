@@ -34,11 +34,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
 
 	<div class="row">
-		<div class="small-12 medium-6 medium-push-6 column gallery">
+		<div class="small-12 medium-6 medium-push-6 large-5 large-push-6 column gallery">
 			<?php do_action( 'woocommerce_spp_gallery'); ?>
 		</div>
 
-		<div class="small-12 medium-6 medium-pull-6 column summary entry-summary">
+		<div class="small-12 medium-6 medium-pull-6 large-5 large-pull-6 column summary entry-summary">
 
 			<?php do_action( 'woocommerce_single_product_summary' ); ?>
 

@@ -1,6 +1,6 @@
 <div class="ctct-embed-signup emailSignup">
        <span id="success_message" style="display:none;">
-           <div style="text-align:center;">Thanks for signing up!</div>
+           <div>Thanks for signing up!</div>
        </span>
        <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
            <!-- The following code must be included to ensure your sign-up form works properly. -->
