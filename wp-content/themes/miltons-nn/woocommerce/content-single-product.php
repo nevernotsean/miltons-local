@@ -33,8 +33,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
 
+	<div class="row collapse">
+		<div class="small-12 column">
+			<?php woocommerce_template_single_title() ?>
+		</div>
+	</div>
+
 	<div class="row">
-		<div class="small-12 medium-6 medium-push-6 large-5 large-push-7 column">
+		<div class="small-12 medium-6 medium-push-6 large-5 large-push-7 column gallery-column">
 			<div class="gallery">
 				<?php do_action( 'woocommerce_spp_gallery'); ?>
 			</div>
@@ -46,12 +52,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="small-12 medium-6 medium-pull-6 large-7 large-pull-5 column summary entry-summary">
 
 			<?php do_action( 'woocommerce_single_product_summary' ); ?>
-
-			<div class="row collapse">
-				<div class="small-12 column">
-					<?php woocommerce_template_single_title() ?>
-				</div>
-			</div>
 
 			<div class="row contain border-b">
 				<div class="small-6 column text-center">
@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php woocommerce_template_single_add_to_cart(); ?>
 					<?php woocommerce_show_messages(); ?>
 				</div>
-				<div class="small-12 medium-6 column end">
+				<div class="small-12 medium-6 large-4 column">
 					<ul class="small-block-grid-3" style="padding: 0 1rem;">
 						<?php if ( get_field('certified_paleo') === true ) { echo '<li><img alt="Certified Paleo" src="'. get_stylesheet_directory_uri() .'/assets/img/certified-paleo.png"></li>';} ?>
 						<?php if ( get_field('no_msg') === true ) { echo '<li><img alt="No MSG" src="'. get_stylesheet_directory_uri() .'/assets/img/no-msg.png"></li>';} ?>
