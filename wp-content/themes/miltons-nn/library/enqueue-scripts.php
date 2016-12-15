@@ -14,7 +14,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts() {
 
 	// Enqueue the main Stylesheet.
-	wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/css/foundation.css' );
+	wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/css/foundation.css', array(), '1.01' );
 
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );
@@ -46,6 +46,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_enqueue_script( 'foundation' );
 	wp_enqueue_script( 'gmaps' );
 	wp_enqueue_script( 'app' );
+	wp_enqueue_script( 'jsx');
+	wp_enqueue_script( 'magic');
+	wp_enqueue_script( 'react');
 
 	}
 
