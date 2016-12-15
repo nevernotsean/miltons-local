@@ -198,8 +198,6 @@ p.in-stock {
 }
 
 .entry-summary {
-    margin-bottom: 50px;
-    border-bottom: 4px solid $warmblack;
 
     @media #{$large-up} {
         padding-left: 0px;
@@ -252,7 +250,6 @@ p.in-stock {
       text-transform: uppercase;
       font-weight: 800;
       color: $warmblack;
-      border-bottom: 4px solid $warmblack;
       margin-top: 50px;
       @media #{$small-only} {
         margin-top: 25px;

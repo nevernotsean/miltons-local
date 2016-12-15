@@ -106,6 +106,6 @@ body {
 
 // Post images
 .entry-content figure img,
-img.wp-post-image {
+body:not(.post-type-archive-product) img.wp-post-image {
     margin-bottom: 1.25rem;
 }

@@ -21,7 +21,6 @@ ul.products {
 }
 .gallery-thumbs {
   margin-top: 10px;
-  margin-bottom: 20px;
   img {
     padding-right: 10px;
     opacity: 0.3;
@@ -142,6 +141,6 @@ ul.payment_methods.methods {
 
 // cert icons
 
-.addcart .small-block-grid-3 li {
-  // padding-bottom: 0;
+.addcart {
+  border-bottom: 1px solid black;
 }

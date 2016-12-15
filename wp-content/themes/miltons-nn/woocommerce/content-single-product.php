@@ -39,6 +39,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
+	<hr style="border: 0; border-bottom: 4px solid #888; margin: 0;">
+
 	<div class="row">
 		<div class="small-12 medium-6 medium-push-6 large-5 large-push-7 column gallery-column">
 			<div class="gallery">
@@ -49,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div>
 
-		<div class="small-12 medium-6 medium-pull-6 large-7 large-pull-5 column summary entry-summary">
+		<div class="small-12 medium-6 medium-pull-6 large-6 large-pull-6 column summary entry-summary">
 
 			<?php do_action( 'woocommerce_single_product_summary' ); ?>
 
@@ -69,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 			</div>
 
-			<div class="row excerpt">
+			<div class="row collapse excerpt">
 				<div class="small-12 column">
 					<?php //woocommerce_template_single_excerpt(); ?>
 					<?php the_content(); ?>
@@ -92,7 +94,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</div>
 	</div>
-
+	<hr style="border: 0; border-bottom: 4px solid #888;">
 	<?php do_action( 'woocommerce_after_single_product_summary' );?>
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
