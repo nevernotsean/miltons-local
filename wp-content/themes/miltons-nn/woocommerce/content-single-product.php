@@ -34,8 +34,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
 
 	<div class="row">
-		<div class="small-12 medium-6 medium-push-6 large-5 large-push-6 column gallery">
-			<?php do_action( 'woocommerce_spp_gallery'); ?>
+		<div class="small-12 medium-6 medium-push-6 large-5 large-push-6 column">
+			<div class="gallery">
+				<?php do_action( 'woocommerce_spp_gallery'); ?>
+			</div>
+			<div class="gallery-thumbs">
+				<?php do_action( 'woocommerce_spp_gallery_thumbs'); ?>
+			</div>
 		</div>
 
 		<div class="small-12 medium-6 medium-pull-6 large-5 large-pull-6 column summary entry-summary">
@@ -54,10 +59,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 				<div class="small-6 column text-center">
 					<?php
+						echo '<span>';
 						global $product;
 						$weight = $product->get_weight();
 						echo $weight;
 						echo 'oz.';
+						echo '</span>';
 					?>
 				</div>
 			</div>
@@ -70,9 +77,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="row collapse addcart">
-				<div class="small-12 column">
+				<div class="small-12 medium-6 column">
 					<?php woocommerce_template_single_add_to_cart(); ?>
 					<?php woocommerce_show_messages(); ?>
+				</div>
+				<div class="small-12 medium-6 column end" style="padding-left: 2rem;">
+					<ul class="small-block-grid-3">
+						<?php if ( get_field('certified_paleo') === true ) { echo '<li><img alt="Certified Paleo" src="'. get_stylesheet_directory_uri() .'/assets/img/certified-paleo.png"></li>';} ?>
+						<?php if ( get_field('no_msg') === true ) { echo '<li><img alt="No MSG" src="'. get_stylesheet_directory_uri() .'/assets/img/no-msg.png"></li>';} ?>
+						<?php if ( get_field('gluten_free') === true ) { echo '<li><img alt="Gluten Free" src="'. get_stylesheet_directory_uri() .'/assets/img/gluten-free.png"></li>';} ?>
+					</ul>
 				</div>
 			</div>
 

@@ -17,7 +17,24 @@ ul.products {
 }
 // SPP Page
 .gallery {
-    padding: 20px 0;
+  margin-top: 20px;
+}
+.gallery-thumbs {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  img {
+    padding-right: 10px;
+    opacity: 0.3;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+    &.slick-current {
+      opacity: 1;
+    }
+  }
 }
 // Cart
 .shop_table.cart {
@@ -104,4 +121,27 @@ ul.payment_methods.methods {
           }
         }
     }
+}
+
+.single-product .quantity {
+  width: 50px;
+  margin-right: -5px;
+  display: inline-block;
+
+  input.qty[type="number"] {
+    font-family: "brandon-grotesque",Helvetica,Roboto,Arial,sans-serif;
+    border: 2px solid #888;
+    border-right: none;
+    font-size: 1rem;
+    font-weight: 800;
+    height: 3rem;
+    padding-left: 1rem;
+    line-height: 0;
+  }
+}
+
+// cert icons
+
+.addcart .small-block-grid-3 li {
+  // padding-bottom: 0;
 }

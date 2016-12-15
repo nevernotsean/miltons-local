@@ -489,9 +489,24 @@ $(window).load(function() {
         slide: 'img',
         arrows: false,
         // fade: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        cssEase: 'ease'
+        autoplay: false,
+        // autoplaySpeed: 2000,
+        cssEase: 'ease',
+        asNavFor: '.gallery-thumbs',
+        adaptiveHeight: true
+    });
+
+    // Shop Slider thumbnails
+    $('.gallery-thumbs').slick({
+        slide: 'img',
+        cssEase: 'ease',
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.gallery',
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true
     });
 
     // Single Post Slider

@@ -9,11 +9,6 @@ function jk_dequeue_styles( $enqueue_styles ) {
     unset( $enqueue_styles['woocommerce-smallscreen'] );  // Remove the smallscreen optimisation
     return $enqueue_styles;
 }
-
-// Or just remove them all in one line
-//add_filter( 'woocommerce_enqueue_styles', '__return_false' );
-
-
 //
 // Category Page
 //
@@ -67,7 +62,7 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 // Custom functions
 
 add_action( 'woocommerce_spp_gallery', 'show_gallery_as_images');
-
+add_action( 'woocommerce_spp_gallery_thumbs', 'show_gallery_as_images');
 function show_gallery_as_images(){
 
   global $post, $product, $woocommerce;
@@ -91,6 +86,84 @@ function show_gallery_as_images(){
     }
   }
 }
+
+// Add custom fields
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+	'key' => 'group_58521e15f3fe6',
+	'title' => 'Product Custom Fields',
+	'fields' => array (
+		array (
+			'key' => 'field_58521e1e7e26f',
+			'label' => 'Gluten Free',
+			'name' => 'gluten_free',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+		),
+		array (
+			'key' => 'field_58521e457e270',
+			'label' => 'No MSG',
+			'name' => 'no_msg',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+		),
+		array (
+			'key' => 'field_58521e527e271',
+			'label' => 'Certified Paleo',
+			'name' => 'certified_paleo',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'product',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'side',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+endif;
 
 
 ?>
