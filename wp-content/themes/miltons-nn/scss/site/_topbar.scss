@@ -1,9 +1,9 @@
 // Add some whitespace between top bar and content
-.top-bar-container,
-.tab-bar {
+
+.tab-bar,
+.top-bar-container {
     // margin-bottom: rem-calc(32);
 }
-
 // Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
 // The $topbar-breakpoint can be edited in _custom-settings.scss.
 @media only screen and (min-width: $topbar-breakpoint + em-calc(1)) {
@@ -11,7 +11,6 @@
         display: none;
     }
 }
-
 // Hide the topbar when the screen size is smaller than the topbar breakpoint
 @media only screen and (max-width: $topbar-breakpoint) {
     .top-bar {
@@ -22,41 +21,47 @@
 .sub-menu.dropdown li.active {
     background-color: $topbar-dropdown-link-bg;
 }
+$topbarheight: 60px; // Topbar fixed
 
-$topbarheight: 60px;
-// Topbar fixed
 .top-bar-container {
     position: fixed;
     z-index: 999;
     height: $topbarheight;
+
     .top-bar {
         border-bottom: 1px solid #fff;
         margin-top: 1rem;
         max-width: none;
         margin: 0 1.25rem;
         @media #{$large-up} {
-            @include topbarmargin;
+             @include topbarmargin;
         }
     }
+
     .logo img {
         height: 55px;
         width: auto;
         padding: 5px;
+
         &#blklogo {
             display: none;
         }
     }
+
     .logo svg {
         width: 200px;
         height: 60px;
     }
+
     .logo svg path {
         fill: #fff;
         transition: fill 500ms ease;
     }
+
     li.menu-item a {
         text-transform: uppercase;
     }
+
     li.divider {
         border-right: 1px solid #fff;
         height: 30px;
@@ -64,28 +69,26 @@ $topbarheight: 60px;
     }
 }
 
+.page-template-page-clients,
 body.home,
-body.page-template-page-wholesale-php,
 body.page-template-page-onepage-php,
-.page-template-page-clients {
+body.page-template-page-wholesale-php {
     .topbar-bg {
         position: fixed;
     }
 }
-
 // Single Post top-bar
 .single-post {
     .top-bar-container.black {
         background-color: white;
     }
 }
-
 // Single product top-bar
 .single-product {
     .top-bar-container {
         position: relative;
         z-index: 999;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }
 
@@ -94,39 +97,46 @@ body.page-template-page-onepage-php,
         border-color: $gold transparent transparent transparent;
         border-top-style: solid;
     }
+
     .top-bar {
         border-bottom: 1px solid #000;
         // margin-top: 1rem;
     }
+
     .logo img {
         // height: 55px;
         // width: auto;
         // padding: 5px;
         display: none;
+
         &#blklogo {
             display: block;
         }
     }
+
     .logo svg path {
         fill: #000;
     }
+
     li a {
         color: $black;
         text-transform: uppercase;
+
         &:hover {
             color: $gold !important;
         }
     }
+
     li.divider {
         border-right: 1px solid #000;
         // height: 30px;
         transform: translateY(45%);
     }
+
     .title-area {
         margin-right: 1rem;
     }
 }
-
 // Hide text under topbar, turned on with js
 .top-bar {
     z-index: 1;
@@ -142,4 +152,30 @@ body.page-template-page-onepage-php,
     width: 40%;
     position: fixed;
     z-index: 0;
+}
+// topbar subscribe
+.top-bar #top-bar-subscribe {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 600px;
+    background-color: white;
+    padding: 20px 10px;
+    top: 60px;
+    border-radius: 0 0 5px 5px;
+
+    .callout {
+        background: #f1f1f1;
+        padding: 10px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    button,
+    input {
+        top: initial;
+        line-height: initial;
+    }
 }

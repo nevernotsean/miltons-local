@@ -2,6 +2,7 @@
     padding: 0;
 }
 // Category Page
+
 .woocommerce-result-count {
     display: none;
 }
@@ -16,26 +17,33 @@ ul.products {
     }
 }
 // SPP Page
+
 .gallery {
-  margin-top: 20px;
+    margin-top: 20px;
 }
+
 .gallery-thumbs {
-  margin-top: 10px;
-  img {
-    padding-right: 10px;
-    opacity: 0.3;
-    &:hover {
-      cursor: pointer;
+    margin-top: 10px;
+
+    img {
+        padding-right: 10px;
+        opacity: 0.3;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &.slick-current {
+            opacity: 1;
+        }
     }
-    &:focus {
-      outline: none;
-    }
-    &.slick-current {
-      opacity: 1;
-    }
-  }
 }
 // Cart
+
 .shop_table.cart {
     @include grid-column(12);
 }
@@ -90,57 +98,82 @@ ul.payment_methods.methods {
     }
 
     .coupon {
-      @include grid-row();
-      margin: 0;
+        @include grid-row();
+        margin: 0;
 
         label {
             @include prefix-postfix-base();
-            @include prefix(
-              $bg: $input-prefix-bg,
-              $is-button: false
-            )
-            @include grid-column( $columns:3, $float:left );
+            @include prefix( $bg: $input-prefix-bg, $is-button: false ) @include grid-column( $columns:3, $float:left );
             @media #{$medium} {
-              @include grid-column( $columns:2, $float:left );
+                 @include grid-column( $columns:2, $float:left );
             }
         }
 
         .input-text {
-          @include grid-column( $columns:9, $float:left );
-          @media #{$medium} {
-            @include grid-column( $columns:3, $float:left );
-          }
+            @include grid-column( $columns:9, $float:left );
+            @media #{$medium} {
+                 @include grid-column( $columns:3, $float:left );
+            }
         }
 
         .button {
-          margin-left: 1rem;
-          @media #{$medium} {
-            height: 2.3125rem;
-            line-height: 1.2;
-          }
+            margin-left: 1rem;
+            @media #{$medium} {
+                height: 2.3125rem;
+                line-height: 1.2;
+            }
         }
     }
 }
 
 .single-product .quantity {
-  width: 50px;
-  margin-right: -5px;
-  display: inline-block;
+    width: 50px;
+    margin-right: -5px;
+    display: inline-block;
 
-  input.qty[type="number"] {
-    font-family: "brandon-grotesque",Helvetica,Roboto,Arial,sans-serif;
-    border: 2px solid #888;
-    border-right: none;
-    font-size: 1rem;
-    font-weight: 800;
-    height: 3rem;
-    padding-left: 1rem;
-    line-height: 0;
-  }
+    input.qty[type="number"] {
+        font-family: "brandon-grotesque",Helvetica,Roboto,Arial,sans-serif;
+        border: 2px solid #888;
+        border-right: none;
+        font-size: 1rem;
+        font-weight: 800;
+        height: 3rem;
+        padding-left: 1rem;
+        line-height: 0;
+    }
+}
+// cert icons
+.addcart {
+    border-bottom: 1px solid black;
+}
+// checkout columns
+form.woocommerce-checkout {
+    @media #{$medium-up} {
+        .col2-set {
+            @include grid-column($columns: 8, $collapse:true);
+
+            .col-1,
+            .col-2 {
+                @include grid-column(6);
+            }
+
+            .col-1 {
+                padding-left: 0;
+            }
+
+            .col-2 {
+              [for="ship-to-different-address-checkbox"] {
+                  display: inline-block;
+              }
+            }
+        }
+        .order-review {
+          @include grid-column(4);
+          padding-right: 0;
+        }
+    }
 }
 
-// cert icons
-
-.addcart {
-  border-bottom: 1px solid black;
+.payment_methods li {
+  list-style: none;
 }

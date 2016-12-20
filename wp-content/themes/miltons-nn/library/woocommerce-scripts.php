@@ -166,4 +166,10 @@ acf_add_local_field_group(array (
 endif;
 
 
+// checkout
+
+add_action('woocommerce_checkout_after_customer_details', function(){ echo '<div class="order-review">'; }, 5);
+add_action('woocommerce_checkout_after_order_review', function(){ echo '</div>'; }, 99);
+add_action('woocommerce_checkout_shipping', function(){ echo '<h3>Shipping Details</h3>'; }, 5);
+
 ?>

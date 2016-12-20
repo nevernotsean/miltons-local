@@ -83,7 +83,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php woocommerce_template_single_add_to_cart(); ?>
 					<?php woocommerce_show_messages(); ?>
 				</div>
-				<div class="small-12 medium-6 large-4 column">
+				<div class="small-12 medium-6 column">
 					<ul class="small-block-grid-3" style="padding: 0 1rem;">
 						<?php if ( get_field('certified_paleo') === true ) { echo '<li><img alt="Certified Paleo" src="'. get_stylesheet_directory_uri() .'/assets/img/certified-paleo.png"></li>';} ?>
 						<?php if ( get_field('no_msg') === true ) { echo '<li><img alt="No MSG" src="'. get_stylesheet_directory_uri() .'/assets/img/no-msg.png"></li>';} ?>

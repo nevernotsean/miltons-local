@@ -45,29 +45,10 @@ require_once( 'library/theme-support.php' );
 /** Add Header image */
 require_once( 'library/custom-header.php' );
 
-/** Add Header image */
+/** Add woo scripts */
 require_once( 'library/woocommerce-scripts.php' );
 
-
-// Gallery background color
-
-add_action('admin_head', 'custom_css');
-
-function custom_css() {
-  echo '<style>
-    .acf-gallery-attachment.acf-soh .margin {
-      background-color: #ddd;
-    }
-  </style>';
-}
-
-// Single Post Pinterest Big Images
-// add_filter( 'the_content', 'add_pinterest_large_image', 10 );
-
-// function add_pinterest_large_image() {
-//   // echo "<script> console.dir(" . json_encode( $html ) . "); </script>";
-//     // $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
-//     return $html;
-// }
+/** Add custom scripts */
+require_once( 'library/custom-functions.php' );
 
 ?>

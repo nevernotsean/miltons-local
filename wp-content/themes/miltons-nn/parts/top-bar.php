@@ -23,6 +23,7 @@
         <section class="top-bar-section">
             <?php foundationpress_top_bar_l(); ?>
             <?php foundationpress_top_bar_r(); ?>
+            <?php echo get_template_part('parts/subscribe-topbar') ?>
         </section>
     </nav>
 </div>
@@ -30,7 +31,7 @@
 
 <?php } else { ?>
 
-<div class="top-bar-container contain-to-grid ?>">
+<div class="top-bar-container contain-to-grid">
     <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="logo">
@@ -46,6 +47,7 @@
                 <li class="divider"></li>
             </ul>
             <?php foundationpress_top_bar_r(); ?>
+            <?php echo get_template_part('parts/subscribe-topbar') ?>
         </section>
     </nav>
 </div>
