@@ -21,10 +21,8 @@ function render_subscribe_modal(){
   echo get_template_part('parts/subscribe-modal');
 }
 
-add_action('foundationpress_after_content', 'render_inline_subscribe', 10);
+add_action('recipe_sidebar_after', 'render_inline_subscribe', 10);
 function render_inline_subscribe(){
-  if ( is_single() && !is_product() ){
     echo get_template_part('parts/subscribe-inline');
-  }
 }
 ?>

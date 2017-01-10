@@ -11,7 +11,8 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 	<?php if ( has_post_thumbnail() ) : ?>
-			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
+			<?php echo "<script> console.dir(" . json_encode($image) . ")</script>"; ?>
 	<?php endif; ?>
 	<header class="post-header" style="background-image: url('<?php echo $image[0]; ?>')">
 		<div class="entry-meta">
@@ -30,18 +31,9 @@ get_header(); ?>
 						<?php if ( !empty($recipe_sidebar) ) { ?>
 						<div class="sidebar-container">
 							<div class="rel-wrapper">
-								<?php echo $recipe_sidebar ?>
+									<?php echo $recipe_sidebar ?>
 									<hr>
-									<ul class="inline-list">
-										<li>
-											<a href="https://www.pinterest.com/pin/create/button/">
-											    <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" />
-											</a>
-										</li>
-										<li>
-										</li>
-									</ul>
-
+									<?php do_action('recipe_sidebar_after') ?>
 							</div>
 						</div>
 						<?php } ?>
