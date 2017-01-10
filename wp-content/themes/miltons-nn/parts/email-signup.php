@@ -408,9 +408,3 @@ function errorSection(errorType) {
 return '<div class="' + msgErrClass + '">' + localizedErrMap[errorType] + '</div>';
 }
 </script>
-<script>
-  function showSubscribe(e) {
-    e.preventDefault();
-    $('#top-bar-subscribe').slideToggle(300);
-  }
-</script>

@@ -1,4 +1,4 @@
-<div id="top-bar-subscribe">
+<div class="subscribe row">
   <div class="medium-6 column">
     <h6>Subscribe to our Newsletter</h6>
     <p style="margin: 0;">Keep in touch with the Milton’s Local community for updates.</p>
@@ -9,10 +9,4 @@
       <?php echo get_template_part('parts/email-signup') ?>
     </div>
   </div>
-  <script>
-    function showSubscribe(e) {
-      e.preventDefault();
-      $('#top-bar-subscribe').slideToggle(300);
-    }
-  </script>
 </div>

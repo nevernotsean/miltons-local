@@ -81,4 +81,7 @@ get_header(); ?>
 	</div>
 	<?php //get_sidebar(); ?>
 </div>
+
+<?php do_action('home_page_before_footer'); ?>
+
 <?php get_footer(); ?>

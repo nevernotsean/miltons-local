@@ -3,6 +3,7 @@
     bottom: 2rem;
     left: 50%;
     z-index: 9999999;
+
     i.fa.fa-angle-down.scrolldown {
         color: $white;
         font-size: 3rem;
@@ -11,9 +12,9 @@
 }
 
 section.container {
-    padding: 50px 0px;
+    padding: 50px 0;
     @media #{$small-only} {
-        padding: 25px 0px;
+        padding: 25px 0;
     }
 }
 
@@ -29,11 +30,11 @@ section.masthead {
 div.placeholder {
     min-height: 100vh;
     height: 100%;
-    width: 0px;
+    width: 0;
     display: block;
     background-color: transparent;
     // position: fixed;
-    top: 0px;
+    top: 0;
     @media #{$small-only} {
         display: none;
     }
@@ -43,21 +44,22 @@ section.active {
     position: fixed;
     top: 0;
     z-index: 0;
+
     & + div.placeholder {
         position: relative;
     }
 }
 
 .home,
-.page-template-page-wholesale-php,
+.page-template-page-clients,
 .page-template-page-onepage-php,
-.page-template-page-clients
- {
+.page-template-page-wholesale-php {
     section.container {
-        padding: 0px;
+        padding: 0;
     }
-    section.waypoint,
-    section.masthead {
+
+    section.masthead,
+    section.waypoint {
         height: 100vh;
         width: 100%;
         z-index: -1;
@@ -66,6 +68,7 @@ section.active {
             min-height: inherit;
         }
     }
+
     .sidebar {
         min-height: 100%;
         min-height: 100vh;
@@ -80,23 +83,25 @@ section.active {
         @media #{$small-only} {
             position: relative;
             width: 100%;
-            padding: 50px 0px;
+            padding: 50px 0;
             max-height: initial;
         }
     }
+
     .left-image {
         width: 60%;
         // height: 0;
         height: 100%;
         position: fixed;
-        top: 0px;
-        box-shadow: inset -5px 0px 15px 0px rgba(0, 0, 0, 0.2);
+        top: 0;
+        box-shadow: inset -5px 0 15px 0 rgba(0, 0, 0, 0.2);
         @media #{$small-only} {
             height: 50vh;
             position: relative;
             width: 100%;
         }
     }
+
     #sidebar-bg {
         background-color: $slate;
         width: 40%;
@@ -112,35 +117,34 @@ section.active {
 .home .sidebar {
     background-color: transparent;
 }
-
 @media #{$small-only} {
     .home section#wypt-1 .left-image {
         display: none;
     }
 }
-
 // Resuable
 .row.contain {
     width: 100%;
-    margin: auto;
-    margin-top: 0.625rem;
-    margin-bottom: 0.625rem;
+    margin: 0.625rem auto;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+
     .column {
         padding-top: 16px;
         padding-bottom: 16px;
         border-right: 1px solid #000;
+
         &:last-child {
-            border-right: 0px solid #000;
+            border-right: 0 solid #000;
         }
-        p,
+
         h1,
         h2,
         h3,
         h4,
         h5,
-        h6 {
+        h6,
+        p {
             margin: 0;
         }
     }
@@ -149,26 +153,27 @@ section.active {
 .border-t {
     border-top: 1px solid #000;
 }
-
 // Category
 ul.products li {
     hr {
         border-bottom: 1px solid #000;
-        border-top: 0px;
+        border-top: 0;
         height: 1px;
         margin: 0;
     }
+
     h6 {
         font-size: 1rem;
         text-transform: uppercase;
     }
+
     &:after {
         height: 1px;
         width: 100%;
         content: '';
         display: block;
         background-color: black;
-        margin: 0.625rem 0px 0px 0px;
+        margin: 0.625rem 0 0;
     }
 }
 
@@ -176,20 +181,20 @@ ul.products li {
     width: 33%;
     height: auto;
 }
-
 // SPP
 .single-product {
     section.container {
-        padding: 0px 0px;
+        padding: 0;
     }
+
     footer.row {
-        margin-top: 0px;
+        margin-top: 0;
     }
 }
 
 .gallery-column {
     @media #{$medium-up} {
-        padding-right: 0px;
+        padding-right: 0;
     }
 }
 
@@ -198,25 +203,28 @@ p.in-stock {
 }
 
 .entry-summary {
-
     @media #{$large-up} {
-        padding-left: 0px;
+        padding-left: 0;
     }
     @media #{$small-only} {
         margin-bottom: 25px;
     }
+
     .row.contain {
-        border-left: 0px solid #000;
-        border-right: 0px solid #000;
+        border-left: 0 solid #000;
+        border-right: 0 solid #000;
     }
+
     .row.excerpt {
         padding-top: 16px;
         padding-bottom: 16px;
     }
+
     .border-b {
         border-bottom: 1px solid #000;
         padding-bottom: 0.625rem;
     }
+
     button.single_add_to_cart_button.button.alt {
         transition: color 200ms ease, border 200ms ease;
         width: auto;
@@ -225,44 +233,46 @@ p.in-stock {
         color: $warmblack;
         border: 2px solid $warmblack;
         font-weight: 800;
+
         &:hover {
             border-color: $black;
             color: $black;
         }
     }
 }
-
 // Cart
 .woocommerce-cart {
     img.attachment-shop_thumbnail.wp-post-image {
         height: 150px;
         width: auto;
     }
+
     td.product-remove a.remove {
         font-size: 2rem;
     }
 }
-
 // Single Blog post
 .single-product {
-  h1.product_title {
-      margin: 0px;
-      text-transform: uppercase;
-      font-weight: 800;
-      color: $warmblack;
-      margin-top: 50px;
-      @media #{$small-only} {
-        margin-top: 25px;
-      }
-  }
+    h1.product_title {
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: $warmblack;
+        margin-top: 50px;
+        @media #{$small-only} {
+            margin-top: 25px;
+        }
+    }
 }
+
 .single-post {
     // reset styles
     .topbar-bg {
         display: none;
     }
+
     section.container {
-        padding: 0px 0px;
+        padding: 0;
     }
     // New Header with Post BG
     .post-header {
@@ -271,6 +281,7 @@ p.in-stock {
         background-position: center center;
         background-repeat: no-repeat;
         position: relative;
+
         &:before {
             content: ' ';
             position: absolute;
@@ -279,6 +290,7 @@ p.in-stock {
             background-color: $black;
             opacity: 0.4;
         }
+
         .entry-meta {
             position: absolute;
             width: 100%;
@@ -288,11 +300,12 @@ p.in-stock {
             right: 0;
             color: white;
             @media #{$medium-up} {
-                @include grid-row();
+                 @include grid-row();
             }
             @media #{$xlarge-up} {
                 margin: 0 auto;
             }
+
             h1 {
                 color: white;
             }
@@ -300,11 +313,12 @@ p.in-stock {
     }
     // Body Styles
     .entry-content {
-        padding: 60px 0px;
+        padding: 60px 0;
         @include grid-row();
         @media #{$small-only} {
-            padding: 25px 0px;
+            padding: 25px 0;
         }
+
         p {
             font-size: 1.25rem;
             line-height: 2.25rem;
@@ -316,18 +330,21 @@ p.in-stock {
             margin-bottom: 2rem;
         }
     }
+
     .sidebar-container {
         @media #{$medium-up} {
-          max-height: 100vh;
-          overflow-y: scroll;
+            max-height: 100vh;
+            overflow-y: scroll;
         }
+
         .rel-wrapper {
             padding: 20px;
             // background-color: $gold;
             border-left: 1px solid black;
-            border-right: 1px solid black // * {
-            //     color: white;
             // }
+            //     color: white;
+            // * {
+            border-right: 1px solid black;
         }
         // Sidebar sticky
         &.sticky {
@@ -337,8 +354,65 @@ p.in-stock {
                 // right: rem-calc(29);
             }
             @media #{$large-up} {
-              // right: 20vw;
+                // right: 20vw;
             }
         }
+    }
+}
+// Subscribe elements
+.sticky-subscribe {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    @media #{$small-only} {
+      z-index: 9;
+    }
+}
+// basic subscribe
+
+.subscribe {
+    background-color: white;
+    padding: 20px 10px;
+
+    .callout {
+        background: #f1f1f1;
+        padding: 10px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    button,
+    input {
+        top: initial;
+        line-height: initial;
+    }
+}
+// subscribe modal
+
+#subscribe-modal {
+    padding: 20px;
+
+    .subscribe {
+        border: 1px solid black;
+        padding: 20px;
+
+        .row:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    a.close-reveal-modal {
+        position: static;
+        font-size: 1rem;
+        color: $gold;
+        font-weight: normal;
+    }
+    @media #{$small-only} {
+        min-height: none;
     }
 }

@@ -153,29 +153,3 @@ body.page-template-page-wholesale-php {
     position: fixed;
     z-index: 0;
 }
-// topbar subscribe
-.top-bar #top-bar-subscribe {
-    display: none;
-    position: absolute;
-    right: 0;
-    width: 600px;
-    background-color: white;
-    padding: 20px 10px;
-    top: 60px;
-    border-radius: 0 0 5px 5px;
-
-    .callout {
-        background: #f1f1f1;
-        padding: 10px;
-    }
-
-    p {
-        margin-bottom: 0;
-    }
-
-    button,
-    input {
-        top: initial;
-        line-height: initial;
-    }
-}
