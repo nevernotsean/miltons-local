@@ -157,5 +157,17 @@ hr.white {
     .submit.button,
     input {
         margin-bottom: 0;
+        border: none;
     }
+}
+
+// offcanvas overrides
+ul.off-canvas-list li {
+  .anchorsStyle, .emailSignup span {
+      border-bottom: 1px solid #262626;
+      color: rgba(255,255,255,0.7);
+      display: block;
+      padding: .6666666667rem;
+      transition: background 300ms ease;
+  }
 }
