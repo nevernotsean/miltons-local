@@ -13,8 +13,13 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0
  */
+ if (function_exists('get_header')) {
+	 get_header();
+ } else {
+	 die();
+ }
+ ?>
 
-get_header(); ?>
 
 <div class="row">
 	<div class="small-12 large-12 columns" role="main">
