@@ -47,7 +47,7 @@ get_header(); ?>
           </div>
         </div>
       </li>
-      <li class="accordion-navigation"><a href="#panel2a" aria-expanded="false"><h5>Local Delivery Service</h5>
+      <!-- <li class="accordion-navigation"><a href="#panel2a" aria-expanded="false"><h5>Local Delivery Service</h5>
         </a>
         <div id="panel2a" class="content" style="margin: 2em auto;">
           <div class="row">
@@ -70,7 +70,7 @@ get_header(); ?>
             </div>
           </div>
         </div>
-      </li>
+      </li> -->
       <li class="accordion-navigation">
         <a style="/* border-bottom: 1px solid black;" href="#panel3a" aria-expanded="false"><h5>At Your Nearest Retailer</h5></a>
         <div id="panel3a" class="content" style="/* margin: 2rem auto;">

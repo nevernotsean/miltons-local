@@ -5,9 +5,15 @@
 
 get_header(); ?>
 
+<!-- Prevent FOUC (flash of unstyled content) - http://johnpolacek.com/2012/10/03/help-prevent-fouc/ -->
+<style type="text/css">
+    .no-fouc {display: none;}
+    .introLogo, .js-scroll-down { opacity: 0; }
+</style>
+
 <div class="row collapse nomax">
 	<div class="small-12 large-12 columns" role="main">
-    <div id="sidebar-bg"></div>
+    <div id="sidebar-bg" style="width: 0%;"></div>
 
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
@@ -83,5 +89,12 @@ get_header(); ?>
 </div>
 
 <?php do_action('home_page_before_footer'); ?>
+
+<script type="text/javascript">
+    document.documentElement.className = 'no-fouc';
+    $(document).ready(function(){
+      $('.no-fouc').removeClass('no-fouc');
+    })
+</script>
 
 <?php get_footer(); ?>

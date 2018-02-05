@@ -1,0 +1,84 @@
+ul#shipping_method li {
+    list-style: none;
+    white-space: nowrap;
+}
+
+ul#shipping_method {
+    margin: 0;
+}
+
+.woocommerce-checkout .top-bar-container.black,
+.archive .top-bar-container.black,
+.page-template-page-wholesale .top-bar-container,
+.page-template-page-farmers .top-bar-container.black {
+    background: white;
+}
+
+.page-template-page-wholesale .top-bar-container .top-bar {
+    border-bottom: 1px solid #000;
+}
+
+.page-template-page-wholesale .top-bar-container .logo img { 
+    display: none; 
+}
+
+.page-template-page-wholesale .top-bar-container .logo img#blklogo {
+    display: block;
+}
+
+.page-template-page-wholesale .top-bar-container .logo svg path {
+    fill: #000;
+}
+
+.page-template-page-wholesale .top-bar-container li a {
+        color: #000;
+        text-transform: uppercase;
+}
+
+.page-template-page-wholesale .top-bar-container li a:hover {
+    color: #F8AD44 !important;
+}
+
+.page-template-page-wholesale .top-bar-container li.divider {
+    border-right: 1px solid #000;
+    transform: translateY(45%);
+}
+
+.page-template-page-wholesale .top-bar-container .title-area {
+    margin-right: 1rem;
+}
+
+.single-product form.cart::before, 
+.single-product form.cart::after {
+        content: " ";
+        display: table;
+}
+
+.single-product form.cart .quantity {
+    position: relative;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    float: left;
+    width: 100px;
+    margin-right: -1rem;
+}
+
+.single-product form.cart .quantity label {
+    position: absolute;
+    margin-top: -24px;
+}
+
+.single-product form.cart .quantity input {
+    height: 49px;
+}
+
+.menu.simple {
+    margin: 0;
+    text-align: center;
+}
+
+.menu.simple li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 5px;
+}

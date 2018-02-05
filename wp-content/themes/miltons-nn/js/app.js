@@ -191,10 +191,10 @@ setPanelsTriggers = function () {
 
 // TopNav Color Triggers
 
-if (!isOnePageTemplate && !isSinglePost) {
+if (!isSinglePost) {
     var hasHeaderBG = $('.topbar-bg').length !== 0;
 
-    if (!isSmall && !hasHeaderBG ) {
+    if (!isSmall) {
         $('section.container').waypoint(function(direction) {
             if (direction == "down") {
                 $('.top-bar-container').addClass('black');
@@ -556,12 +556,14 @@ $(window).on('nofoucreveal', function() {
 });
 
 
-// Pinterest
-(function(d) {
-    var f = d.getElementsByTagName('SCRIPT')[0],
-        p = d.createElement('SCRIPT');
-    p.type = 'text/javascript';
-    p.async = true;
-    p.src = '//assets.pinterest.com/js/pinit.js';
-    f.parentNode.insertBefore(p, f);
-}(document));
+if (isSinglePost){
+    // Pinterest
+    (function(d) {
+        var f = d.getElementsByTagName('SCRIPT')[0],
+            p = d.createElement('SCRIPT');
+        p.type = 'text/javascript';
+        p.async = true;
+        p.src = '//assets.pinterest.com/js/pinit.js';
+        f.parentNode.insertBefore(p, f);
+    }(document));
+}

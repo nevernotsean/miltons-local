@@ -73,13 +73,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 				?>
 		  </div>
 		  <div class="small-4 column text-center">
-		  	<?php
-						global $product;
-						$weight = $product->get_weight();
-					?>
+		  	<?php $weight = get_field('meat-weight'); ?>
 		    <?php woocommerce_template_loop_price(); ?>
-		    <span> / <?php echo $weight;
-						echo 'oz.'; ?></span>
+		    <span> | <?php echo $weight . 'oz.'; ?></span>
 
 		  </div>
 		</div>

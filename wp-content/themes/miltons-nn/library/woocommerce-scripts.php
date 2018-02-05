@@ -172,4 +172,36 @@ add_action('woocommerce_checkout_after_customer_details', function(){ echo '<div
 add_action('woocommerce_checkout_after_order_review', function(){ echo '</div>'; }, 99);
 add_action('woocommerce_checkout_shipping', function(){ echo '<h3>Shipping Details</h3>'; }, 5);
 
+// Hide Ground for states other than local
+add_filter( 'woocommerce_package_rates', 'shipping_rates_for_specific_states', 10, 2 );
+function shipping_rates_for_specific_states( $rates, $package ) {
+
+	echo '<script>console.log(' . json_encode($rates) . ')</script>';
+	
+
+    if ( is_admin() && ! defined( 'DOING_AJAX' ) )
+        return;
+
+    # Setup an array of states that do not allow UPS Shipping 2nd Day Air. 
+    # As of 10/18/2015 we added 3 days ground too.
+    $enabled_states = array(
+        "MD", "VA", "DC", "NC", "SC","NY", "PA", "WV"
+    );
+
+    $destination_state = $package['destination']['state'];
+
+    if( in_array( $destination_state, $enabled_states ) ) {
+		// unset( $rates['wf_shipping_ups:03'] ); // Unset Ground
+    } else {
+        unset( $rates['wf_shipping_ups:03'] ); // Unset Ground
+    }
+
+    return $rates;
+}
+
+add_action('woocommerce_checkout_before_order_review', 'shipping_notice_1', 10);
+function shipping_notice_1(){
+	echo '<p>Orders are shipped Monday-Wednesday the week after they are placed unless otherwise noted</p>';
+}
+
 ?>

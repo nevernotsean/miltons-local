@@ -16,6 +16,8 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	// // Enqueue the main Stylesheet. DISABLED TO CACHE BUST IN THE HEADER!
 	// wp_enqueue_style( 'main-stylesheet',  get_template_directory_uri() . '/css/foundation.css', array(), filemtime( get_template_directory() . '/css/foundation.css'), 'screen' );
 
+	wp_enqueue_style( 'shame',  get_template_directory_uri() . '/css/shame.css');
+
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );
 
@@ -46,7 +48,6 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_enqueue_script( 'foundation' );
 	wp_enqueue_script( 'gmaps' );
 	wp_enqueue_script( 'app' );
-
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );

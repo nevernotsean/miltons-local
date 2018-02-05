@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php
 						echo '<span>';
 						global $product;
-						$weight = $product->get_weight();
+						$weight = get_field('meat-weight');
 						echo $weight;
 						echo 'oz.';
 						echo '</span>';

@@ -18,6 +18,18 @@
 
 get_header(); ?>
 
+<hr>
+<div class="row">
+	<div class="small-12 column text-center">
+		<ul class="menu simple">
+			<li><a href="<?php echo site_url(); ?>/category/recipe/">All Recipes</a></li>
+			<li><a href="<?php echo site_url(); ?>/category/recipe/paleo-friendly/">Paleo Friendly</a></li>
+			<li><a href="<?php echo site_url(); ?>/category/recipe/gluten-free/">Gluten Free</a></li>
+			<li><a href="<?php echo site_url(); ?>/category/recipe/keto-friendly/">Keto Friendly</a></li>
+		</ul>
+	</div>
+</div>
+<hr>
 <div class="row">
 <!-- Row for main content area -->
 	<div class="small-12 large-12 columns" role="main">
