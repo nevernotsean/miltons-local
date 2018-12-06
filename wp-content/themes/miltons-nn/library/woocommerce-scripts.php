@@ -182,7 +182,7 @@ function shipping_rates_for_specific_states( $rates, $package ) {
     # Setup an array of states that do not allow UPS Shipping 2nd Day Air. 
     # As of 10/18/2015 we added 3 days ground too.
     $enabled_states = array(
-        "MD", "VA", "DC", "NC", "SC","NY", "PA", "WV"
+        "MD", "VA", "DC", "NC", "SC","NY", "PA", "WV", "AL", 'CT', 'DE', 'FL', "GA", 'IN', "KT", "ME","MA", "MI", "NH", "NJ", "OH", "VT"
     );
 
     $destination_state = $package['destination']['state'];
