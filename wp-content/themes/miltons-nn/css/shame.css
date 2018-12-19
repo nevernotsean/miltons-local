@@ -104,18 +104,18 @@ ul#shipping_method {
 }
 
 /* add to cart message*/
-.woocommerce-notices-wrapper {
+.woocommerce-notices-wrapper .woocommerce-message {
   background: white;
   border: 3px solid lightgray;
   padding: 15px;
   border-radius: 3px;
 }
-.woocommerce-notices-wrapper a {
+.woocommerce-notices-wrapper .woocommerce-message a {
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 820px) {
-  .woocommerce-notices-wrapper {
+  .woocommerce-notices-wrapper .woocommerce-message {
     position: absolute;
     top: 10px;
     right: 16px;
