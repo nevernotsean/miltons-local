@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<hr style="border: 0; border-bottom: 4px solid #888; margin: 0;">
 
-	<div class="row">
+	<div class="row" style="margin: 0 auto;">
 		<div class="small-12 medium-6 medium-push-6 large-5 large-push-7 column gallery-column">
 			<div class="gallery">
 				<?php do_action( 'woocommerce_spp_gallery'); ?>
