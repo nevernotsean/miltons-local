@@ -197,7 +197,7 @@ function shipping_rates_for_specific_states( $rates, $package ) {
 }
 
 add_action('woocommerce_checkout_before_order_review', 'shipping_notice_1', 10);
-add_action('woocommerce_after_single_product_summary', 'shipping_notice_1', 10);
+add_action('woocommerce_after_single_product_summary', 'shipping_notice_2', 10);
 function shipping_notice_1(){
 	echo '<p>Orders are shipped Monday-Wednesday the week after they are placed unless otherwise noted</p>';
 }

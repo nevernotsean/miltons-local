@@ -11,7 +11,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 	<?php if ( has_post_thumbnail() ) : ?>
-			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 	<?php endif; ?>
 	<header class="post-header" style="background-image: url('<?php echo $image[0]; ?>')">
 		<div class="entry-meta">
