@@ -31,8 +31,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
-
 	<div class="row collapse">
 		<div class="small-12 column">
 			<?php woocommerce_template_single_title() ?>
@@ -40,6 +38,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div>
 
 	<hr style="border: 0; border-bottom: 4px solid #888; margin: 0;">
+
+	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
 
 	<div class="row" style="margin: 0 auto;">
 		<div class="small-12 medium-6 medium-push-6 large-5 large-push-7 column gallery-column">
@@ -94,8 +94,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</div>
 	</div>
-	<hr style="border: 0; border-bottom: 4px solid #888;">
+
 	<?php do_action( 'woocommerce_after_single_product_summary' );?>
+
+	<hr style="border: 0; border-bottom: 4px solid #888;">
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
