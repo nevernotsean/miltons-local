@@ -197,8 +197,12 @@ function shipping_rates_for_specific_states( $rates, $package ) {
 }
 
 add_action('woocommerce_checkout_before_order_review', 'shipping_notice_1', 10);
+add_action('woocommerce_after_single_product_summary', 'shipping_notice_1', 10);
 function shipping_notice_1(){
 	echo '<p>Orders are shipped Monday-Wednesday the week after they are placed unless otherwise noted</p>';
+}
+function shipping_notice_2(){
+	echo '<p>Place your order by Wednesday, December 19th at noon to guarantee delivery by Christmas</p>';
 }
 
 add_action('woocommerce_before_shop_loop_item_title', function(){
